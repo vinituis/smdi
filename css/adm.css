@@ -1,0 +1,63 @@
+table {
+    width: 100%;
+}
+
+table tr, td {
+    border: 1px solid #696969;
+    padding: 1rem 0.5rem;
+    text-transform: none;
+}
+
+.ocultar {
+    border: none;
+}
+
+.formcad {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    text-transform: none;
+}
+
+.formcad h3 {
+    font-size: 2.5rem;
+    padding: 5rem 2rem 0 2rem;
+    text-transform: none;
+    color: #290369;
+}
+
+.formcad input, select, textarea {
+    width: 80%;
+    border: 0.1rem solid #696969;
+    padding: 1rem;
+    margin: 0.5rem 0;
+    text-transform: none;
+}
+
+.formcad label {
+    width: 80%;
+    font-size: 1.5rem;
+    padding: 1rem;
+    text-transform: none;
+}
+
+.formcad input[type="submit"] {
+    color: #fff;
+    background-color: #290369;
+    border-radius: 8px 0;
+    cursor: pointer;
+
+}
+
+.correct-msg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 1.5rem;
+    padding: 2rem;
+    width: 100%;
+    background-color: green;
+}

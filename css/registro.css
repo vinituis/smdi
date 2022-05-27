@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400&display=swap");
+
+* {
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+    margin: 0;padding: 0;
+    transition: all .2s linear;
+}
+
+body {
+    background-color: #681c86;
+}
+
+.form-container {
+    min-height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url(../images/bg2.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    perspective: 1000px;
+}
+
+.form-container form {
+    height: 550px;
+    width: 400px;
+    background: rgba(255, 255, 255, .1);
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .3);
+    border-top: 1px solid rgba(255, 255, 255, .3);
+    border-left: 1px solid rgba(255, 255, 255, .3);
+    backdrop-filter: blur(15px);
+    transform-style: preserve-3d;
+}
+
+.form-container form h3 {
+    font-size: 30px;
+    padding: 30px 0;
+    color: #ccc;
+    letter-spacing: 3px;
+}
+
+.form-container form i {
+    padding: 0 5px;
+    font-size: 20px;
+    color: #bbb;
+}
+
+.form-container form input{
+    outline: none;
+    border: none;
+    height: 40px;
+    width: 82%;
+    background: rgba(0, 0, 0, .3);
+    color: rgba(255, 255, 255, .7);
+    box-shadow: 0 0 5px rgba(0, 0, 0, .5) inset;
+    font-size: 17px;
+    padding: 0 10px;
+    margin: 15px 0;
+    letter-spacing: 1px;
+}
+
+.form-container form input[type="submit"] {
+    width: 90%;
+    cursor: pointer;
+    background: linear-gradient(90deg, deeppink, blueviolet);
+    margin-top: 30px;
+    border-radius: 50px;
+}
+
+.form-container form input[type="submit"]:hover {
+    letter-spacing: 4px;
+}
+
+.form-container form a, p {
+    color: #bbb;
+}
+
+.error-msg {
+    width: 100%;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: red;
+    color: #ddd;
+}
+
+.correct-msg {
+    width: 100%;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: green;
+    color: #ddd;
+}
