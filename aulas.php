@@ -68,18 +68,28 @@ $iniciado;
                     <?php 
                     if($nota[$i] == '1'){
                         echo '<i class="fas fa-star"></i>';
+                        echo '<i class="far fa-star"></i>';
+                        echo '<i class="far fa-star"></i>';
+                        echo '<i class="far fa-star"></i>';
+                        echo '<i class="far fa-star"></i>';
                     }elseif($nota[$i] == '2'){
                         echo '<i class="fas fa-star"></i>';
                         echo '<i class="fas fa-star"></i>';
+                        echo '<i class="far fa-star"></i>';
+                        echo '<i class="far fa-star"></i>';
+                        echo '<i class="far fa-star"></i>';
                     }elseif($nota[$i] == '3'){
                         echo '<i class="fas fa-star"></i>';
                         echo '<i class="fas fa-star"></i>';
                         echo '<i class="fas fa-star"></i>';
+                        echo '<i class="far fa-star"></i>';
+                        echo '<i class="far fa-star"></i>';
                     }elseif($nota[$i] == '4'){
                         echo '<i class="fas fa-star"></i>';
                         echo '<i class="fas fa-star"></i>';
                         echo '<i class="fas fa-star"></i>';
                         echo '<i class="fas fa-star"></i>';
+                        echo '<i class="far fa-star"></i>';
                     }elseif($nota[$i] == '5'){
                         echo '<i class="fas fa-star"></i>';
                         echo '<i class="fas fa-star"></i>';
@@ -92,7 +102,7 @@ $iniciado;
                 <h3><?php echo $nome[$i]; ?></h3>
                 <p><?php echo $desc[$i]; ?></p>
                 <p>Professor: <?php echo $prof[$i]; ?></p>
-                <a href="./aula?id=<?php echo $id[$i]; ?>&aula=<?php echo $ref[$i]; ?>" class="btn">select course</a>
+                <a href="./aula?id=<?php echo $id[$i]; ?>&aula=<?php echo $ref[$i]; ?>" class="btn">Acessar curso</a>
             </div>
         </div>
 <?php }elseif($status[$i] == 'block'){
