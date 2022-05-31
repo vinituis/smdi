@@ -78,9 +78,9 @@ if(isset($_POST['submit'])){
     <div>
         <form id="cadastroAulaSMDI" class="formcad" action="" method="post">
             <label for="nome"> Nome da Aula</label>
-            <input type="text" id="nome" name="nome" placeholder="Ex: Tema principal - Subtema">
+            <input required type="text" id="nome" name="nome" placeholder="Ex: Tema principal - Subtema">
             <label for="categoria">Categoria</label>
-            <select name="categoria" id="categoria">
+            <select required name="categoria" id="categoria">
                 <option value="">Selecione</option>
                 <option value="Aula1">Aula 1</option>
                 <option value="Aula2">Aula 2</option>
@@ -88,11 +88,12 @@ if(isset($_POST['submit'])){
                 <option value="Aula4">Aula 4</option>
             </select>
             <label for="image">Link da imagem</label>
-            <input type="text" name="image" id="image" placeholder="Ex: http://www.example.com/images/...jpg">
+            <input required type="text" name="image" id="image" placeholder="Ex: http://www.example.com/images/...jpg">
             <label for="descricao">Descrição da aula</label>
-            <textarea name="descricao" id="descricao" placeholder="Limite máximo: 100 caracteres." rows="4" Maxlength="100"></textarea>
+            <textarea required name="descricao" id="descricao" placeholder="Limite máximo: 100 caracteres." rows="4" Maxlength="100"></textarea>
             <label for="professor">Selecione o Professor</label>
-            <select name="professor" id="professor">
+            <select required name="professor" id="professor">
+                <option value="">Selecione</option>
             <?php 
                 $sql = 'SELECT * FROM professores';
                 if($res=mysqli_query($conn, $sql)){
@@ -109,9 +110,9 @@ if(isset($_POST['submit'])){
             <?php }}} ?>
             </select>
             <label for="linkVideo">Código de embed do vídeo</label>
-            <input type="text" name="linkVideo" id="linkVideo" placeholder="Embed do vídeo">
+            <input required type="text" name="linkVideo" id="linkVideo" placeholder="Embed do vídeo">
             <label for="nota">Selecione a nota do curso</label>
-            <select name="nota" id="nota">
+            <select required name="nota" id="nota">
                 <option value="">Selecione</option>
                 <option value="1">1</option>
                 <option value="2">2</option>

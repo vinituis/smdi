@@ -41,7 +41,7 @@ if(!isset($_SESSION['admin_name'])){
             <td>descrição</td>
             <td>nota</td>
             <td>status</td>
-            <td>ação</td>
+            <td colspan="2">ação</td>
         </tr>
         <?php 
             $sql = 'SELECT * FROM aulas';
@@ -74,11 +74,14 @@ if(!isset($_SESSION['admin_name'])){
             <td><?php echo $status[$i]; ?></td>
             <?php
                 if($status[$i] == 'ativo'){
-                    echo '<td><a href="./desativar_aula?id='.$id[$i].'">Desativar</a><a style="margin-left: 1rem;" href="./bloqueio_aula?id='.$id[$i].'">Bloquear</a></td>';
+                    echo '<td width="12%"><a href="./desativar_aula?id='.$id[$i].'"><i class="fas fa-pause"></i> Desativar</a></td>
+                    <td width="12%"><a href="./bloqueio_aula?id='.$id[$i].'"><i class="fas fa-lock"></i> Bloquear</a></td>';
                 }elseif($status[$i] == 'inativo'){
-                    echo '<td><a href="./ativar_aula?id='.$id[$i].'">Ativar</a><a style="margin-left: 1rem;" href="./bloqueio_aula?id='.$id[$i].'">Ativar bloqueado</a></td>';
+                    echo '<td width="12%"><a href="./ativar_aula?id='.$id[$i].'"><i class="fas fa-play"></i> Ativar</a></td>
+                    <td width="12%"><a href="./bloqueio_aula?id='.$id[$i].'"><i class="fas fa-lock"></i> Ativar bloqueado</a></td>';
                 }elseif($status[$i] == 'block'){
-                    echo '<td><a href="./ativar_aula?id='.$id[$i].'">Ativar</a><a style="margin-left: 1rem;" href="./desativar_aula?id='.$id[$i].'">Desativar</a></td>';
+                    echo '<td width="12%"><a href="./ativar_aula?id='.$id[$i].'"><i class="fas fa-play"></i> Ativar</a></td>
+                    <td width="12%"><a href="./desativar_aula?id='.$id[$i].'"><i class="fas fa-pause"></i> Desativar</a></td>';
                 }
             ?>
         </tr>
