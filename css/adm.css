@@ -21,13 +21,6 @@ table tr, td {
     text-transform: none;
 }
 
-.formcad h3 {
-    font-size: 2.5rem;
-    padding: 5rem 2rem 0 2rem;
-    text-transform: none;
-    color: #290369;
-}
-
 .formcad input, select, textarea {
     width: 80%;
     border: 0.1rem solid #696969;
