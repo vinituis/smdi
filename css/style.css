@@ -69,6 +69,7 @@ section:nth-child(even) {
   color: #fff;
   background: #290369;
   font-size: 1.7rem;
+  text-transform: none;
 }
 
 .btn-d {

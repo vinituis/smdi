@@ -1,13 +1,21 @@
 <?php
 
 include 'config.php';
+include 'cabecalho.php';
+
+$iniciado;
+
+if(!isset($_SESSION['admin_name'])){
+    header('location:./');
+}
+
 
 $id_page = $_GET['id'];
 
 $sql = "UPDATE aulas SET status = 'block' WHERE id = '$id_page'";
 
 if (mysqli_query($conn, $sql)) {
-    $sucesso = "Sucesso! Aula bloqueada";
+    $sucesso = "Aula bloqueada!";
 } else {
     $sucesso = "Houve um erro: " . mysqli_error($conn);
 }
@@ -23,15 +31,23 @@ mysqli_close($conn);
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo $sucesso?></title>
-    <link rel="stylesheet" href="./css/global.css">
-    <link rel="stylesheet" href="./css/erro.css">
+
+    <?php echo $headAdm; ?>
+
 </head>
 <body>
+    
+<?php 
+    echo $headerAdm;
+?>
 
-<div class="content">
-    <h1><?php echo $sucesso?></h1>
-    <a href="./admin_aula"><button class="btn-p">Retornar para o site</button></a>
-</div>
+<section>
+    <div class='heading'>
+        <h3><p><?php echo $sucesso?></p></h3><br>
+        <a href="./admin_aula"><button class="btn">Voltar</button></a>
+    </div>
+</section>
+
     
 </body>
 </html>
