@@ -71,7 +71,7 @@ $iniciado;
             <p class="blog-description"><?php echo $desc[$i];?></p>
             <div class="icons">
                 <p><i class="fas fa-calendar"></i> <?php echo $data[$i];?></p>
-                <a href="<?php echo $url[$i];?>">Acessar</a>
+                <a class="btn-d">Acessar</a>
             </div>
         </div>
     <?php }}} ?>

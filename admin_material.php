@@ -81,7 +81,7 @@ if(!isset($_SESSION['admin_name'])){
 
         <?php }} ?>
     </table>
-
+    <a href="./cad_material" class="btn">Cadastrar material</a>
 </section>
 </body>
 </html>
