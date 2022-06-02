@@ -62,16 +62,16 @@ if(!isset($_SESSION['admin_name'])){
             <td><?php echo $status[$i]; ?></td>
             <?php
                 if($status[$i] == 'ativo'){
-                    echo '<td><a href="desativar_prof?id='.$id[$i].'">Desativar</a></td>';
+                    echo '<td><a href="desativar_prof?id='.$id[$i].'"><i class="fas fa-pause"></i> Desativar</a></td>';
                 }elseif($status[$i] == 'inativo'){
-                    echo '<td><a href="ativar_prof?id='.$id[$i].'">Ativar</a></td>';
+                    echo '<td><a href="ativar_prof?id='.$id[$i].'"><i class="fas fa-play"></i> Ativar</a></td>';
                 }
             ?>
         </tr>
 
         <?php }} ?>
     </table>
-
+    <a href="./cad_prof" class="btn">Cadastrar Professor</a>
 </section>
 </body>
 </html>
