@@ -38,7 +38,7 @@ if(!isset($_SESSION['admin_name'])){
             <td>data</td>
             <td>status</td>
             <td>material</td>
-            <td>ações</td>
+            <td colspan="2">ações</td>
         </tr>
         <?php 
             $sql = 'SELECT * FROM materiais';
@@ -70,11 +70,14 @@ if(!isset($_SESSION['admin_name'])){
             <td><a href="<?php echo $url[$i]; ?>">Acesse</a></td>
             <?php
                 if($status[$i] == 'ativo'){
-                    echo '<td><a href="./desativar_material?id='.$id[$i].'">Desativar</a><a style="margin-left: 1rem;" href="./bloqueio_material?id='.$id[$i].'">Bloquear</a></td>';
+                    echo '<td width="12%"><a href="./desativar_material?id='.$id[$i].'"><i class="fas fa-pause"></i> Desativar</a></td>
+                    <td width="12%"><a style="margin-left: 1rem;" href="./bloqueio_material?id='.$id[$i].'"><i class="fas fa-lock"></i> Bloquear</a></td>';
                 }elseif($status[$i] == 'inativo'){
-                    echo '<td><a href="./ativar_material?id='.$id[$i].'">Ativar</a><a style="margin-left: 1rem;" href="./bloqueio_material?id='.$id[$i].'">Ativar bloqueado</a></td>';
+                    echo '<td width="12%"><a href="./ativar_material?id='.$id[$i].'"><i class="fas fa-play"></i> Ativar</a></td>
+                    <td width="12%"><a style="margin-left: 1rem;" href="./bloqueio_material?id='.$id[$i].'"><i class="fas fa-lock"></i> Ativar bloqueado</a></td>';
                 }elseif($status[$i] == 'block'){
-                    echo '<td><a href="./ativar_material?id='.$id[$i].'">Ativar</a><a style="margin-left: 1rem;" href="./desativar_material?id='.$id[$i].'">Desativar</a></td>';
+                    echo '<td width="12%"><a href="./ativar_material?id='.$id[$i].'"><i class="fas fa-play"></i> Ativar</a></td>
+                    <td width="12%"><a style="margin-left: 1rem;" href="./desativar_material?id='.$id[$i].'"><i class="fas fa-pause"></i> Desativar</a></td>';
                 }
             ?>
         </tr>
