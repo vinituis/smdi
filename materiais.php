@@ -67,7 +67,7 @@ $iniciado;
                 <i class="fas fa-lock"></i>
             </div>
             <img src="<?php echo $img[$i]; ?>" alt="">
-            <a href="<?php echo $url[$i];?>" class="title"><?php echo $nome[$i];?></a>
+            <a href="" class="title btn-d"><?php echo $nome[$i];?></a>
             <p class="blog-description"><?php echo $desc[$i];?></p>
             <div class="icons">
                 <p><i class="fas fa-calendar"></i> <?php echo $data[$i];?></p>
@@ -78,6 +78,8 @@ $iniciado;
     if($result=mysqli_query($conn, $sql)){
         $rowcount=mysqli_num_rows($result);
         if($rowcount == '0'){
+            echo $semContent;
+        }else if($rowcount >= '0' & $status[$i] == 'inativo'){
             echo $semContent;
         }
     }} ?>

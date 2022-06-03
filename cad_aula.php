@@ -20,20 +20,17 @@ if(isset($_POST['submit'])){
     if($cat == 'Aula1'){
         $cat = 'Aula 1';
         $referencia = 'ass_aula_1';
-    }
-    if($cat == 'Aula2'){
+    }elseif($cat == 'Aula2'){
         $cat = 'Aula 2';
         $referencia = 'ass_aula_2';
-    }
-    if($cat == 'Aula3'){
+    }elseif($cat == 'Aula3'){
         $cat = 'Aula 3';
         $referencia = 'ass_aula_3';
-    }
-    if($cat == 'Aula4'){
+    }elseif($cat == 'Aula4'){
         $cat = 'Aula 4';
         $referencia = 'ass_aula_4';
-    }
-    if($cat == '2019' || '2020' || '2021'){
+    }elseif($cat === '2019' || '2020' || '2021'){
+        $cat = $cat;
         $referencia = 'ed_anterior';
     }
     
@@ -41,7 +38,7 @@ if(isset($_POST['submit'])){
 
     $result = mysqli_query($conn, $select);
 
-    if(mysqli_num_rows($result) > 0){
+    if(mysqli_num_rows($result) >= 0){
         $insert = "INSERT INTO aulas(nome_aula, categoria, image, descrição, professor, video, nota, referencia) VALUES('$nome_aula', '$cat', '$img', '$desc', '$prof', '$vid', '$nota', '$referencia')";
         mysqli_query($conn, $insert);
         $correct[] = 'Aula cadastrada!';

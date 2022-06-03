@@ -118,7 +118,7 @@ $iniciado;
                 <h3><?php echo $nome[$i]; ?></h3>
                 <p><?php echo $desc[$i]; ?></p>
                 <p>Professor: <?php echo $prof[$i]; ?></p>
-                <span class="btn btn-d">Curso bloqueado</span>
+                <span class="btn btn-d">Aula bloqueada</span>
                 <p><small style="text-transform: none;">A aula será liberada conforme o cronograma</small></p>
             </div>
         </div>

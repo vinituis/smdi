@@ -83,7 +83,6 @@ if(!isset($_SESSION['admin_name'])){
             <td>nome</td>
             <td>descrição</td>
             <td>status</td>
-            <td>ações</td>
         </tr>
         <?php 
             $sql = 'SELECT * FROM professores';
@@ -107,13 +106,6 @@ if(!isset($_SESSION['admin_name'])){
             <td><?php echo $nome[$i]; ?></td>
             <td><?php echo $desc[$i]; ?></td>
             <td><?php echo $status[$i]; ?></td>
-            <?php
-                if($status[$i] == 'ativo'){
-                    echo '<td><a href="desativar_prof?id='.$id[$i].'">Desativar</a></td>';
-                }elseif($status[$i] == 'inativo'){
-                    echo '<td><a href="ativar_prof?id='.$id[$i].'">Ativar</a></td>';
-                }
-            ?>
         </tr>
 
         <?php }} ?>
@@ -198,7 +190,6 @@ if(!isset($_SESSION['admin_name'])){
             <td>data</td>
             <td>status</td>
             <td>material</td>
-            <td>ações</td>
         </tr>
         <?php 
             $sql = 'SELECT * FROM materiais';
@@ -228,15 +219,6 @@ if(!isset($_SESSION['admin_name'])){
             <td><?php echo $data[$i]; ?></td>
             <td><?php echo $status[$i]; ?></td>
             <td><a href="<?php echo $url[$i]; ?>">Acesse</a></td>
-            <?php
-                if($status[$i] == 'ativo'){
-                    echo '<td><a href="./desativar_material?id='.$id[$i].'">Desativar</a><a style="margin-left: 1rem;" href="./bloqueio_material?id='.$id[$i].'">Bloquear</a></td>';
-                }elseif($status[$i] == 'inativo'){
-                    echo '<td><a href="./ativar_material?id='.$id[$i].'">Ativar</a><a style="margin-left: 1rem;" href="./bloqueio_material?id='.$id[$i].'">Ativar bloqueado</a></td>';
-                }elseif($status[$i] == 'block'){
-                    echo '<td><a href="./ativar_material?id='.$id[$i].'">Ativar</a><a style="margin-left: 1rem;" href="./desativar_material?id='.$id[$i].'">Desativar</a></td>';
-                }
-            ?>
         </tr>
 
         <?php }} ?>

@@ -20,7 +20,7 @@ if(isset($_POST['submit'])){
 
     $result = mysqli_query($conn, $select);
 
-    if(mysqli_num_rows($result) > 0){
+    if(mysqli_num_rows($result) >= 0){
         $insert = "INSERT INTO materiais(nome, img, descrição, data, url) VALUES('$nome_material', '$image', '$desc', '$data', '$url')";
         mysqli_query($conn, $insert);
         $correct[] = 'Material cadastrado!';

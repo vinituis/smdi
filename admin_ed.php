@@ -81,7 +81,7 @@ if(!isset($_SESSION['admin_name'])){
                 }elseif($status[$i] == 'inativo'){
                     echo '<td width="12%" colspan="2"><a href="./ativar_aula?id='.$id[$i].'"><i class="fas fa-play"></i> Ativar</a></td>';
                 }
-            }
+            }elseif($cat[$i] !== '2019' || '2020' || '2021'){}
                 ?>
               
         </tr>

@@ -14,11 +14,11 @@ if(isset($_POST['submit'])){
     $image = $_POST['image'];
     $desc = $_POST['descricao'];
     
-    $select = " SELECT * FROM professores ";
+    $select = " SELECT * FROM professores";
 
     $result = mysqli_query($conn, $select);
 
-    if(mysqli_num_rows($result) > 0){
+    if(mysqli_num_rows($result) >= 0){
         $insert = "INSERT INTO professores(nome, img, descrição) VALUES('$nome_material', '$image', '$desc')";
         mysqli_query($conn, $insert);
         $correct[] = 'Professor cadastrado!';
@@ -50,9 +50,9 @@ if(isset($_POST['submit'])){
      };
 ?>
 
-<section class='courses' id='cadAulas'>
+<section class='courses' id='cadProf'>
     <div class='heading'>
-        <h3>Cadastrar Material</h3>
+        <h3>Cadastrar Professor</h3>
     </div>
 
     <div>

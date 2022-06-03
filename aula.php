@@ -11,7 +11,9 @@ $aula = $_GET['aula'];
 $sql = mysqli_query($conn, "SELECT * FROM aulas WHERE id = '$id_page'");
 $sql2 = mysqli_query($conn, "SELECT * FROM user");
 
-$id_user = $_SESSION['user_id'];
+if(isset($_SESSION['user_id'])){
+    $id_user = $_SESSION['user_id'];
+}
         
 if(isset($_COOKIE['aula'.$id_page.''])){
     $cookie = $_COOKIE['aula'.$id_page.''];
@@ -47,11 +49,14 @@ if(isset($_COOKIE['aula'.$id_page.''])){
                     <h3>$usu->nome_aula</h3>
                     <p>Professor: $usu->professor</p>
                 </div>
-                $usu->video
+                <div class='iframe'>
+                    $usu->video
+                </div>
             </section>";
         }
          
         if(isset($cookie)){
+            if(isset($_SESSION['user_id'])){
             if($cookie == 's'){
                 if($aula == 'ass_aula_1'){
                     $sqlup = "UPDATE user SET ass_aula_1 = 's' WHERE id = '$id_user'";
@@ -81,7 +86,7 @@ if(isset($_COOKIE['aula'.$id_page.''])){
                     } else {
                         $sucesso = "Houve um erro: " . mysqli_error($conn);
                     }
-                }
+                }}
                 // echo $sucesso;
                 mysqli_close($conn);
             }
