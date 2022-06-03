@@ -74,7 +74,13 @@ $iniciado;
                 <a class="btn-d">Acessar</a>
             </div>
         </div>
-    <?php }}} ?>
+    <?php }}
+    if($result=mysqli_query($conn, $sql)){
+        $rowcount=mysqli_num_rows($result);
+        if($rowcount == '0'){
+            echo $semContent;
+        }
+    }} ?>
 
     </div>
     

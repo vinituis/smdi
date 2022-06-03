@@ -65,8 +65,12 @@ $iniciado;
                 }
             }
         }
-    }
-    ?>
+        if($result=mysqli_query($conn, $sql)){
+            $rowcount=mysqli_num_rows($result);
+            if($rowcount == '0'){
+                echo $semContent;
+            }
+        }} ?>
 
 </section>
 <section class="courses" id="ed2020">
@@ -109,7 +113,13 @@ $iniciado;
             </div>
         </div>
 
-        <?php }}}} ?>
+        <?php }}}
+        if($result=mysqli_query($conn, $sql)){
+            $rowcount=mysqli_num_rows($result);
+            if($rowcount == '0'){
+                echo $semContent;
+            }
+        }} ?>
     </div>
 </section>
 <section class="courses" id="ed2021">
@@ -152,7 +162,13 @@ $iniciado;
             </div>
         </div>
 
-        <?php }}}} ?>
+        <?php }}}
+    if($result=mysqli_query($conn, $sql)){
+        $rowcount=mysqli_num_rows($result);
+        if($rowcount == '0'){
+            echo $semContent;
+        }
+    }} ?>
     </div>
 </section>
 </body>

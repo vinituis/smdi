@@ -51,7 +51,13 @@ $iniciado;
             <h3><?php echo $nome[$i]; ?></h3>
             <p><?php echo $desc[$i]; ?></p>
         </div>
-    <?php }}} ?>
+    <?php }}
+    if($result=mysqli_query($conn, $sql)){
+        $rowcount=mysqli_num_rows($result);
+        if($rowcount == '0'){
+            echo $semContent;
+        }
+    }} ?>
 
         
     </div>
