@@ -14,7 +14,9 @@ $cssGlobal = '<link rel="stylesheet" href="css/style.css">';
     
 $jsGlobal = '<script src="js/script.js" defer></script>';
 
-$headLinks = $fontawesome . $cssGlobal . $jsGlobal;
+$noIndex = '<meta name="robots" content="noindex">';
+
+$headLinks = $fontawesome . $cssGlobal . $jsGlobal . $noIndex;
 
 //Globais
 
