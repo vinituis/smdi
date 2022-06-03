@@ -28,9 +28,16 @@ $name = 'SMDI';
 
 //user
 
+$semContent = '
+    <div class="heading">
+        <br><br>
+        <span>Ainda estamos trabalhando nesses conteúdos...</span>
+    </div>';
+
 $nav = '
 <nav class="navbar">
     <a href="./"> <i class="fas fa-angle-right"></i> Página Inicial </a>
+    <a href="./ed"> <i class="fas fa-angle-right"></i> Edições Anteriores </a>
     <a href="./aulas"> <i class="fas fa-angle-right"></i> Aulas </a>
     <a href="./materiais"> <i class="fas fa-angle-right"></i> Materiais </a>
     <a href="./professores"> <i class="fas fa-angle-right"></i> Professores </a>
@@ -74,7 +81,8 @@ $navAdm = '
     <a href="./admin_aula"> <i class="fas fa-angle-right"></i> Aulas </a>
     <a href="./admin_prof"> <i class="fas fa-angle-right"></i> Professores </a>
     <a href="./admin_user"> <i class="fas fa-angle-right"></i> Usuários </a>
-    <a href="./admin_material"> <i class="fas fa-angle-right"></i> Materiais </a>'
+    <a href="./admin_material"> <i class="fas fa-angle-right"></i> Materiais </a>
+    <a href="./admin_ed"> <i class="fas fa-angle-right"></i> Edições anteriores </a>'
     .$sair.'
 </nav>';
 

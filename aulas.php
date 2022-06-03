@@ -55,6 +55,7 @@ $iniciado;
             $img[$i] = $reg['image'];
             $ref[$i] = $reg['referencia'];
             if($status[$i] == 'ativo'){
+            if($ref[$i] == 'ed_anterior'){}else{
     ?>
 
         <div class="box">
@@ -105,7 +106,7 @@ $iniciado;
                 <a href="./aula?id=<?php echo $id[$i]; ?>&aula=<?php echo $ref[$i]; ?>" class="btn">Acessar curso</a>
             </div>
         </div>
-<?php }elseif($status[$i] == 'block'){
+<?php }}elseif($status[$i] == 'block'){
     ?>
     <div class="box">
             <div class="image">
@@ -121,7 +122,13 @@ $iniciado;
                 <p><small style="text-transform: none;">A aula será liberada conforme o cronograma</small></p>
             </div>
         </div>
-    <?php }}} ?>
+    <?php }}
+    if($result=mysqli_query($conn, $sql)){
+        $rowcount=mysqli_num_rows($result);
+        if($rowcount == '0'){
+            echo $semContent;
+        }
+    }} ?>
 
     </div>
 

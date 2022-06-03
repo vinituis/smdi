@@ -33,6 +33,9 @@ if(isset($_POST['submit'])){
         $cat = 'Aula 4';
         $referencia = 'ass_aula_4';
     }
+    if($cat == '2019' || '2020' || '2021'){
+        $referencia = 'ed_anterior';
+    }
     
     $select = " SELECT * FROM user ";
 
@@ -86,6 +89,9 @@ if(isset($_POST['submit'])){
                 <option value="Aula2">Aula 2</option>
                 <option value="Aula3">Aula 3</option>
                 <option value="Aula4">Aula 4</option>
+                <option value="2019">Edição 2019</option>
+                <option value="2020">Edição 2020</option>
+                <option value="2021">Edição 2021</option>
             </select>
             <label for="image">Link da imagem</label>
             <input required type="text" name="image" id="image" placeholder="Ex: http://www.example.com/images/...jpg">

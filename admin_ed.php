@@ -30,7 +30,7 @@ if(!isset($_SESSION['admin_name'])){
 
 <section class='courses' id='aulas'>
     <div class='heading'>
-        <h3>Aulas cadastradas</h3>
+        <h3>Aulas de Edições Anteriores</h3>
     </div>
     <table>
         <tr>
@@ -64,7 +64,7 @@ if(!isset($_SESSION['admin_name'])){
                     $nota[$i] = $reg['nota'];
                     $status[$i] = $reg['status'];
                     $ref[$i] = $reg['referencia'];
-                    if($ref[$i] !== 'ed_anterior'){
+                    if($ref[$i] == 'ed_anterior'){
         ?>
 
         <tr>
@@ -77,14 +77,9 @@ if(!isset($_SESSION['admin_name'])){
             <td><?php echo $status[$i]; ?></td>
             <?php
                 if($status[$i] == 'ativo'){
-                    echo '<td width="12%"><a href="./desativar_aula?id='.$id[$i].'"><i class="fas fa-pause"></i> Desativar</a></td>
-                    <td width="12%"><a href="./bloqueio_aula?id='.$id[$i].'"><i class="fas fa-lock"></i> Bloquear</a></td>';
+                    echo '<td width="12%" colspan="2"><a href="./desativar_aula?id='.$id[$i].'"><i class="fas fa-pause"></i> Desativar</a></td>';
                 }elseif($status[$i] == 'inativo'){
-                    echo '<td width="12%"><a href="./ativar_aula?id='.$id[$i].'"><i class="fas fa-play"></i> Ativar</a></td>
-                    <td width="12%"><a href="./bloqueio_aula?id='.$id[$i].'"><i class="fas fa-lock"></i> Ativar bloqueado</a></td>';
-                }elseif($status[$i] == 'block'){
-                    echo '<td width="12%"><a href="./ativar_aula?id='.$id[$i].'"><i class="fas fa-play"></i> Ativar</a></td>
-                    <td width="12%"><a href="./desativar_aula?id='.$id[$i].'"><i class="fas fa-pause"></i> Desativar</a></td>';
+                    echo '<td width="12%" colspan="2"><a href="./ativar_aula?id='.$id[$i].'"><i class="fas fa-play"></i> Ativar</a></td>';
                 }
             }
                 ?>
@@ -95,7 +90,6 @@ if(!isset($_SESSION['admin_name'])){
     </table>
 
     <a href="./cad_aula" class="btn">Cadastrar aula</a>
-    <a href="./admin_ed" class="btn">Gerenciar Edições Anteriores</a>
 </section>
 </body>
 </html>
