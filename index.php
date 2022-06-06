@@ -63,6 +63,7 @@ if(isset($_POST['submit'])){
     <?php
         echo $loginCss; 
         echo $fontawesome;
+        echo $GA4;
     ?>
 </head>
 <body>

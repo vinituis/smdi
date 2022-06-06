@@ -4,6 +4,16 @@ $iniciado = session_start();
 
 //link
 
+$GA4 = '<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9DC39DW0VW"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag("js", new Date());
+
+  gtag("config", "G-9DC39DW0VW");
+</script>';
+
 $fontawesome = '<script src="https://kit.fontawesome.com/77f6bd1ed5.js" crossorigin="anonymous" defer></script>';
 
 $loginCss = '<link rel="stylesheet" href="css/login.css">';
@@ -16,7 +26,7 @@ $jsGlobal = '<script src="js/script.js" defer></script>';
 
 $noIndex = '<meta name="robots" content="noindex">';
 
-$headLinks = $fontawesome . $cssGlobal . $jsGlobal . $noIndex;
+$headLinks = $fontawesome . $cssGlobal . $jsGlobal . $noIndex . $GA4;
 
 //Globais
 

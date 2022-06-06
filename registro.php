@@ -42,6 +42,7 @@ if(isset($_POST['submit'])){
     <title>Acesso</title>
     <?php
         echo $registroCss;
+        echo $GA4;
     ?>
 </head>
 <body>
