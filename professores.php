@@ -64,5 +64,7 @@ $iniciado;
 
 </section>
 
+<?php mysqli_close($conn); ?>
+
 </body>
 </html>

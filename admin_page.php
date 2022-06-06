@@ -226,5 +226,8 @@ if(!isset($_SESSION['admin_name'])){
 
     <a href="./admin_material" class="btn">Gerenciar materiais</a>
 </section>
+
+<?php mysqli_close($conn); ?>
+
 </body>
 </html>

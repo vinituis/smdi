@@ -91,5 +91,8 @@ if(!isset($_SESSION['admin_name'])){
 
     <a href="./cad_aula" class="btn">Cadastrar aula</a>
 </section>
+
+<?php mysqli_close($conn); ?>
+
 </body>
 </html>

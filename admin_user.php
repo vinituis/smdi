@@ -98,5 +98,8 @@ if(!isset($_SESSION['admin_name'])){
     </table>
 
 </section>
+
+<?php mysqli_close($conn); ?>
+
 </body>
 </html>

@@ -128,5 +128,8 @@ if(isset($_POST['submit'])){
     </div>
 
 </section>
+
+<?php mysqli_close($conn); ?>
+
 </body>
 </html>

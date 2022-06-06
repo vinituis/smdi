@@ -73,5 +73,8 @@ if(!isset($_SESSION['admin_name'])){
     </table>
     <a href="./cad_prof" class="btn">Cadastrar Professor</a>
 </section>
+
+<?php mysqli_close($conn); ?>
+
 </body>
 </html>

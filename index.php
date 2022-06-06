@@ -99,5 +99,8 @@ if(isset($_POST['submit'])){
             formL.style.transform = 'rotateX(0deg) rotateY(0deg)';
         });
     </script>
+
+<?php mysqli_close($conn); ?>
+
 </body>
 </html>

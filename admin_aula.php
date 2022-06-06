@@ -97,5 +97,8 @@ if(!isset($_SESSION['admin_name'])){
     <a href="./cad_aula" class="btn">Cadastrar aula</a>
     <a href="./admin_ed" class="btn">Gerenciar Edições Anteriores</a>
 </section>
+
+<?php mysqli_close($conn); ?>
+
 </body>
 </html>
