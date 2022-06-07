@@ -26,7 +26,9 @@ $jsGlobal = '<script src="js/script.js" defer></script>';
 
 $noIndex = '<meta name="robots" content="noindex">';
 
-$headLinks = $fontawesome . $cssGlobal . $jsGlobal . $noIndex . $GA4;
+$favicon = '<link rel="icon" type="image/x-icon" href="./images/favicon.png">';
+
+$headLinks = $fontawesome . $cssGlobal . $jsGlobal . $favicon . $noIndex . $GA4;
 
 //Globais
 
@@ -40,7 +42,12 @@ $autor = '';
 
 $credit = '<p class="credit"> Criado por <span>' . $autor . '</span> | Todos os direitos reservados!</p>';
 
+$linkLogo = './';
+
+$iconName = './images/favicon.png';
+
 $name = 'SMDI';
+
 
 //user
 
@@ -50,11 +57,13 @@ $semContent = '
         <span>Ainda estamos trabalhando nesses conteúdos...</span>
     </div>';
 
+// para ativar as aulas, retorne o 'href="./aulas"' na tag de 'a', retirando a classe 'btn-d' e troque a classe 'fa-lock' por 'fa-angle-right' na tag 'i' //
+
 $nav = '
 <nav class="navbar">
     <a href="./"> <i class="fas fa-angle-right"></i> Página Inicial </a>
     <a href="./ed"> <i class="fas fa-angle-right"></i> Edições Anteriores </a>
-    <a href="./aulas"> <i class="fas fa-angle-right"></i> Aulas </a>
+    <a class="btn-d"> <i class="fas fa-lock"></i> Aulas </a>
     <a href="./materiais"> <i class="fas fa-angle-right"></i> Materiais </a>
     <a href="./professores"> <i class="fas fa-angle-right"></i> Professores </a>
     '.$sair.'
@@ -76,7 +85,7 @@ $redes = '
 $header = '
 <div id="menu-btn" class="fas fa-bars"></div>
 <header class="header">
-<a href="#" class="logo"> <i class="fas fa-graduation-cap"></i> '.$name.' </a>
+<a href="'.$linkLogo.'" class="logo"> <img src="'.$iconName.'"> '.$name.' </a>
 '. $nav . $redes . $credit .'
 
 </header>';
@@ -84,7 +93,7 @@ $header = '
 $headerAula = '
 <div id="menu-btn" class="fas fa-bars"></div>
 <header class="header">
-<a href="#" class="logo"> <i class="fas fa-graduation-cap"></i> '.$name.' </a>
+<a href="'.$linkLogo.'" class="logo"> <img src="'.$iconName.'"> '.$name.' </a>
 '. $navAula . $redes . $credit .'
 </header>';
 
@@ -105,7 +114,7 @@ $navAdm = '
 $headerAdm = '
 <div id="menu-btn" class="fas fa-bars"></div>
 <header class="header">
-<a href="#" class="logo"> <i class="fas fa-graduation-cap"></i> '.$name.' </a>
+<a href="'.$linkLogo.'" class="logo"> <img src="'.$iconName.'"> '.$name.' </a>
 '. $navAdm . $credit .'
 
 </header>';

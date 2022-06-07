@@ -49,7 +49,7 @@ if(isset($_COOKIE['aula'.$id_page.''])){
                     <h3>$usu->nome_aula</h3>
                     <p>Professor: $usu->professor</p>
                 </div>
-                <div class='iframe'>
+                <div class='iframe-aula'>
                     $usu->video
                 </div>
             </section>";
