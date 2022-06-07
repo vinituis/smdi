@@ -54,7 +54,7 @@ $iniciado;
     <div class="box">
         <div class="image">
             <h3><?php echo $nome[$i]; ?></h3>
-            <p>Professor: <?php echo $prof[$i]; ?></p>
+            <p class="prof-name">Professor: <?php echo $prof[$i]; ?></p>
             <div class="iframe">
                 <?php echo $video[$i]; ?>
             </div>
@@ -106,7 +106,7 @@ $iniciado;
         <div class="box">
             <div class="image">
                 <h3><?php echo $nome[$i]; ?></h3>
-                <p>Professor: <?php echo $prof[$i]; ?></p>
+                <p class="prof-name">Professor: <?php echo $prof[$i]; ?></p>
                 <div class="iframe">
                     <?php echo $video[$i]; ?>
                 </div>
@@ -155,7 +155,7 @@ $iniciado;
         <div class="box">
             <div class="image">
                 <h3><?php echo $nome[$i]; ?></h3>
-                <p>Professor: <?php echo $prof[$i]; ?></p>
+                <p class="prof-name">Professor: <?php echo $prof[$i]; ?></p>
                 <div class="iframe">
                     <?php echo $video[$i]; ?>
                 </div>

@@ -726,6 +726,11 @@ iframe {
   height: 215px;
 }
 
+.prof-name{
+  font-size: 1.5rem;
+  padding: 0 0 1rem 0;
+}
+
 @media (max-width: 1200px) {
   html {
     font-size: 55%;
