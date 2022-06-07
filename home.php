@@ -34,7 +34,7 @@ $iniciado;
     </div>
 
 </section>
-
+<!--
 <section class="about" id="about">
 
     <div class="image">
@@ -167,6 +167,6 @@ $iniciado;
     </div>
 
 </section>
-
+-->
 </body>
 </html>

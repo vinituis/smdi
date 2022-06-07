@@ -59,7 +59,8 @@ if(isset($_POST['submit'])){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Acesso</title>
+    <title>SMDI | Login</title>
+    <meta name="description" content="<?php echo $descLogin; ?>">
     <?php
         echo $loginCss; 
         echo $fontawesome;
@@ -90,8 +91,8 @@ if(isset($_POST['submit'])){
         var formL = document.getElementById('loginSMDI');
 
         formL.addEventListener('mousemove', (e) =>{
-            var x = (window.innerWidth / 2 - e.pageX) / 16;
-            var y = (window.innerHeight / 2 - e.pageY) / 16;
+            var x = (window.innerWidth / 2 - e.pageX) / 20;
+            var y = (window.innerHeight / 2 - e.pageY) / 20;
 
             formL.style.transform = 'rotateX(' + x + 'deg) rotateY(' + y + 'deg)';
         });

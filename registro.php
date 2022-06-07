@@ -39,7 +39,8 @@ if(isset($_POST['submit'])){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Acesso</title>
+    <title>SMDI | Registro</title>
+    <meta name="description" content="<?php echo $descRegistro; ?>">
     <?php
         echo $registroCss;
         echo $GA4;
@@ -77,8 +78,8 @@ if(isset($_POST['submit'])){
         var formR = document.getElementById('registroSMDI');
 
         formR.addEventListener('mousemove', (e) =>{
-            var x = (window.innerWidth / 2 - e.pageX) / 24;
-            var y = (window.innerHeight / 2 - e.pageY) / 24;
+            var x = (window.innerWidth / 2 - e.pageX) / 30;
+            var y = (window.innerHeight / 2 - e.pageY) / 30;
 
             formR.style.transform = 'rotateX(' + x + 'deg) rotateY(' + y + 'deg)';
         });

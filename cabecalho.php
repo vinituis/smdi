@@ -30,6 +30,10 @@ $headLinks = $fontawesome . $cssGlobal . $jsGlobal . $noIndex . $GA4;
 
 //Globais
 
+$descLogin = ' ';
+
+$descRegistro = ' ';
+
 $sair = '<br><a href="./sair"> <i class="fas fa-angle-right"></i> Sair </a>';
 
 $autor = '';
@@ -63,10 +67,10 @@ $navAula = '
 
 $redes = '
 <div class="share">
-    <a href="#" class="fab fa-facebook-f"></a>
-    <a href="#" class="fab fa-twitter"></a>
-    <a href="#" class="fab fa-instagram"></a>
-    <a href="#" class="fab fa-linkedin"></a>
+    <a href="https://www.facebook.com/ABIMAQoficial" class="fab fa-facebook-f"></a>
+    <a href="https://instagram.com/abimaq_oficial" class="fab fa-instagram"></a>
+    <a href="https://www.youtube.com/tvabimaq" class="fab fa-youtube"></a>
+    <a href="https://www.linkedin.com/company/abimaqoficial/" class="fab fa-linkedin"></a>
 </div>';
 
 $header = '

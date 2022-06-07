@@ -66,13 +66,13 @@ body {
 .form-container form input[type="submit"] {
     width: 90%;
     cursor: pointer;
-    background: linear-gradient(90deg, deeppink, blueviolet);
+    background: linear-gradient(90deg, rgb(104, 28, 134), rgb(88, 52, 255));
     margin-top: 30px;
     border-radius: 50px;
 }
 
 .form-container form input[type="submit"]:hover {
-    letter-spacing: 4px;
+    background: linear-gradient(120deg, rgb(88, 52, 255), rgb(104, 28, 134));
 }
 
 .form-container form a, p {
