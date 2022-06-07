@@ -716,6 +716,16 @@ section:nth-child(even) {
   text-decoration: underline;
 }
 
+.iframe {
+  width: 100%;
+  height: auto;
+}
+
+iframe {
+  width: 100%;
+  height: 215px;
+}
+
 @media (max-width: 1200px) {
   html {
     font-size: 55%;
@@ -752,13 +762,3 @@ section:nth-child(even) {
   }
 }
 /*# sourceMappingURL=style.css.map */
-
-.iframe {
-  width: 100%;
-  height: 50rem;
-}
-
-iframe {
-  width: 100%;
-  height: 100%;
-}
