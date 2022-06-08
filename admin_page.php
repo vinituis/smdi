@@ -40,7 +40,7 @@ $iniciado;
             <td>nota</td>
         </tr>
         <?php 
-            $sql = 'SELECT * FROM aulas';
+            $sql = 'SELECT * FROM aulas ORDER BY id DESC LIMIT 5';
             if($res=mysqli_query($conn, $sql)){
                 $id = array();
                 $nome = array();
@@ -85,7 +85,7 @@ $iniciado;
             <td>status</td>
         </tr>
         <?php 
-            $sql = 'SELECT * FROM professores';
+            $sql = 'SELECT * FROM professores ORDER BY id DESC LIMIT 5';
             if($res=mysqli_query($conn, $sql)){
                 $id = array();
                 $nome = array();
@@ -133,7 +133,7 @@ $iniciado;
             <td>4</td>
         </tr>
         <?php 
-            $sql = 'SELECT * FROM user';
+            $sql = 'SELECT * FROM user ORDER BY id DESC LIMIT 5';
             if($res=mysqli_query($conn, $sql)){
                 $id = array();
                 $nome = array();
@@ -163,6 +163,8 @@ $iniciado;
                     echo 'usuário ativo';
                 }elseif($user_type[$i] == 'block'){
                     echo 'usuário bloqueado';
+                }elseif($user_type[$i] == 'pre'){
+                    echo 'presencial';
                 } ?>
             </td>
             <td><?php echo $aula1[$i]; ?></td>
@@ -192,7 +194,7 @@ $iniciado;
             <td>material</td>
         </tr>
         <?php 
-            $sql = 'SELECT * FROM materiais';
+            $sql = 'SELECT * FROM materiais ORDER BY id DESC LIMIT 5';
             if($res=mysqli_query($conn, $sql)){
                 $id = array();
                 $nome = array();
