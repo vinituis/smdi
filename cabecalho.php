@@ -48,7 +48,6 @@ $iconName = './images/favicon.png';
 
 $name = 'SMDI';
 
-
 //user
 
 $semContent = '
@@ -61,9 +60,10 @@ $semContent = '
 
 $nav = '
 <nav class="navbar">
+    <a href="./ao_vivo"> <i class="fas fa-lock"></i> Transmissão </a>
+    <a class="btn-d"> <i class="fas fa-lock"></i> Aulas </a> <br>
     <a href="./home"> <i class="fas fa-angle-right"></i> Página Inicial </a>
     <a href="./ed"> <i class="fas fa-angle-right"></i> Edições Anteriores </a>
-    <a class="btn-d"> <i class="fas fa-lock"></i> Aulas </a>
     <a href="./materiais"> <i class="fas fa-angle-right"></i> Materiais </a>
     <a href="./professores"> <i class="fas fa-angle-right"></i> Professores </a>
     '.$sair.'
@@ -97,6 +97,16 @@ $headerAula = '
 '. $navAula . $redes . $credit .'
 </header>';
 
+$AoVivo = $semContent;
+
+$iframeAoVivo = '<section class="courses" id="aula">
+<div class="heading">
+    <h3>Transmissão ao vivo</h3>
+</div>
+<div class="iframe-aula">
+    '.$AoVivo.'
+</div>
+</section>';
 
 //adm
 

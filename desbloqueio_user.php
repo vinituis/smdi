@@ -2,6 +2,10 @@
 
 include 'config.php';
 
+if(!isset($_SESSION['admin_name'])){
+    header('location:./');
+}
+
 $id_page = $_GET['id'];
 
 $sql = "UPDATE user SET user_type = 'user' WHERE id = '$id_page'";

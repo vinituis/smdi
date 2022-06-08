@@ -3,11 +3,11 @@
 include 'config.php';
 include 'cabecalho.php';
 
-$iniciado;
-
 if(!isset($_SESSION['admin_name'])){
-   header('location:./');
+    header('location:./');
 }
+
+$iniciado;
 
 ?>
 
