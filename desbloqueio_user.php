@@ -1,10 +1,11 @@
 <?php
 
 include 'config.php';
+include 'cabecalho.php';
 
 if(!isset($_SESSION['admin_name'])){
     header('location:./');
-}
+}else{
 
 $id_page = $_GET['id'];
 
@@ -27,15 +28,23 @@ mysqli_close($conn);
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo $sucesso?></title>
-    <link rel="stylesheet" href="./css/global.css">
-    <link rel="stylesheet" href="./css/erro.css">
+    
+    <?php echo $headAdm; ?>
+
 </head>
 <body>
 
-<div class="content">
-    <h1><?php echo $sucesso?></h1>
-    <a href="./admin_user"><button class="btn-p">Retornar para o site</button></a>
-</div>
+<?php 
+    echo $headerAdm;
+?>
+
+<section>
+    <div class="heading">
+        <h3><p><?php echo $sucesso?></p></h3><br>
+        <a href="./admin_user"><button class="btn">Retornar para o site</button></a>
+    </div>
+</section>
     
 </body>
+<?php } ?>
 </html>

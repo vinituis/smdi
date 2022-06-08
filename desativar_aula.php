@@ -5,7 +5,7 @@ include 'cabecalho.php';
 
 if(!isset($_SESSION['admin_name'])){
     header('location:./');
-}
+}else{
 
 $iniciado;
 
@@ -48,4 +48,5 @@ mysqli_close($conn);
 </div>
     
 </body>
+<?php } ?>
 </html>

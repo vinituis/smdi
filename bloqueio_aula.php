@@ -5,7 +5,7 @@ include 'cabecalho.php';
 
 if(!isset($_SESSION['admin_name'])){
     header('location:./');
-}
+}else{
 
 $iniciado;
 
@@ -46,7 +46,6 @@ mysqli_close($conn);
         <a href="./admin_aula"><button class="btn">Voltar</button></a>
     </div>
 </section>
-
-    
 </body>
+<?php } ?>
 </html>
