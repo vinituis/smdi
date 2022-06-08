@@ -18,7 +18,7 @@ if(isset($_SESSION['user_name'])){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nome da Aula</title>
+    <title>SMDI | Transmissão ao vivo</title>
     <?php echo $headLinks; ?>
 </head>
 <body>

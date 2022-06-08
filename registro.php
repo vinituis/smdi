@@ -44,6 +44,7 @@ if(isset($_POST['submit'])){
     <?php
         echo $registroCss;
         echo $GA4;
+        echo $favicon;
     ?>
 </head>
 <body>
