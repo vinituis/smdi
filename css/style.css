@@ -737,10 +737,66 @@ iframe {
   height: 50rem;
 }
 
-
 .prof-name{
   font-size: 1.5rem;
   padding: 0 0 1rem 0;
+}
+
+.prof {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.prof img {
+  height: 25rem;
+  width: 25rem;
+  border-radius: 50%;
+  margin: 1rem;
+  padding: 2rem;
+}
+
+.prof h3 {
+  font-size: 2rem;
+  color: #290369;
+}
+
+.prof span {
+  font-size: 1.3rem;
+  padding: 0.3rem;
+  color: #681c86;
+}
+
+.prof p {
+  font-size: 1.3rem;
+  margin: 2rem;
+  padding: 0 10rem;
+}
+
+.prof .share {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.prof .share a {
+  height: 4.5rem;
+  width: 4.5rem;
+  line-height: 4.5rem;
+  font-size: 1.8rem;
+  background: #fff;
+  color: #290369;
+  margin: 0 .1rem;
+  border: 1px solid #290369;
+  border-radius: 50px;
+}
+
+.prof .share a:hover {
+  color: #fff;
+  background: #290369;
 }
 
 @media (max-width: 1200px) {

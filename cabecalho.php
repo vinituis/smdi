@@ -74,6 +74,11 @@ $navAula = '
     <a href="./aulas"> <i class="fas fa-angle-left"></i> Voltar para Aulas </a>
 </nav>';
 
+$navProf = '
+<nav class="navbar">
+    <a href="./professores"> <i class="fas fa-angle-left"></i> Voltar </a>
+</nav>';
+
 $redes = '
 <div class="share">
     <a href="https://www.facebook.com/ABIMAQoficial" class="fab fa-facebook-f"></a>
@@ -95,6 +100,13 @@ $headerAula = '
 <header class="header">
 <a href="'.$linkLogo.'" class="logo"> <img src="'.$iconName.'"> '.$name.' </a>
 '. $navAula . $redes . $credit .'
+</header>';
+
+$headerProf = '
+<div id="menu-btn" class="fas fa-bars"></div>
+<header class="header">
+<a href="'.$linkLogo.'" class="logo"> <img src="'.$iconName.'"> '.$name.' </a>
+'. $navProf . $redes . $credit .'
 </header>';
 
 $AoVivo = $semContent;

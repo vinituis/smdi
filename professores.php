@@ -43,21 +43,23 @@ $iniciado;
         $id = array();
         $nome = array();
         $img = array();
-        $desc = array();
+        $cargo = array();
         $status = array();
         $i = 0;
         while ($reg = mysqli_fetch_assoc($res)) {
             $id[$i] = $reg['id'];
             $nome[$i] = $reg['nome'];
             $img[$i] = $reg['img'];
-            $desc[$i] = $reg['descrição'];
+            $cargo[$i] = $reg['cargo'];
             $status[$i] = $reg['status'];
             if($status[$i] == 'ativo'){
     ?>
         <div class="box">
-            <img src="<?php echo $img[$i]; ?>" alt="">
-            <h3><?php echo $nome[$i]; ?></h3>
-            <p><?php echo $desc[$i]; ?></p>
+            <a href="./professor?id=<?php echo $id[$i]; ?>">    
+                <img src="<?php echo $img[$i]; ?>" alt="">
+                <h3><?php echo $nome[$i]; ?></h3>
+            </a>
+            <p><?php echo $cargo[$i]; ?></p>
         </div>
     <?php }}
     if($result=mysqli_query($conn, $sql)){

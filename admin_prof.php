@@ -34,7 +34,7 @@ $iniciado;
         <tr>
             <td>id</td>
             <td>nome</td>
-            <td>descrição</td>
+            <td>cargo</td>
             <td>status</td>
             <td>ações</td>
         </tr>
@@ -44,21 +44,21 @@ $iniciado;
                 $id = array();
                 $nome = array();
                 $img = array();
-                $desc = array();
+                $cargo = array();
                 $status = array();
                 $i = 0;
                 while ($reg = mysqli_fetch_assoc($res)) {
                     $id[$i] = $reg['id'];
                     $nome[$i] = $reg['nome'];
                     $img[$i] = $reg['img'];
-                    $desc[$i] = $reg['descrição'];
+                    $cargo[$i] = $reg['cargo'];
                     $status[$i] = $reg['status'];
         ?>
 
         <tr>
             <td><?php echo $id[$i]; ?></td>
             <td><?php echo $nome[$i]; ?></td>
-            <td><?php echo $desc[$i]; ?></td>
+            <td><?php echo $cargo[$i]; ?></td>
             <td><?php echo $status[$i]; ?></td>
             <?php
                 if($status[$i] == 'ativo'){
