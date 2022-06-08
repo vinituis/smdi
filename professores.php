@@ -38,7 +38,7 @@ $iniciado;
 
     <div class="box-container">
     <?php
-    $sql = 'SELECT * FROM professores';
+    $sql = 'SELECT * FROM professores ORDER BY nome ASC';
     if($res=mysqli_query($conn, $sql)){
         $id = array();
         $nome = array();
