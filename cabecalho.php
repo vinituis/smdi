@@ -56,11 +56,11 @@ $semContent = '
         <span>Ainda estamos trabalhando nesses conteúdos...</span>
     </div>';
 
-// para ativar as aulas, retorne o 'href="./aulas"' na tag de 'a', retirando a classe 'btn-d' e troque a classe 'fa-lock' por 'fa-angle-right' na tag 'i' //
+// para ativar as AULAS e AO_VIVO, retorne o 'href="./aulas"' e 'href="./ao_vivo"' na tag de 'a', retirando a classe 'btn-d' e troque a classe 'fa-lock' por 'fa-angle-right' na tag 'i' //
 
 $nav = '
 <nav class="navbar">
-    <a href="./ao_vivo"> <i class="fas fa-lock"></i> Transmissão </a>
+    <a class="btn-d"> <i class="fas fa-lock"></i> Transmissão </a>
     <a class="btn-d"> <i class="fas fa-lock"></i> Aulas </a> <br>
     <a href="./home"> <i class="fas fa-angle-right"></i> Página Inicial </a>
     <a href="./ed"> <i class="fas fa-angle-right"></i> Edições Anteriores </a>
