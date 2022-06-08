@@ -61,7 +61,7 @@ $semContent = '
 
 $nav = '
 <nav class="navbar">
-    <a href="./"> <i class="fas fa-angle-right"></i> Página Inicial </a>
+    <a href="./home"> <i class="fas fa-angle-right"></i> Página Inicial </a>
     <a href="./ed"> <i class="fas fa-angle-right"></i> Edições Anteriores </a>
     <a class="btn-d"> <i class="fas fa-lock"></i> Aulas </a>
     <a href="./materiais"> <i class="fas fa-angle-right"></i> Materiais </a>
@@ -107,7 +107,8 @@ $navAdm = '
     <a href="./admin_prof"> <i class="fas fa-angle-right"></i> Professores </a>
     <a href="./admin_user"> <i class="fas fa-angle-right"></i> Usuários </a>
     <a href="./admin_material"> <i class="fas fa-angle-right"></i> Materiais </a>
-    <a href="./admin_ed"> <i class="fas fa-angle-right"></i> Edições anteriores </a>'
+    <a href="./admin_ed"> <i class="fas fa-angle-right"></i> Edições anteriores </a>
+    <br> <a href="./home"> <i class="fas fa-angle-right"></i> Vista do usuário </a>'
     .$sair.'
 </nav>';
 
