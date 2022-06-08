@@ -116,6 +116,7 @@ $navAdm = '
     <a href="./admin_aula"> <i class="fas fa-angle-right"></i> Aulas </a>
     <a href="./admin_prof"> <i class="fas fa-angle-right"></i> Professores </a>
     <a href="./admin_user"> <i class="fas fa-angle-right"></i> Usuários </a>
+    <a href="./admin_lista"> <i class="fas fa-angle-right"></i> Lista presencial </a>
     <a href="./admin_material"> <i class="fas fa-angle-right"></i> Materiais </a>
     <a href="./admin_ed"> <i class="fas fa-angle-right"></i> Edições anteriores </a>
     <br> <a href="./home"> <i class="fas fa-angle-right"></i> Vista do usuário </a>'

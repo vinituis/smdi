@@ -28,22 +28,14 @@ $iniciado;
 
 <section class='courses' id='usuarios'>
     <div class='heading'>
-        <h3>Gerenciar usuários</h3>
+        <h3>Lista dos inscritos presenciais</h3>
     </div>
     <table>
         <tr>
-            <td rowspan="2">id</td>
-            <td rowspan="2">nome</td>
-            <td rowspan="2">email</td>
-            <td rowspan="2">Acesso</td>
-            <td colspan="4">Aulas</td>
-            <td rowspan="2">Ação</td>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td>2</td>
-            <td>3</td>
-            <td>4</td>
+            <td>id</td>
+            <td>nome</td>
+            <td>email</td>
+            <td>Acesso</td>
         </tr>
         <?php 
             $sql = 'SELECT * FROM user';
@@ -63,7 +55,7 @@ $iniciado;
                     $aula2[$i] = $reg['ass_aula_2'];
                     $aula3[$i] = $reg['ass_aula_3'];
                     $aula4[$i] = $reg['ass_aula_4'];
-                    if($user_type[$i] !== 'pre'){
+                    if($user_type[$i] == 'pre'){
         ?>
 
         <tr>
@@ -71,31 +63,10 @@ $iniciado;
             <td><?php echo $nome[$i]; ?></td>
             <td><?php echo $email[$i]; ?></td>
             <td>
-                <?php if($user_type[$i] == 'admin'){
-                    echo 'administrador';
-                }elseif($user_type[$i] == 'user'){
-                    echo 'usuário ativo';
-                }elseif($user_type[$i] == 'block'){
-                    echo 'usuário bloqueado';
-                }elseif($user_type[$i] == 'pre'){
+                <?php if($user_type[$i] == 'pre'){
                     echo 'presencial';
                 } ?>
             </td>
-            <td><?php echo $aula1[$i]; ?></td>
-            <td><?php echo $aula2[$i]; ?></td>
-            <td><?php echo $aula3[$i]; ?></td>
-            <td><?php echo $aula4[$i]; ?></td>
-            <?php
-                if($user_type[$i] == 'block'){
-                    echo '<td><a href="./desbloqueio_user?id='.$id[$i].'">Liberar</a></td>';
-                }elseif($user_type[$i] == 'user'){
-                    echo '<td><a href="./bloqueio_user?id='.$id[$i].'">Bloquear</a></td>';
-                }elseif($user_type[$i] == 'admin'){
-                    echo '<td></td>';
-                }else{
-                    echo '<td></td>';
-                }
-            ?>
             
         </tr>
 
