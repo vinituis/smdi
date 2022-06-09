@@ -36,12 +36,57 @@ $iniciado;
     </div>
 
     <div class="content">
-        <span>online education</span>
-        <h3>A better learning future starts here. <a href="#">get started</a></h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, itaque beatae laboriosam nulla odio voluptatibus molestias vero pariatur laborum molestiae.</p>
-        <a href="#courses" class="btn">our courses</a>
+        <span>Evento Presencial</span>
+        <h3>Seminário de Marketing Digital na Indústria. <br><a>SMDI 2022</a></h3>
+        <p>Esse ano a ABIMAQ proporciona uma experiência inovadora em marketing digital. Um evento presencial totalmente prático, para profissionais que querem se aprimorar e tornar seus negócios em referências de mercado.</p>
+        <a href="#pricing" class="btn">Por que participar?</a>
     </div>
 
+</section>
+<section class="pricing" id="pricing">
+
+    <div class="heading">
+        <h3>Por que participar?</h3>
+    </div>
+
+    <div class="box-container">
+
+        <div class="box">
+            <h3>Online para não sócios</h3>
+            <img src="images/price-1.svg" alt="">
+            <div class="list">
+                <p> <i class="fas fa-check"></i> Acesso as edições anteriores </p>
+                <p> <i class="fas fa-check"></i> Acesso a materiais complementares das edições anteriores </p>
+                <p> <i class="fas fa-times"></i> Aulas ao vivo da edição de 2022 </p>
+                <p> <i class="fas fa-times"></i> Materiais complementares de 2022 </p>
+                <p> <i class="fas fa-times"></i> Aula prática presencial </p>
+            </div>
+        </div>
+
+        <div class="box">
+            <h3>Online para sócios</h3>
+            <img src="images/price-2.svg" alt="">
+            <div class="list">
+                <p> <i class="fas fa-check"></i> Acesso as edições anteriores </p>
+                <p> <i class="fas fa-check"></i> Acesso a materiais complementares das edições anteriores </p>
+                <p> <i class="fas fa-check"></i> Aulas ao vivo da edição de 2022 </p>
+                <p> <i class="fas fa-check"></i> Materiais complementares de 2022 </p>
+                <p> <i class="fas fa-times"></i> Aula prática presencial </p>
+            </div>
+        </div>
+
+        <div class="box">
+            <h3>VIP</h3>
+            <img src="images/price-3.svg" alt="">
+            <div class="list">
+                <p> <i class="fas fa-check"></i> Acesso as edições anteriores </p>
+                <p> <i class="fas fa-check"></i> Acesso a materiais complementares das edições anteriores </p>
+                <p> <i class="fas fa-check"></i> Aulas ao vivo da edição de 2022 </p>
+                <p> <i class="fas fa-check"></i> Materiais complementares de 2022 </p>
+                <p> <i class="fas fa-check"></i> Aula prática presencial </p>
+            </div>
+        </div>
+    </div>
 </section>
 <!--
 <section class="about" id="about">
