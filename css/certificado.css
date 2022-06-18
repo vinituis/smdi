@@ -1,0 +1,55 @@
+body{
+    width: 1000px;
+}
+
+img {
+    width: 1000px;
+    height: auto;
+    overflow: hidden;
+}
+
+.content {
+   position: absolute;
+   width: 1000px;
+   top: 9rem;
+   margin: 0;
+   padding: 0;
+   z-index: 1;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+   text-align: center;
+}
+
+.content p {
+    padding: 1rem 3rem;
+}
+
+.ass{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+}
+
+.ass p {
+    padding-top: 5rem;
+    background-color: red;
+}
+
+.link-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.5rem;
+}
+
+.btn-generate{
+    padding: 0.2rem 1rem;
+    cursor: pointer;
+    color: #fff;
+    background: #290369;
+    font-size: 0.8rem;
+    text-transform: none;
+}

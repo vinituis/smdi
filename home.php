@@ -39,14 +39,73 @@ $iniciado;
         <span>Evento Presencial</span>
         <h3>Seminário de Marketing Digital na Indústria. <br><a>SMDI 2022</a></h3>
         <p>Esse ano a ABIMAQ proporciona uma experiência inovadora em marketing digital. Um evento presencial totalmente prático, para profissionais que querem se aprimorar e tornar seus negócios em referências de mercado.</p>
-        <a href="#pricing" class="btn">Por que participar?</a>
+        <a href="#pricing" class="btn">Quero saber mais</a>
+    </div>
+    <div class="heading">
+        <h3>O que é o SMDI?</h3>
+        <p>inserir texto Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, amet labore, nam adipisci ea quod cum quas, reiciendis quidem incidunt nobis error. Repellat eveniet labore quae reiciendis dolores cupiditate magnam quidem officiis ut nam velit ea iste, excepturi exercitationem porro.</p>
+    </div>
+</section>
+<!-- <section class="pricing" id="">
+
+    <div class="box-container">
+
+        <div class="box">
+            <h3>Quando vai acontecer?</h3>
+            <div class="list">
+                <p>inserir texto Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, amet labore, nam adipisci ea quod cum quas, reiciendis quidem incidunt nobis error. Repellat eveniet labore quae reiciendis dolores cupiditate magnam quidem officiis ut nam velit ea iste, excepturi exercitationem porro.</p>
+            </div>
+        </div>
+
+        <div class="box">
+            <h3>Quando vai acontecer?</h3>
+            <div class="list">
+                <p>inserir texto Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, amet labore, nam adipisci ea quod cum quas, reiciendis quidem incidunt nobis error. Repellat eveniet labore quae reiciendis dolores cupiditate magnam quidem officiis ut nam velit ea iste, excepturi exercitationem porro.</p>
+            </div>
+        </div>
+
+        <div class="box">
+            <h3>Quando vai acontecer?</h3>
+            <div class="list">
+                <p>inserir texto Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, amet labore, nam adipisci ea quod cum quas, reiciendis quidem incidunt nobis error. Repellat eveniet labore quae reiciendis dolores cupiditate magnam quidem officiis ut nam velit ea iste, excepturi exercitationem porro.</p>
+            </div>
+        </div>
+    </div>
+</section> -->
+<!-- category section starts  -->
+
+<section class="category" id="category">
+
+    <div class="box-container">
+
+        <div class="box">
+            <i class="fas fa-code"></i>
+            <h3>programing</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, reiciendis.</p>
+        </div>
+
+        <div class="box">
+            <i class="fas fa-paint-brush"></i>
+            <h3>graphic design</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, reiciendis.</p>
+        </div>
+
+        <div class="box">
+            <i class="fas fa-bullhorn"></i>
+            <h3>marketing</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, reiciendis.</p>
+        </div>
+
     </div>
 
 </section>
+
+<!-- category section ends -->
+
 <section class="pricing" id="pricing">
 
     <div class="heading">
-        <h3>Por que participar?</h3>
+        <h3>Modalidades de participação</h3>
     </div>
 
     <div class="box-container">
@@ -76,7 +135,7 @@ $iniciado;
         </div>
 
         <div class="box">
-            <h3>VIP</h3>
+            <h3>Presencial | vagas limitadas</h3>
             <img src="images/price-3.svg" alt="">
             <div class="list">
                 <p> <i class="fas fa-check"></i> Acesso as edições anteriores </p>
