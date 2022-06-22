@@ -24,7 +24,7 @@ body {
 }
 
 .form-container form {
-    height: 550px;
+    height: 600px;
     width: 400px;
     background: rgba(255, 255, 255, .1);
     text-align: center;
@@ -47,6 +47,29 @@ body {
     padding: 0 5px;
     font-size: 20px;
     color: #bbb;
+}
+
+.aceite {
+    width: 20rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-left: 2.5rem;
+}
+
+input[type="checkbox"] {
+    width: 1rem !important;
+    background: none !important;
+    box-shadow: none !important;
+    border: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+.aceite label {
+    margin-top: 1rem;
+    font-size: 0.8rem;
+    color: #ccc;
 }
 
 .form-container form input{

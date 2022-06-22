@@ -14,7 +14,15 @@ if(isset($_SESSION['user_name'])){
 	<div class="content">
 		<h1>Certificado de participação</h1>
 		<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga quia sint voluptatem quam quae ab error suscipit assumenda doloribus impedit.</p>
-		<h2><?php echo $_SESSION['user_name']; ?></h2>
+		<h2><?php 
+		
+		if(isset($_SESSION['user_name'])){
+			echo $_SESSION['user_name']; 
+		}elseif(isset($_SESSION['admin_name'])){
+			echo $_SESSION['admin_name'];
+		}
+		
+		?></h2>
 		<div class="ass">
 			<p>Assinatura 1</p>
 			<p>Assinatura 2</p>

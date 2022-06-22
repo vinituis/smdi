@@ -24,7 +24,7 @@ $iniciado;
 <body>
 	<div id="container">
 		<div class="link-container">
-			<button class="btn-generate" onclick="convertHTMLToPDF()">Gerar certificado em PDF</button>
+			<button class="btn-generate" onclick="convertHTMLToPDF()">Caso o download não funcione, clique aqui</button>
 		</div>
 		<div id="html-template">
 		<?php require_once __DIR__ . '/Template/html-template.php'; ?>
@@ -43,10 +43,12 @@ $iniciado;
 
 	doc.html(pdfjs, {
 		callback: function(doc) {
-			doc.save("output.pdf");
+			doc.save("certificado.pdf");
 		},
 		x: 0,
 		y: 0
 	});
-}</script>
+}
+convertHTMLToPDF();
+</script>
 </html>

@@ -69,6 +69,10 @@ if(isset($_POST['submit'])){
          <input type="email" name="email" required placeholder="Digite seu email">
          <input type="password" name="password" required placeholder="Digite seu CPF">
          <input type="password" name="cpassword" required placeholder="Repita seu CPF">
+         <div class="aceite">
+            <input type="checkbox" name="aceite" id="aceite" required>
+            <label for="aceite">Eu aceito receber comunicações da ABIMAQ e de seus parceiros</label>
+         </div>
          <input type="submit" name="submit" value="Cadastrar" class="form-btn">
          <br><br>
          <p>Já tem cadastro? <a href="./">Faça login aqui!</a></p>
