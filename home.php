@@ -64,7 +64,13 @@ $iniciado;
     </div>
     <div class="heading">
         <h3>Quando vai acontecer?</h3>
-        <p>Dia 18 de agosto de 2022, quinta-feira<br>Das 9h às 18h</p>
+        <p>Dia 18 de agosto de 2022, quinta-feira<br>Das 9h às 18h<br>
+            <?php 
+                if($_SESSION['type'] == 'pre'){
+                    echo 'Endereço: Av. Jabaquara, 2925 - São Paulo/SP';
+                }
+            ?>
+        </p>
     </div>
 </section>
 <!-- category section starts  -->
@@ -136,6 +142,21 @@ $iniciado;
         </div>  
     </div>
 </section>
+<section>
+    <div class="partners" id="partners">
+        <h3>Patrocinador</h3>
+        <div class="patrocinador">
+            <img src="./images/partner/hydac.jpg" alt="Logo Hydac">
+        </div>
+        <h3>Apoio</h3>
+        <div class="apoio">
+            <img src="./images/partner/actuel.jpg" alt="Logo Actuel">
+            <img src="./images/partner/liberprint.jpg" alt="Logo Liberprint">
+            <img src="./images/partner/interbusiness.jpg" alt="Logo Interbusiness">
+        </div>
+    </div>
+</section>
+
 <!--
 <section class="about" id="about">
 

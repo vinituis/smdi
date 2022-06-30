@@ -828,6 +828,37 @@ span.aviso{
 
 }
 
+.partners {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-direction: column;
+}
+
+.partners h3 {
+  font-size: 2rem;
+  color: #290369;
+}
+
+.partners .patrocinador, 
+.partners .apoio {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 5rem;
+}
+
+.partners .patrocinador img {
+  max-width: 30rem;
+}
+
+.partners .apoio img {
+  max-width: 20rem;
+  width: 15rem;
+}
+
 @media (max-width: 1200px) {
   html {
     font-size: 55%;
@@ -861,6 +892,13 @@ span.aviso{
   }
   .contact .row form .inputBox input {
     width: 100%;
+  }
+  .partners .patrocinador img {
+    width: 40rem;
+  }
+  .partners .apoio img {
+    width: 20rem;
+    padding: 2rem;
   }
 }
 /*# sourceMappingURL=style.css.map */
