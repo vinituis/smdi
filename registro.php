@@ -5,8 +5,8 @@
 
 if(isset($_POST['submit'])){
 
-   $name = $_POST['name'];
-   $email = $_POST['email'];
+   $name = filter_var($_POST['name'], FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH);
+   $email = filter_var($_POST['email'], FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH);
    $pass = md5($_POST['password']);
    $cpass = md5($_POST['cpassword']);
 
@@ -45,11 +45,18 @@ if(isset($_POST['submit'])){
         echo $registroCss;
         echo $GA4;
         echo $favicon;
+        echo $fontawesome;
     ?>
 </head>
 <body>
     <div class="form-container">
-
+      <div class="text">
+         <h2>SMDI</h2>
+         <p>No dia 18/08 você será nosso convidado para um evento de marketing digital, voltado para profissionais que querem se aprimorar e tornar seus negócios em referências de mercado.</p>
+         <p>O grande diferencial deste ano: <b>conteúdo mão na massa e prático!</b></p>
+         <p>Será com participação online.</p>
+         <button><a href="#registroSMDI">Realize seu cadastro <i class="fas fa-long-arrow-alt-right"></i></a></button>
+      </div>
       <form id="registroSMDI" action="" method="post">
          <?php
          if(isset($error)){
@@ -65,13 +72,13 @@ if(isset($_POST['submit'])){
          };
          ?>
          <h3>Cadastre-se</h3>
-         <input type="text" name="name" required placeholder="Digite seu nome">
+         <input type="text" name="name" required placeholder="Digite seu nome completo">
          <input type="email" name="email" required placeholder="Digite seu email">
          <input type="password" name="password" required placeholder="Digite seu CPF">
          <input type="password" name="cpassword" required placeholder="Repita seu CPF">
          <div class="aceite">
             <input type="checkbox" name="aceite" id="aceite" required>
-            <label for="aceite">Eu aceito receber comunicações da ABIMAQ e de seus parceiros</label>
+            <label for="aceite">Você concorda em receber as comunicações da ABIMAQ e dos parceiros que apoiam o SMDI 2022.</label>
          </div>
          <input type="submit" name="submit" value="Cadastrar" class="form-btn">
          <br><br>
@@ -83,8 +90,8 @@ if(isset($_POST['submit'])){
         var formR = document.getElementById('registroSMDI');
 
         formR.addEventListener('mousemove', (e) =>{
-            var x = (window.innerWidth / 2 - e.pageX) / 30;
-            var y = (window.innerHeight / 2 - e.pageY) / 30;
+            var x = (window.innerWidth / 2 - e.pageX) / 60;
+            var y = (window.innerHeight / 2 - e.pageY) / 60;
 
             formR.style.transform = 'rotateX(' + x + 'deg) rotateY(' + y + 'deg)';
         });

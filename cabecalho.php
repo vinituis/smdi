@@ -58,10 +58,13 @@ $semContent = '
 
 // para ativar as AULAS e AO_VIVO, retorne o 'href="./aulas"' e 'href="./ao_vivo"' na tag de 'a', retirando a classe 'btn-d' e troque a classe 'fa-lock' por 'fa-angle-right' na tag 'i' //
 
+// certificado = href="./certificado?certificado=yes"
+
 $nav = '
 <nav class="navbar">
     <a class="btn-d"> <i class="fas fa-lock"></i> Transmissão </a>
-    <a class="btn-d"> <i class="fas fa-lock"></i> Aulas </a> <br>
+    <a class="btn-d"> <i class="fas fa-lock"></i> Aulas </a>
+    <a class="btn-d"> <i class="fas fa-lock"></i> Certificado </a> <br>
     <a href="./home"> <i class="fas fa-angle-right"></i> Página Inicial </a>
     <a href="./ed"> <i class="fas fa-angle-right"></i> Edições Anteriores </a>
     <a href="./materiais"> <i class="fas fa-angle-right"></i> Materiais </a>

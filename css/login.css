@@ -24,7 +24,7 @@ body {
 }
 
 .form-container form {
-    height: 450px;
+    height: 500px;
     width: 350px;
     background: rgba(255, 255, 255, .1);
     text-align: center;
@@ -85,4 +85,10 @@ body {
     padding: 20px;
     background-color: red;
     color: #ddd;
+}
+
+.g-recaptcha {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

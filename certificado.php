@@ -24,7 +24,7 @@ $iniciado;
 <body>
 	<div id="container">
 		<div class="link-container">
-			<button class="btn-generate" onclick="convertHTMLToPDF()">Caso o download não funcione, clique aqui</button>
+			<button class="btn-generate" onclick="convertHTMLToPDF()">Caso o download não funcione, clique aqui</button><a href="./home">Retornar para a Página Inicial</a>
 		</div>
 		<div id="html-template">
 		<?php require_once __DIR__ . '/Template/html-template.php'; ?>
@@ -47,7 +47,7 @@ $iniciado;
 		},
 		x: 0,
 		y: 0
-	});
+	})
 }
 convertHTMLToPDF();
 </script>

@@ -15,12 +15,28 @@ if(isset($_SESSION['admin_name'])){
 
 if(isset($_POST['submit'])){
 
-   $email = $_POST['email'];
+   $email = filter_var($_POST['email'], FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH);
    $pass = md5($_POST['password']);
 
    $select = " SELECT * FROM user WHERE email = '$email' && password = '$pass' ";
 
    $result = mysqli_query($conn, $select);
+   
+   if(isset($_POST['g-recaptcha-response'])){
+    $captcha_data = $_POST['g-recaptcha-response'];
+   }
+   if(!$captcha_data){
+    header('location:./');
+    exit;
+   }
+
+   $resposta = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=6LcvKZkgAAAAAMys8dHv5EfCxOKbJE3BifklRjMx&response=".$captcha_data."&remoteip=".$_SERVER['REMOTE_ADDR']);
+
+   if($resposta.success) {
+    echo '';
+   }else {
+    $error[] = 'usuário mal intencionado';
+   }
 
    if(mysqli_num_rows($result) > 0){
 
@@ -31,7 +47,9 @@ if(isset($_POST['submit'])){
         $_SESSION['admin_name'] = $row['name'];
         header('location:admin_page');
 
-      }elseif($row['user_type'] == 'user'){
+        $_SESSION['type'] = $row['user_type'];
+
+      }elseif($row['user_type'] == 'user' || 'pre'){
 
         $_SESSION['user_name'] = $row['name'];
         header('location:home');
@@ -42,10 +60,11 @@ if(isset($_POST['submit'])){
         $_SESSION['user_id'] = $row['id'];
         header('location:home');
 
+        $_SESSION['type'] = $row['user_type'];
+
       }elseif($row['user_type'] == 'block'){
         $error[] = 'Seu usuario está bloqueado!';
-      }
-     
+      }     
    }else{
       $error[] = 'Não identificamos seu registo';
    }
@@ -84,6 +103,7 @@ if(isset($_POST['submit'])){
             <input name="email" type="email" placeholder="Digite seu email" />
             <i class="fas fa-lock"></i>
             <input name="password" type="password" placeholder="Digite seu CPF" />
+            <div data-sitekey="6LcvKZkgAAAAACUkb2I7gf_ZTf2ji4_PzWMKsgYh" class="g-recaptcha"></div>
             <input type="submit" name="submit" value="Acessar" />
             <a href="./registro">Faça seu registro!</a>
         </form>
@@ -103,6 +123,7 @@ if(isset($_POST['submit'])){
             formL.style.transform = 'rotateX(0deg) rotateY(0deg)';
         });
     </script>
+    <script src="https://www.google.com/recaptcha/api.js"></script>
 
 <?php mysqli_close($conn); ?>
 
