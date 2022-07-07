@@ -51,7 +51,7 @@ if(isset($_POST['submit'])){
 <body>
     <div class="form-container">
       <div class="text">
-         <h2>SMDI</h2>
+         <h1>SMDI</h1>
          <p>No dia 18/08 você será nosso convidado para um evento de marketing digital, voltado para profissionais que querem se aprimorar e tornar seus negócios em referências de mercado.</p>
          <p>O grande diferencial deste ano: <b>conteúdo mão na massa e prático!</b></p>
          <p>Será com participação online.</p>

@@ -34,7 +34,7 @@ $headLinks = $fontawesome . $cssGlobal . $jsGlobal . $favicon . $noIndex . $GA4;
 
 $descLogin = ' ';
 
-$descRegistro = ' ';
+$descRegistro = 'Tenha acesso a plataforma do SMDI, que é um evento marketing para a indústria. Conteúdo prático e simples para você aprender marketing fazendo!';
 
 $sair = '<br><a href="./sair"> <i class="fas fa-angle-right"></i> Sair </a>';
 
