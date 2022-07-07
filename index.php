@@ -78,7 +78,7 @@ if(isset($_POST['submit'])){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SMDI | Login</title>
+    <title>SMDI 2022 - Seminário de Marketing Digital na Indústria | Login</title>
     <meta name="description" content="<?php echo $descLogin; ?>">
     <?php
         echo $loginCss; 
@@ -89,6 +89,7 @@ if(isset($_POST['submit'])){
     ?>
 </head>
 <body>
+    <h1 style="display:none">Acesse a plataforma do SMDI 2022</h1>
     <div class="form-container">
         <form action="" method="post" id="loginSMDI">
             <?php

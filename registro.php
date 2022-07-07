@@ -39,7 +39,7 @@ if(isset($_POST['submit'])){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SMDI | Registro</title>
+    <title>SMDI 2022 - Seminário de Marketing Digital na Indústria | Registro para o evento</title>
     <meta name="description" content="<?php echo $descRegistro; ?>">
     <?php
         echo $registroCss;

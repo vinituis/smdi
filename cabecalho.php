@@ -32,7 +32,7 @@ $headLinks = $fontawesome . $cssGlobal . $jsGlobal . $favicon . $noIndex . $GA4;
 
 //Globais
 
-$descLogin = ' ';
+$descLogin = 'Realize seu login e tenha acesso a plataforma do SMDI com todas as edições do melhor evento de marketing digital para a indústria. Conteúdo prático e simples para você aprender marketing fazendo!';
 
 $descRegistro = 'Tenha acesso a plataforma do SMDI, que é um evento marketing para a indústria. Conteúdo prático e simples para você aprender marketing fazendo!';
 
