@@ -175,9 +175,11 @@ $iniciado;
 
         <?php }} ?>
     </table>
-
-    <a href="./admin_user" class="btn">Gerenciar usuários</a>
-
+    <div>
+        <a href="./admin_user" class="btn">Gerenciar usuários</a>
+        <a href="./download_on" class="btn">Baixar lista online</a>
+        <a href="./download_pre" class="btn">Baixar lista presencial</a>
+    </div>
 </section>
 
 <section class='courses' id='materiais'>

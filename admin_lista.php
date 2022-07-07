@@ -29,6 +29,7 @@ $iniciado;
 <section class='courses' id='usuarios'>
     <div class='heading'>
         <h3>Lista dos inscritos presenciais</h3>
+        <a href="./download_pre" class="btn">Baixar em Excel</a>
     </div>
     <table>
         <tr>
