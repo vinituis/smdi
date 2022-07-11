@@ -17,7 +17,7 @@ $iniciado;
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SMDI | Administração de Usuários</title>
+    <title>SMDI | Administração de Usuários Presencial</title>
 
 <?php echo $headAdm; ?>
 
@@ -37,6 +37,7 @@ $iniciado;
             <td>nome</td>
             <td>email</td>
             <td>Acesso</td>
+            <td>Ação</td>
         </tr>
         <?php 
             $sql = 'SELECT * FROM user';
@@ -66,6 +67,11 @@ $iniciado;
             <td>
                 <?php if($user_type[$i] == 'pre'){
                     echo 'presencial';
+                } ?>
+            </td>
+            <td>
+                <?php if($user_type[$i] == 'pre'){
+                    echo '<a href="./desbloqueio_user?id='.$id[$i].'">Tornar online</a>';
                 } ?>
             </td>
             

@@ -38,7 +38,7 @@ $iniciado;
             <td rowspan="2">email</td>
             <td rowspan="2">Acesso</td>
             <td colspan="4">Aulas</td>
-            <td rowspan="2">Ação</td>
+            <td rowspan="2" colspan="2">Ação</td>
         </tr>
         <tr>
             <td>1</td>
@@ -90,9 +90,10 @@ $iniciado;
                 if($user_type[$i] == 'block'){
                     echo '<td><a href="./desbloqueio_user?id='.$id[$i].'">Liberar</a></td>';
                 }elseif($user_type[$i] == 'user'){
-                    echo '<td><a href="./bloqueio_user?id='.$id[$i].'">Bloquear</a></td>';
+                    echo '<td><a href="./bloqueio_user?id='.$id[$i].'">Bloquear</a></td>
+                    <td><a href="./trocar_pre?id='.$id[$i].'">Tornar presencial</a></td>';
                 }elseif($user_type[$i] == 'admin'){
-                    echo '<td></td>';
+                    echo '<td></td><td></td>';
                 }else{
                     echo '<td></td>';
                 }
