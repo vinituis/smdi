@@ -28,7 +28,7 @@ $noIndex = '<meta name="robots" content="noindex">';
 
 $favicon = '<link rel="icon" type="image/x-icon" href="./images/favicon.png">';
 
-$headLinks = $fontawesome . $cssGlobal . $jsGlobal . $favicon . $noIndex . $GA4;
+$headLinks = $fontawesome . $cssGlobal . $jsGlobal . $favicon . $GA4;
 
 //Globais
 
@@ -148,6 +148,6 @@ $headerAdm = '
 
 $admCss = '<link rel="stylesheet" href="css/adm.css">';
 
-$headAdm = $headLinks . $admCss;
+$headAdm = $headLinks . $noIndex . $admCss;
 
 ?>

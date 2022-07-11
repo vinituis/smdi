@@ -48,7 +48,7 @@ if(isset($_POST['submit'])){
         echo $fontawesome;
     ?>
 </head>
-<body>
+<body id="topo">
     <div class="form-container">
       <div class="text">
          <h1>SMDI</h1>
@@ -71,7 +71,7 @@ if(isset($_POST['submit'])){
             };
          };
          ?>
-         <h3>Cadastre-se</h3>
+         <h3>Registre-se</h3>
          <input type="text" name="name" required placeholder="Digite seu nome completo">
          <input type="email" name="email" required placeholder="Digite seu email">
          <input type="password" name="password" required placeholder="Digite seu CPF">
@@ -86,20 +86,52 @@ if(isset($_POST['submit'])){
       </form>
 
     </div>
-    <script>
-        var formR = document.getElementById('registroSMDI');
 
-        formR.addEventListener('mousemove', (e) =>{
-            var x = (window.innerWidth / 2 - e.pageX) / 60;
-            var y = (window.innerHeight / 2 - e.pageY) / 60;
+    <div class="conteudos">
+      <div class="title">
+         <h1>SMDI | Seminário de Marketing Digital na Indústria</h1>
+         <h3>Nosso negócio é fazer você multiplicar seus negócios!</h3>
+      </div>
+      <p>
+         Neste ano de 2022, nosso evento de marketing digital para a indústria está diferente, em formato híbrido e com as edições anteriores para você assistir agora mesmo.
+         <br><br>
+         São mais de 17 horas de aulas gravadas de puro conhecimento prático e aplicável para sua empresa.
+         <br><br>
+         Não perca tempo! Registre-se agora mesmo e tenha acesso a todas as aulas.
+      </p>
 
-            formR.style.transform = 'rotateX(' + x + 'deg) rotateY(' + y + 'deg)';
+      <div class="title">
+         <h2>As aulas de 2022</h2>
+      </div>
+      <p class="aulas">No dia 18 de agosto de 2022, teremos aulas ao vivo sobre:
+         <br><br>
+         <ul>
+            <li>Comunicação estratégica pelo WhatsApp;</li>
+            <li>Como criar conteúdo relevante e atrativo para as redes sociais da sua indústria e conversar com o seu público comprador;</li>
+            <li>Planejamento do zero à otimização;</li>
+            <li>Marketing de Comunidade;</li>
+            <li>Dicas de SEO para o seu negócio, com foco em Copywriting;</li>
+            <li>Analytics e como identificar pontos de conversão no seu site;</li>
+            <li>E muito mais...</li>
+         </ul>
+         <a href="#topo" class="btn">Registre-se agora mesmo</a>
+      </p>
+    </div>
+
+<script>
+   var formR = document.getElementById('registroSMDI');
+
+   formR.addEventListener('mousemove', (e) =>{
+      var x = (window.innerWidth / 2 - e.pageX) / 60;
+      var y = (window.innerHeight / 2 - e.pageY) / 60;
+
+      formR.style.transform = 'rotateX(' + x + 'deg) rotateY(' + y + 'deg)';
+   });
+
+   formR.addEventListener('mouseleave', function(){
+      formR.style.transform = 'rotateX(0deg) rotateY(0deg)';
         });
-
-        formR.addEventListener('mouseleave', function(){
-            formR.style.transform = 'rotateX(0deg) rotateY(0deg)';
-        });
-    </script>
+</script>
 
 <?php mysqli_close($conn); ?>
 

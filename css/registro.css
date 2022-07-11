@@ -7,6 +7,10 @@
     transition: all .2s linear;
 }
 
+html::-webkit-scrollbar {
+    width: 0rem;
+}
+
 body {
     background-color: #681c86;
 }
@@ -198,11 +202,64 @@ option{
     color: #ddd;
 }
 
-@media (max-width: 450px) {
+.conteudos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ddd;
+    flex-direction: column;
+    padding: 5rem 20rem 3rem 20rem;
+}
+
+.conteudos .title {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.conteudos h1 {
+    color: #681c86;
+}
+
+.conteudos h2 {
+    color: #681c86;
+    margin: 2rem 2rem -2rem 2rem;
+}
+
+.conteudos h3 {
+    color: #696969;
+}
+
+.conteudos p{
+    color: #000;
+}
+
+.conteudos p.aulas{
+    color: #000;
+}
+
+.conteudos .btn {
+    color: #fff;
+    background-color: #681c86;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    cursor: pointer;
+    margin: 2.5rem;
+    width: 100%;
+    text-align: center;
+}
+
+.conteudos ul {
+    margin-left: 1rem;
+}
+
+@media (max-width: 900px) {
     .form-container .text .aviso {
         font-size: 0.85rem;
     }
     .form-container form {
         width: 90%;
+    }
+    .conteudos{
+        padding: 2rem;
     }
 }
