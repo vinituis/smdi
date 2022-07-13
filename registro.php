@@ -2,6 +2,7 @@
 
 @include 'config.php';
 @include 'cabecalho.php';
+@include 'Template/email.php';
 
 if(isset($_POST['submit'])){
 
@@ -26,6 +27,73 @@ if(isset($_POST['submit'])){
          $insert = "INSERT INTO user(name, email, password) VALUES('$name','$email','$pass')";
          mysqli_query($conn, $insert);
          $correct[] = 'Usuário cadastrado!';
+         if($insert){
+            date_default_timezone_set('America/Sao_Paulo');
+            $hora_envio = date('H:i:s');
+            $data_envio = date('d/m/Y');
+            $user_type = 'Online';
+            $arq = "<style type='text/css'>
+                  body {
+                     margin:0;
+                     font-family: Verdana, sans-serif;
+                     font-size: 12px;
+                     color: #808080;
+                  }
+                  p {
+                     font-size: 12px;
+                  }
+                  a {
+                     color: #666;
+                     font-size: 12px;
+                  }
+                  table {
+                     margin: 25px;
+                  }
+                  a:hover {
+                     color: #005;
+                     text-decoration: none;
+                  }
+               </style>
+
+               <html>
+                  <table width='510' border='0' cellpadding='10' bgcolor='#fff'>
+                     <tr>
+                           <td>
+                              <p>Olá $name</p>
+                              <p>Agradecemos sua inscrição no Seminário de Marketing Digital na Indústria (SMDI).</p>
+                              <p>O formato de participação que você escolheu é $user_type.</p>
+                              <p>O evento acontecerá no dia <b>18 de agosto das 9h às 17h30</b>.</p>
+                              <p>Para não perder essa oportunidade de aprendizado, aproveite para adicionar o evento no seu calendário!</p>
+                              <a href='#'>Link 1</a>
+                              <a href='#'>Link 2</a>
+                              <a href='#'>Link 3</a>
+                              <p>Enquanto o evento não chega, aproveite para acessar os conteúdos dos anos anteriores e ir se preparando para o nosso encontro em agosto.</p>
+                              <p>Dúvidas? Entre em contato conosco no e-mail <a href='mailto:marketing@abimaq.org.br'>marketing@abimaq.org.br</a>.</p>
+                              <p>Até breve,</p>
+                              <p>ABIMAQ - Associação Brasileira da Indústria de Máquinas e Equipamentos</p>
+                           </td>
+                     </tr>
+                  </table>
+               </html>";
+
+            $emailenviar = 'marketing@abimaq.org.br';
+            $destino = $email;
+            $assunto = 'Confirmação para o SMDI 2022';
+
+            $headers = 'MIME-Version: 1.0' . "\r\n";
+            $headers .= 'Content-Type: text/html; charset=iso-8859-1' . "\r\n";
+            $headers .= 'From: Eventos ABIMAQ <$email>';
+
+            $enviaremail = mail($destino, $assunto, $arq, $headers);
+
+            if($enviaremail){
+               $mgm = 'enviado';
+               echo $mgm;
+            }else{
+               $mgm = 'erro';
+               echo $mgm;
+            }
+         }
       }
    }
 
