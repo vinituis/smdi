@@ -211,7 +211,7 @@ $iniciado;
     <div class="partners" id="partners">
         <h3>Patrocinador</h3>
         <div class="patrocinador">
-            <img src="./images/partner/hydac.jpg" alt="Logo Hydac">
+            <a href="https://www.hydac.com/pt-br/"><img src="./images/partner/hydac.jpg" alt="Logo Hydac"></a>
         </div>
         <h3>Apoio</h3>
         <div class="apoio">
