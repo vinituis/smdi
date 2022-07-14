@@ -54,3 +54,8 @@ table tr, td {
     width: 100%;
     background-color: green;
 }
+
+.n-usu {
+    margin: 1rem;
+    color: #000;
+}

@@ -30,6 +30,25 @@ $iniciado;
     <div class='heading'>
         <h3>Lista dos inscritos presenciais</h3>
         <a href="./download_pre" class="btn">Baixar em Excel</a>
+        <?php 
+            $usu = 'SELECT * FROM user';
+
+            if ($result=mysqli_query($conn, $usu)){
+                $i=0;
+                $ia=0;
+                $ip=0;
+                while ($registro = mysqli_fetch_array($result)){
+                   $type = $registro['user_type'];
+                   
+                    if($type == 'pre'){
+                        $ip= $ip + 1;
+                    }
+                }
+                
+                mysqli_num_rows($result);
+                    echo "<h2 class='n-usu'>" . $ip . " usuários presenciais </h2>";
+            }
+        ?>
     </div>
     <table>
         <tr>

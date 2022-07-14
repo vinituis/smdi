@@ -859,6 +859,41 @@ span.aviso{
   width: 15rem;
 }
 
+.prog .box-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.prog .table {
+  width: 100%;
+  font-size: 1.2rem;
+}
+
+.prog .table tr, td {
+  border: 1px solid #696969;
+  padding: 1rem 0.5rem;
+  text-transform: none;
+}
+
+.prog h3 {
+  font-size: 2rem;
+  color: #290369;
+}
+
+td.destaque {
+  background-color: #681c86;
+  color: #fff;
+  text-align: center;
+}
+
+.center {
+  text-align: center;
+}
+
 @media (max-width: 1200px) {
   html {
     font-size: 55%;
