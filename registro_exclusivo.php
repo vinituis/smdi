@@ -154,8 +154,25 @@ if(isset($_POST['submit'])){
          <input type="password" name="cpassword" required placeholder="Repita seu CPF">
          <select name="user_type" id="user_type" required>
             <option value="">Selecione sua participação</option>
-            <option value="pre">Presencial</option>
-            <option value="user">Online</option>
+            <?php 
+            $usu = 'SELECT * FROM user';
+            if ($result=mysqli_query($conn, $usu)){
+               $ip=1;
+               while ($registro = mysqli_fetch_array($result)){
+                  $type = $registro['user_type'];      
+                  if($type == 'pre'){
+                     $ip= $ip + 1;
+                  }
+               }
+               mysqli_num_rows($result);
+               if($ip > 60){
+                  echo '<option value="user">Online</option>';      
+               } else {
+                  echo '<option value="pre">Presencial</option> <option value="user">Online</option>';
+               }
+                echo "<h2 class='n-usu'>" . $ip . " usuários presenciais </h2>";
+            }
+        ?>
          </select>
          
          <div class="aceite">
