@@ -65,7 +65,7 @@ if(isset($_POST['submit'])){
                               <p>Para não perder essa oportunidade de aprendizado, aproveite para adicionar o evento no seu calendário!</p>
                               <a href='https://calndr.link/d/event/?service=apple&start=2022-08-1809:00&end=2022-08-1817:30&title=SMDI%20-%20Semin%C3%A1rio%20de%20Marketing%20Digital%20na%20Ind%C3%BAstria&description=O%20evento%20acontecer%C3%A1%20no%20dia%2018%20de%20agosto%20das%209h%20%C3%A0s%2017h30.%20%20Enquanto%20o%20evento%20n%C3%A3o%20chega,%20aproveite%20para%20acessar%20os%20conte%C3%BAdos%20dos%20anos%20anteriores%20e%20ir%20se%20preparando%20para%20o%20nosso%20encontro%20em%20agosto.%20%20D%C3%BAvidas?%20Entre%20em%20contato%20conosco%20no%20e-mail%20marketing@abimaq.org.br.'>Apple</a>
                               <a href='https://calndr.link/d/event/?service=google&start=2022-08-1809:00&end=2022-08-1817:30&title=SMDI%20-%20Semin%C3%A1rio%20de%20Marketing%20Digital%20na%20Ind%C3%BAstria&description=O%20evento%20acontecer%C3%A1%20no%20dia%2018%20de%20agosto%20das%209h%20%C3%A0s%2017h30.%20%20Enquanto%20o%20evento%20n%C3%A3o%20chega,%20aproveite%20para%20acessar%20os%20conte%C3%BAdos%20dos%20anos%20anteriores%20e%20ir%20se%20preparando%20para%20o%20nosso%20encontro%20em%20agosto.%20%20D%C3%BAvidas?%20Entre%20em%20contato%20conosco%20no%20e-mail%20marketing@abimaq.org.br.'>Google</a>
-                              <a href='https://calndr.link/d/event/?service=outlook&start=2022-08-1809:00&end=2022-08-1817:30&title=SMDI%20-%20Semin%C3%A1rio%20de%20Marketing%20Digital%20na%20Ind%C3%BAstria&description=O%20evento%20acontecer%C3%A1%20no%20dia%2018%20de%20agosto%20das%209h%20%C3%A0s%2017h30.%20%20Enquanto%20o%20evento%20n%C3%A3o%20chega,%20aproveite%20para%20acessar%20os%20conte%C3%BAdos%20dos%20anos%20anteriores%20e%20ir%20se%20preparando%20para%20o%20nosso%20encontro%20em%20agosto.%20%20D%C3%BAvidas?%20Entre%20em%20contato%20conosco%20no%20e-mail%20marketing@abimaq.org.br.'>Link 3</a>
+                              <a href='https://calndr.link/d/event/?service=outlook&start=2022-08-1809:00&end=2022-08-1817:30&title=SMDI%20-%20Semin%C3%A1rio%20de%20Marketing%20Digital%20na%20Ind%C3%BAstria&description=O%20evento%20acontecer%C3%A1%20no%20dia%2018%20de%20agosto%20das%209h%20%C3%A0s%2017h30.%20%20Enquanto%20o%20evento%20n%C3%A3o%20chega,%20aproveite%20para%20acessar%20os%20conte%C3%BAdos%20dos%20anos%20anteriores%20e%20ir%20se%20preparando%20para%20o%20nosso%20encontro%20em%20agosto.%20%20D%C3%BAvidas?%20Entre%20em%20contato%20conosco%20no%20e-mail%20marketing@abimaq.org.br.'>Outlook</a>
                               <p>Enquanto o evento não chega, aproveite para acessar os conteúdos dos anos anteriores e ir se preparando para o nosso encontro em agosto.</p>
                               <p>Dúvidas? Entre em contato conosco no e-mail <a href='mailto:marketing@abimaq.org.br'>marketing@abimaq.org.br</a>.</p>
                               <p>Até breve,</p>
@@ -86,10 +86,10 @@ if(isset($_POST['submit'])){
             $enviaremail = mail($destino, $assunto, $arq, $headers);
 
             if($enviaremail){
-               $mgm = 'enviado';
+               $mgm = '<span style="display: flex;width: 100%;align-items: center;justify-content: center;font-size: 1.2rem;padding: 1.5rem 0;color: #fff;">Confirmação enviada para o e-mail cadastrado</span>';
                echo $mgm;
             }else{
-               $mgm = 'erro';
+               $mgm = '<span style="display: flex;width: 100%;align-items: center;justify-content: center;font-size: 1.2rem;padding: 1.5rem 0;color: #fff;">Ops... Não conseguimos enviar o e-mail de confirmação</span>';
                echo $mgm;
             }
          }
