@@ -36,15 +36,11 @@ $iniciado;
             if ($result=mysqli_query($conn, $usu)){
                 $i=0;
                 $ia=0;
-                $ip=0;
                 while ($registro = mysqli_fetch_array($result)){
                    $type = $registro['user_type'];
                    
                     if($type == 'user'){
                         $i= $i + 1;
-                    }
-                    if($type == 'pre'){
-                        $ip= $ip + 1;
                     }
                     if($type == 'admin'){
                         $ia= $ia + 1;
@@ -90,7 +86,7 @@ $iniciado;
                     $aula2[$i] = $reg['ass_aula_2'];
                     $aula3[$i] = $reg['ass_aula_3'];
                     $aula4[$i] = $reg['ass_aula_4'];
-                    if($user_type[$i] !== 'pre'){
+                    if($user_type[$i] !== 'pre' && $user_type[$i] !== 'user_pre'){
         ?>
 
         <tr>

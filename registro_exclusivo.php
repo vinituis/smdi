@@ -37,6 +37,9 @@ if(isset($_POST['submit'])){
             if($user_type == "user"){
                $user_type == "Online";
             }
+            if($user_type == 'user_pre'){
+               $user_type = "Online, com nome na lista de espera para participar presencialmente";
+            }
             $arq = "<style type='text/css'>
                   body {
                      margin:0;
@@ -165,12 +168,13 @@ if(isset($_POST['submit'])){
                   }
                }
                mysqli_num_rows($result);
-               if($ip > 60){
+               if($ip > 70){
                   echo '<option value="user">Online</option>';      
+                  echo '<option value="user_pre">Lista de Espera Presencial</option>';
                } else {
-                  echo '<option value="pre">Presencial</option> <option value="user">Online</option>';
+                  echo '<option value="pre">Presencial</option>';
+                  echo '<option value="user">Online</option>';
                }
-                echo "<h2 class='n-usu'>" . $ip . " usuários presenciais </h2>";
             }
         ?>
          </select>

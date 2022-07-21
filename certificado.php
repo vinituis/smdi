@@ -39,7 +39,7 @@ $iniciado;
 <script>function convertHTMLToPDF() {
 	const { jsPDF } = window.jspdf;
 
-	var doc = new jsPDF('l', 'px', [1000, 1000]);
+	var doc = new jsPDF('l', 'px', [800, 580]);
 	var pdfjs = document.querySelector('#html-template');
 
 	doc.html(pdfjs, {

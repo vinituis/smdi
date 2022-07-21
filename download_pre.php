@@ -12,14 +12,14 @@ $iniciado;
 $sql = 'SELECT * from user';
 
 $arquivo = 'lista_presencial.xls';
-$data = gmdate("d-m-y_H-i-s");
-header ("Expires: Mon, 26 Jul 1997 05:00:00 GMT");
-header ("Last-Modified: " . gmdate("D,d M YH:i:s") . " GMT");
-header ("Cache-Control: no-cache, must-revalidate");
-header ("Pragma: no-cache");
-header ("Content-type: application/x-msexecel");
-header ("Content-Disposition: attachment; filename={$arquivo}");
-header ("Content-Description: Lista baixada em ".$data."");
+// $data = gmdate("d-m-y_H-i-s");
+// header ("Expires: Mon, 26 Jul 1997 05:00:00 GMT");
+// header ("Last-Modified: " . gmdate("D,d M YH:i:s") . " GMT");
+// header ("Cache-Control: no-cache, must-revalidate");
+// header ("Pragma: no-cache");
+// header ("Content-type: application/x-msexecel");
+// header ("Content-Disposition: attachment; filename={$arquivo}");
+// header ("Content-Description: Lista baixada em ".$data."");
 
 ?>
 
@@ -52,7 +52,7 @@ header ("Content-Description: Lista baixada em ".$data."");
                         $name[$i] = $reg['name'];
                         $email[$i] = $reg['email'];
                         $user_type[$i] = $reg['user_type'];
-                        if($user_type[$i] == 'pre'){
+                        if($user_type[$i] == 'pre' || $user_type[$i] == 'user_pre'){
                             echo "<tr><td>" . $name[$i] . "</td>";
                             echo "<td>" . $email[$i] . "</td>";
                             echo "<td>" . $user_type[$i] . "</td></tr>";

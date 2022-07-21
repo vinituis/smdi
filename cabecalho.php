@@ -28,7 +28,9 @@ $noIndex = '<meta name="robots" content="noindex">';
 
 $favicon = '<link rel="icon" type="image/x-icon" href="./images/favicon.png">';
 
-$headLinks = $fontawesome . $cssGlobal . $jsGlobal . $favicon . $GA4;
+$jivochat = '<script src="//code.jivosite.com/widget/GZ66OuA1oQ" async></script>';
+
+$headLinks = $fontawesome . $cssGlobal . $jsGlobal . $favicon . $GA4 . $jivochat;
 
 //Globais
 
