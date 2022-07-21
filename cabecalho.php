@@ -40,9 +40,9 @@ $descRegistro = 'Tenha acesso a plataforma do SMDI, que é um evento marketing p
 
 $sair = '<br><a href="./sair"> <i class="fas fa-angle-right"></i> Sair </a>';
 
-$autor = '';
+$autor = '<a href="https://www.linkedin.com/in/vinicius-fernandes-andrade/" style="color:#bebebe">Vinicius</a>';
 
-$credit = '<p class="credit"> Criado por <span>' . $autor . '</span> | Todos os direitos reservados!</p>';
+$credit = '<p class="credit"> Criado por <span>' . $autor . '</span> <br><br> ABIMAQ | Todos os direitos reservados!</p>';
 
 $linkLogo = './';
 
