@@ -58,7 +58,7 @@ if(isset($_COOKIE['aula'.$id_page.''])){
                     <p>Professor: $usu->professor</p>
                 </div>
                 <div class='iframe-aula'>
-                    $usu->video
+                <iframe width='560' height='315' src='https://www.youtube.com/embed/$usu->video' title='$usu->nome_aula' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>
                 </div>
             </section>";
         }

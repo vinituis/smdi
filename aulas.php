@@ -51,6 +51,8 @@ $iniciado;
         $img = array();
         $ref = array();
         $i = 0;
+        $it = 0;
+        $ia = 0;
         while ($reg = mysqli_fetch_assoc($res)) {
             $id[$i] = $reg['id'];
             $nome[$i] = $reg['nome_aula'];
@@ -72,7 +74,7 @@ $iniciado;
                 <h3><?php echo $nome[$i]; ?></h3>
             </div>
             <div class="content">
-                <div class="stars">
+                <!-- <div class="stars">
                     <?php 
                     if($nota[$i] == '1'){
                         echo '<i class="fas fa-star"></i>';
@@ -106,14 +108,15 @@ $iniciado;
                         echo '<i class="fas fa-star"></i>';
                     }
                     ?>
-                </div>
+                </div> -->
                 <h3><?php echo $nome[$i]; ?></h3>
                 <p><?php echo $desc[$i]; ?></p>
                 <p>Professor: <?php echo $prof[$i]; ?></p>
-                <a href="./aula?id=<?php echo $id[$i]; ?>&aula=<?php echo $ref[$i]; ?>" class="btn">Acessar curso</a>
+                <a href="./aula?id=<?php echo $id[$i]; ?>&aula=<?php echo $ref[$i]; ?>" class="btn">Acessar Aula</a>
             </div>
         </div>
 <?php }}elseif($status[$i] == 'block'){
+    if($ref[$i] == 'ed_anterior'){}else{
     ?>
     <div class="box">
             <div class="image">
@@ -129,13 +132,7 @@ $iniciado;
                 <p><small style="text-transform: none;">A aula será liberada conforme o cronograma</small></p>
             </div>
         </div>
-    <?php }}
-    if($result=mysqli_query($conn, $sql)){
-        $rowcount=mysqli_num_rows($result);
-        if($rowcount == '0'){
-            echo $semContent;
-        }
-    }} ?>
+    <?php }}}} ?>
 
     </div>
 

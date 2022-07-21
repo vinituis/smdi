@@ -114,7 +114,11 @@ $headerProf = '
 '. $navProf . $redes . $credit .'
 </header>';
 
-$AoVivo = $semContent;
+$cod_vid = 'jfKfPfyJRdk';
+
+$AoVivo = '<iframe width="560" height="315" src="https://www.youtube.com/embed/'.$cod_vid.'" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+
+$chat = '<iframe src="https://www.youtube.com/live_chat?v='.$cod_vid.'&embed_domain=smdi.abimaq.org.br" >';
 
 $iframeAoVivo = '<section class="courses" id="aula">
 <div class="heading">
@@ -122,6 +126,8 @@ $iframeAoVivo = '<section class="courses" id="aula">
 </div>
 <div class="iframe-aula">
     '.$AoVivo.'
+    <br>
+    '.$chat.'
 </div>
 </section>';
 

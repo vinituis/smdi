@@ -112,8 +112,8 @@ if(isset($_POST['submit'])){
                 <option value="<?php echo $nome[$i]; ?>"><?php echo $nome[$i]; ?></option>
             <?php }}} ?>
             </select>
-            <label for="linkVideo">Código de embed do vídeo</label>
-            <input required type="text" name="linkVideo" id="linkVideo" placeholder="Embed do vídeo">
+            <label for="linkVideo">Código do vídeo no YouTube</label>
+            <input required type="text" name="linkVideo" id="linkVideo" placeholder="Ex: jfKfPfyJRdk">
             <label for="nota">Selecione a nota do curso</label>
             <select required name="nota" id="nota">
                 <option value="">Selecione</option>
