@@ -27,12 +27,12 @@ if(isset($_SESSION['user_name'])){
 			margin: 0; padding: 0;
 			width: 800px;
 			position: absolute;
-			top:0;
+			top:5rem;
 			z-index: 1;
 		}
 
 		.content h1 {
-			margin-top: 10rem;
+			margin-top: 5rem;
 		}
 		.content h2 {
 			margin-bottom: 0;

@@ -1,3 +1,6 @@
+body {
+    max-width: 800px;
+}
 
 .link-container{
     display: flex;
