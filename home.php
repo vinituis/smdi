@@ -157,12 +157,12 @@ $iniciado;
             <tr>
                 <td class="destaque">09h30</td>
                 <td>Comunicação Estratégica pelo WhatsApp</td>
-                <td colspan="6">JP do WhatsApp</td>
+                <td colspan="6"><a href="professor?id=24">JP do WhatsApp</a></td>
             </tr>
             <tr>
                 <td class="destaque">10h30</td>
                 <td>Como criar conteúdo relevante e atrativo para as redes sociais</td>
-                <td colspan="6">Priscila Santos</td>
+                <td colspan="6"><a href="professor?id=22">Priscila Santos</a></td>
             </tr>
             <tr>
                 <td class="destaque">11h15</td>
@@ -177,12 +177,12 @@ $iniciado;
             <tr>
                 <td class="destaque">13h00</td>
                 <td>Marketing de Comunidade</td>
-                <td colspan="6">À definir</td>
+                <td colspan="6"><a href="professor?id=25">Lia Penteado</a></td>
             </tr>
             <tr>
                 <td class="destaque">13h30</td>
                 <td>Dicas de SEO para o seu negócio, com foco em Copywriting</td>
-                <td colspan="6">Ludy Amano</td>
+                <td colspan="6"><a href="professor?id=23">Ludy Amano</a></td>
             </tr>
             <tr>
                 <td class="destaque">15h00</td>
@@ -209,15 +209,34 @@ $iniciado;
 
 <section>
     <div class="partners" id="partners">
-        <h3>Patrocinador</h3>
+        <h3>Patrocínio</h3>
         <div class="patrocinador">
-            <a href="https://www.hydac.com/pt-br/"><img src="./images/partner/hydac.jpg" alt="Logo Hydac"></a>
+            <a target="_blank" href="https://www.dell.com/pt-br"><img src="./images/partner/Dell.png" alt="Logo Dell"></a>
+            <a target="_blank" href="https://www.hydac.com/pt-br/"><img src="./images/partner/hydac.jpg" alt="Logo Hydac"></a>
+            <a target="_blank" href="https://www.expomafe.com.br/pt/home.html"><img src="./images/partner/expomafe.png" alt="Logo Expomafe"></a>
+            <a target="_blank" href="https://www.informamarkets.com/pt/home.html"><img src="./images/partner/informa.png" alt="Logo Informa"></a>
+            <a target="_blank" href="https://www.plasticobrasil.com.br/pt/HOME.html"><img src="./images/partner/plastico-brasil.png" alt="Logo Plástico Brasil"></a>
+        </div>
+        <h3>Parceria</h3>
+        <div class="parceria">
+        <a target="_blank" href="https://www.birmind.com.br/"><img src="./images/partner/birmind.png" alt="Logo Birmind"></a>
+        <a target="_blank" href="https://www.deere.com.br/pt/index.html"><img src="./images/partner/john-deere.png" alt="Logo Jhon Deere"></a>
+        <a target="_blank" href="https://www.linkedin.com/in/jpborges-jornalista/"><img src="./images/partner/JP.png" alt="Logo JP"></a>
+        <a target="_blank" href="https://www.mirago.com.br/"><img src="./images/partner/mirago.png" alt="Logo Mirago"></a>
+        <a target="_blank" href="https://www.ploomes.com/"><img src="./images/partner/ploomes.png" alt="Logo Ploomes"></a>
+        <a target="_blank" href="https://www.soulrocket.com.br/"><img src="./images/partner/soul-rocket.png" alt="Logo Soul Rocket"></a>
+        <a target="_blank" href="https://www.staubli.com/br/en/corp.html"><img src="./images/partner/staubli.png" alt="Logo Staubli"></a>
+        <a target="_blank" href="http://www.agenciatmd.com.br/site/"><img src="./images/partner/TMD.png" alt="Logo Agência TMD"></a>
         </div>
         <h3>Apoio</h3>
         <div class="apoio">
-            <img src="./images/partner/actuel.jpg" alt="Logo Actuel">
-            <img src="./images/partner/liberprint.jpg" alt="Logo Liberprint">
-            <img src="./images/partner/interbusiness.jpg" alt="Logo Interbusiness">
+            <img src="./images/partner/actuel.png" alt="Logo Actuel">
+            <img src="./images/partner/interbusiness.png" alt="Logo Interbusiness">
+            <img src="./images/partner/liberprint.png" alt="Logo Liberprint">
+        </div>
+        <h3>Divulgação</h3>
+        <div class="divulga">
+            <a target="_blank" href="https://plasticovirtual.com.br/"><img src="./images/partner/plastico-virtual.png" alt="Logo Plástico Virtual"></a>
         </div>
     </div>
 </section>

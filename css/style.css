@@ -834,14 +834,21 @@ span.aviso{
   justify-content: space-between;
   gap: 2rem;
   flex-direction: column;
+  padding: 0rem 10rem;
 }
 
 .partners h3 {
   font-size: 2rem;
-  color: #290369;
+  background-color: #681c86;
+  color: #fff;
+  width: 100%;
+  text-align: center;
+  padding: 1rem;
 }
 
 .partners .patrocinador, 
+.partners .parceria,
+.partners .divulga,
 .partners .apoio {
   display: flex;
   align-items: center;
@@ -851,12 +858,22 @@ span.aviso{
 }
 
 .partners .patrocinador img {
-  max-width: 30rem;
+  max-width: 20rem;
+}
+
+.partners .parceria img {
+  max-width: 20rem;
+  width: 18rem;
 }
 
 .partners .apoio img {
   max-width: 20rem;
   width: 15rem;
+}
+
+.partners .divulga img {
+  max-width: 20rem;
+  width: 14rem;
 }
 
 .prog .box-container {
