@@ -638,6 +638,27 @@ section:nth-child(even) {
   padding: 3rem;
   background: #fff;
   border: 0.1rem solid #999;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.reviews .box-container .box .tag.p {
+  width: 80%;
+  background-color: #681c86;
+  color: #fff;
+  padding: 0.5rem;
+  border-radius: 10px;
+}
+
+.reviews .box-container .box .tag.n {
+  width: 80%;
+  background-color: #696969;
+  color: #fff;
+  padding: 0.5rem;
+  border-radius: 10px;
 }
 
 .reviews .box-container .box img {
@@ -654,7 +675,6 @@ section:nth-child(even) {
 
 .reviews .box-container .box p {
   line-height: 2;
-  padding: 2rem 0;
   font-size: 1.3rem;
   color: #777;
 }
@@ -762,7 +782,7 @@ iframe {
 .prof {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   flex-direction: column;
   height: 100vh;
 }
@@ -814,6 +834,15 @@ iframe {
 .prof .share a:hover {
   color: #fff;
   background: #290369;
+}
+
+.prof .aulas {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
 }
 
 span.aviso{

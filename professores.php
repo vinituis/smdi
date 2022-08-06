@@ -45,6 +45,7 @@ $iniciado;
         $img = array();
         $cargo = array();
         $status = array();
+        $atual = array();
         $i = 0;
         while ($reg = mysqli_fetch_assoc($res)) {
             $id[$i] = $reg['id'];
@@ -52,13 +53,23 @@ $iniciado;
             $img[$i] = $reg['img'];
             $cargo[$i] = $reg['cargo'];
             $status[$i] = $reg['status'];
+            $atual[$i] = $reg['atual'];
             if($status[$i] == 'ativo'){
     ?>
         <div class="box">
+            <?php 
+            if($atual[$i] == 's'){
+                $atual[$i] = '<span class="tag p">Professor da edição atual</span>';
+            }else{
+                $atual[$i] = '<span class="tag n">Professor da edição anterior</span>';
+            }
+            
+            ?>
             <a href="./professor?id=<?php echo $id[$i]; ?>">    
                 <img src="<?php echo $img[$i]; ?>" alt="">
                 <h3><?php echo $nome[$i]; ?></h3>
             </a>
+            <?php echo $atual[$i]; ?>
             <p><?php echo $cargo[$i]; ?></p>
         </div>
     <?php }}
