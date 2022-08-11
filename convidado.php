@@ -11,10 +11,10 @@ $iniciado;
  
     $id_page = $_GET['id'];
     
-    $sql = "UPDATE user SET user_type = 'pre' WHERE id = '$id_page'";
+    $sql = "UPDATE user SET user_type = 'conv' WHERE id = '$id_page'";
     
     if (mysqli_query($conn, $sql)) {
-        $sucesso = "Alteração de modalidade realizado com sucesso!";
+        $sucesso = "Alterado como convidado!";
     } else {
         $sucesso = "Houve um erro: " . mysqli_error($conn);
     }
