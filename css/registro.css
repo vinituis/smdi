@@ -1,0 +1,265 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400&display=swap");
+
+* {
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+    margin: 0;padding: 0;
+    transition: all .2s linear;
+}
+
+html::-webkit-scrollbar {
+    width: 0rem;
+}
+
+body {
+    background-color: #681c86;
+}
+
+.form-container {
+    min-height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url(../images/bg2.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    perspective: 1000px;
+    gap: 5rem;
+    flex-wrap: wrap;
+}
+
+.form-container .text {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    margin: 1rem 2rem;
+    gap: 0.8rem;
+    color: #fff;
+}
+
+.form-container .text h1 {
+    font-size: 4.2rem;
+    font-weight: 800;
+    margin-bottom: 1.2rem;
+}
+
+.form-container .text p {
+    max-width: 500px;
+    color: #fff;
+}
+
+.form-container .text span {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+}
+
+.form-container .text .aviso {
+    font-size: 1rem;
+    background-color: rgb(255, 0, 0);
+    padding: 1rem 2rem;
+}
+
+.form-container .text button {
+    background-color: rgba(104, 28, 134, 0.7);
+    border: 0.2rem solid #fff;
+    padding: 0.5rem 1rem;
+    color: #fff;
+    margin-top: 2rem;
+}
+
+.form-container .text button a {
+    text-decoration: none;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.form-container .text button a:hover {
+    gap: 1rem;
+    font-weight: 800;
+}
+
+.form-container .text button a i {
+    font-size: 1.1rem;
+}
+
+.form-container form {
+    height: 660px;
+    width: 400px;
+    background: rgba(255, 255, 255, .1);
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .3);
+    border-top: 1px solid rgba(255, 255, 255, .3);
+    border-left: 1px solid rgba(255, 255, 255, .3);
+    backdrop-filter: blur(15px);
+    transform-style: preserve-3d;
+}
+
+.form-container form h3 {
+    font-size: 30px;
+    padding: 30px 0;
+    color: #ccc;
+    letter-spacing: 3px;
+}
+
+.form-container form i {
+    padding: 0 5px;
+    font-size: 20px;
+    color: #bbb;
+}
+
+.aceite {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-left: 2.5rem;
+}
+
+input[type="checkbox"] {
+    width: 1.4rem !important;
+    background: none !important;
+    box-shadow: none !important;
+    border: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+.aceite label {
+    margin-top: 1rem;
+    font-size: 0.75rem;
+    color: #ccc;
+    text-align: left;
+}
+
+select {
+    outline: none;
+    border: none;
+    height: 40px;
+    width: 82%;
+    background: rgba(0, 0, 0, .3);
+    color: rgba(255, 255, 255, .3);
+    box-shadow: 0 0 5px rgba(0, 0, 0, .5) inset;
+    font-size: 17px;
+    padding: 0 10px;
+    margin: 15px 0;
+    letter-spacing: 1px;
+}
+
+option{
+    background-color: rgb(104, 28, 134);
+    color: #fff;
+}
+
+.form-container form input{
+    outline: none;
+    border: none;
+    height: 40px;
+    width: 82%;
+    background: rgba(0, 0, 0, .3);
+    color: rgba(255, 255, 255, .7);
+    box-shadow: 0 0 5px rgba(0, 0, 0, .5) inset;
+    font-size: 17px;
+    padding: 0 10px;
+    margin: 15px 0;
+    letter-spacing: 1px;
+}
+
+.form-container form input[type="submit"] {
+    width: 90%;
+    cursor: pointer;
+    background: linear-gradient(90deg, rgb(104, 28, 134), rgb(88, 52, 255));
+    margin-top: 30px;
+    border-radius: 50px;
+}
+
+.form-container form input[type="submit"]:hover {
+    background: linear-gradient(120deg, rgb(88, 52, 255), rgb(104, 28, 134));
+}
+
+.form-container form a, p {
+    color: #bbb;
+}
+
+.error-msg {
+    width: 100%;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: red;
+    color: #ddd;
+}
+
+.correct-msg {
+    width: 100%;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: green;
+    color: #ddd;
+}
+
+.conteudos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ddd;
+    flex-direction: column;
+    padding: 5rem 20rem 3rem 20rem;
+}
+
+.conteudos .title {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.conteudos h1 {
+    color: #681c86;
+}
+
+.conteudos h2 {
+    color: #681c86;
+    margin: 2rem 2rem -2rem 2rem;
+}
+
+.conteudos h3 {
+    color: #696969;
+}
+
+.conteudos p{
+    color: #000;
+}
+
+.conteudos p.aulas{
+    color: #000;
+}
+
+.conteudos .btn {
+    color: #fff;
+    background-color: #681c86;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    cursor: pointer;
+    margin: 2.5rem;
+    width: 100%;
+    text-align: center;
+}
+
+.conteudos ul {
+    margin-left: 1rem;
+}
+
+@media (max-width: 900px) {
+    .form-container .text .aviso {
+        font-size: 0.85rem;
+    }
+    .form-container form {
+        width: 90%;
+    }
+    .conteudos{
+        padding: 2rem;
+    }
+}

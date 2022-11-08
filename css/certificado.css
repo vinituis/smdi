@@ -1,0 +1,19 @@
+body {
+    max-width: 800px;
+}
+
+.link-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
+
+.btn-generate{
+    padding: 0.2rem 1rem;
+    cursor: pointer;
+    color: #fff;
+    background: #290369;
+    font-size: 0.8rem;
+    text-transform: none;
+}

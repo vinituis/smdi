@@ -1,0 +1,284 @@
+.equipe {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    -webkit-transition: all .2s linear;
+    flex-wrap: wrap;
+}
+
+.equipe .camila {
+    background: url("../images/equipe/camila-normal.png") no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 200px;
+    height: 250px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.equipe .camila:hover {
+    background: url("../images/equipe/camila-careta.png") no-repeat;
+}
+
+.equipe .camila p {
+    width: 100%;
+    background-color: #681c86;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+}
+
+.equipe .charles {
+    background: url("../images/equipe/charles-normal.png") no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 200px;
+    height: 250px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.equipe .charles:hover {
+    background: url("../images/equipe/charles-careta.png") no-repeat;
+}
+
+.equipe .charles p {
+    width: 100%;
+    background-color: #681c86;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+}
+
+.equipe .denise {
+    background: url("../images/equipe/denise-normal.png") no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 200px;
+    height: 250px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.equipe .denise:hover {
+    background: url("../images/equipe/denise-careta.png") no-repeat;
+}
+
+.equipe .denise p {
+    width: 100%;
+    background-color: #681c86;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+}
+
+.equipe .fernanda {
+    background: url("../images/equipe/fernanda-normal.png") no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 200px;
+    height: 250px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.equipe .fernanda:hover {
+    background: url("../images/equipe/fernanda-careta.png") no-repeat;
+}
+
+.equipe .fernanda p {
+    width: 100%;
+    background-color: #681c86;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+}
+
+.equipe .geraldo {
+    background: url("../images/equipe/geraldo-normal.png") no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 200px;
+    height: 250px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.equipe .geraldo:hover {
+    background: url("../images/equipe/geraldo-careta.png") no-repeat;
+}
+
+.equipe .geraldo p {
+    width: 100%;
+    background-color: #681c86;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+}
+
+.equipe .jefferson {
+    background: url("../images/equipe/jefferson-normal.png") no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 200px;
+    height: 250px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.equipe .jefferson:hover {
+    background: url("../images/equipe/jefferson-careta.png") no-repeat;
+}
+
+.equipe .jefferson p {
+    width: 100%;
+    background-color: #681c86;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+}
+
+.equipe .lariza {
+    background: url("../images/equipe/lariza-normal.png") no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 200px;
+    height: 250px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.equipe .lariza:hover {
+    background: url("../images/equipe/lariza-careta.png") no-repeat;
+}
+
+.equipe .lariza p {
+    width: 100%;
+    background-color: #681c86;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+}
+
+.equipe .murilo {
+    background: url("../images/equipe/murilo-normal.png") no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 200px;
+    height: 250px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.equipe .murilo:hover {
+    background: url("../images/equipe/murilo-careta.png") no-repeat;
+}
+
+.equipe .murilo p {
+    width: 100%;
+    background-color: #681c86;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+}
+
+.equipe .nelson {
+    background: url("../images/equipe/nelson-normal.png") no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 200px;
+    height: 250px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.equipe .nelson:hover {
+    background: url("../images/equipe/nelson-careta.png") no-repeat;
+}
+
+.equipe .nelson p {
+    width: 100%;
+    background-color: #681c86;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+}
+
+.equipe .sidney {
+    background: url("../images/equipe/sidney-normal.png") no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 200px;
+    height: 250px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.equipe .sidney:hover {
+    background: url("../images/equipe/sidney-careta.png") no-repeat;
+}
+
+.equipe .sidney p {
+    width: 100%;
+    background-color: #681c86;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+}
+
+.equipe .vilma {
+    background: url("../images/equipe/vilma-normal.png") no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 200px;
+    height: 250px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.equipe .vilma:hover {
+    background: url("../images/equipe/vilma-careta.png") no-repeat;
+}
+
+.equipe .vilma p {
+    width: 100%;
+    background-color: #681c86;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+}
+
+.equipe .vinicius {
+    background: url("../images/equipe/vinicius-normal.png") no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 200px;
+    height: 250px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.equipe .vinicius:hover {
+    background: url("../images/equipe/vinicius-careta.png") no-repeat;
+}
+
+.equipe .vinicius p {
+    width: 100%;
+    background-color: #681c86;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+}
