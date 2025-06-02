@@ -5,30 +5,34 @@ $programacaoDefinida = true;
 $ingressosDisponiveis = true;
 $patrocinadoresConfirmados = false;
 $lotes = [
+    // Lote 1: 02/06/2025 - 13/06/2025
+    // Lote 2: 14/06/2025 - 27/06/2025
+    // Lote 3: 28/06/2025 - 11/07/2025
+    // Lote F: 12/07/2025 - 01/08/2025
     [
         'nome' => 'Lote 1',
-        'inicio' => '26/05/2025',
-        'fim' => '06/06/2025',
+        'inicio' => '02/06/2025',
+        'fim' => '13/06/2025',
         'associado' => 200.00,
         'nao_associado' => 400.00
     ],
     [
         'nome' => 'Lote 2',
-        'inicio' => '07/06/2025',
-        'fim' => '18/06/2025',
+        'inicio' => '14/06/2025',
+        'fim' => '27/06/2025',
         'associado' => 220.00,
         'nao_associado' => 440.00
     ],
     [
         'nome' => 'Lote 3',
-        'inicio' => '19/06/2025',
+        'inicio' => '28/06/2025',
         'fim' => '11/07/2025',
         'associado' => 240.00,
         'nao_associado' => 480.00
     ],
     [
         'nome' => 'Lote Final',
-        'inicio' => '11/07/2025',
+        'inicio' => '12/07/2025',
         'fim' => '01/08/2025',
         'associado' => 260.00,
         'nao_associado' => 520.00
@@ -53,43 +57,43 @@ $palestrantes = [
 ];
 $programacao = [
     [
-        'horario' => '13:00 - 13:30',
+        'horario' => '13:30 - 14:00',
         'titulo' => 'Credenciamento',
         'palestrante' => null,
         'descricao' => 'Recebimento dos participantes, entrega de materiais.'
     ],
     [
-        'horario' => '14:00 - 14:50',
+        'horario' => '14:00 - 15:00',
         'titulo' => 'Palestra Magna',
         'palestrante' => 'A definir',
         'descricao' => null
     ],
     [
-        'horario' => '15:00 - 15:50',
+        'horario' => '15:10 - 16:00',
         'titulo' => 'Trilha 1: Marketing',
         'palestrante' => 'A definir',
         'descricao' => null
     ],
     [
-        'horario' => '15:00 - 15:50',
+        'horario' => '15:10 - 16:00',
         'titulo' => 'Trilha 1: Vendas',
         'palestrante' => 'A definir',
         'descricao' => null
     ],
     [
-        'horario' => '16:00 - 16:50',
+        'horario' => '16:10 - 17:00',
         'titulo' => 'Trilha 2: Marketing',
         'palestrante' => 'A definir',
         'descricao' => null
     ],
     [
-        'horario' => '16:10 - 16:50',
+        'horario' => '16:10 - 17:00',
         'titulo' => 'Trilha 2: Vendas',
         'palestrante' => 'A definir',
         'descricao' => null
     ],
     [
-        'horario' => '17:00 - 18:30',
+        'horario' => '17:10 - 18:00',
         'titulo' => 'Encerramento e Coquetel de Networking',
         'palestrante' => null,
         'descricao' => 'Celebre o aprendizado, fortaleça conexões e gere novas oportunidades de negócio em um ambiente descontraído.'
@@ -127,6 +131,13 @@ $patrocinadoresPrata = [
 ];
 
 header('Cache-Control: no-cache, no-store, private');
+
+// +++ ADICIONAR ESTA LINHA +++
+date_default_timezone_set('America/Sao_Paulo'); // Defina seu fuso horário
+$hoje = new DateTime();
+$hoje->setTime(0, 0, 0); // Normaliza para meia-noite para comparações de data consistentes
+
+
 ?>
 
 <!DOCTYPE html>
@@ -142,7 +153,7 @@ header('Cache-Control: no-cache, no-store, private');
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <!-- Link para a biblioteca AOS (Animate On Scroll) -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <meta name="robots" content="noindex">
+    <!-- <meta name="robots" content="noindex"> -->
     <style>
         /* Cores e Fundos para Dark Theme Aprimorado */
         :root {
@@ -824,6 +835,20 @@ header('Cache-Control: no-cache, no-store, private');
 
          }
 
+         /* +++ ADICIONAR ESTE ESTILO CSS PARA O DESTAQUE +++ */
+        .lote-atual-destaque {
+            border: 3px solid var(--primary-color) !important; /* Borda mais grossa e colorida */
+            box-shadow: 0 0 15px rgba(150, 134, 242, 0.7) !important; /* Um brilho sutil usando a cor primária com alfa */
+            transform: scale(1.03); /* Opcional: levemente maior para chamar mais atenção */
+            z-index: 10; /* Para garantir que fique por cima de outros elementos se houver sobreposição */
+        }
+        .lote-atual-destaque .card-header {
+            background-color: var(--primary-color) !important;
+            color: #ffffff !important; /* Garante que o texto do header seja branco e legível */
+            font-weight: bold;
+        }
+        /* +++ FIM DO ESTILO CSS PARA DESTAQUE +++ */
+
     </style>
 </head>
 
@@ -853,7 +878,7 @@ header('Cache-Control: no-cache, no-store, private');
     <section id="home" class="hero-section" data-aos="fade-in">
         <div class="hero-overlay"></div>
         <div class="container hero-content d-flex flex-column justify-content-center align-items-center text-center px-3">
-            <small>Tema de 2025</small>
+            <small>Dia 12/08/2025 às 13h30</small>
             <h1 class="display-4 fw-bold mb-3" data-aos="fade-up" data-aos-delay="200">Explorando novos caminhos</h1>
             <p class="fs-5 mb-5 mt-3" style="max-width: 800px;" data-aos="fade-up" data-aos-delay="400">A evolução do marketing e vendas na era digital.</p>
             <div data-aos="fade-up" data-aos-delay="600">
@@ -942,12 +967,39 @@ header('Cache-Control: no-cache, no-store, private');
                         <p>Associados <strong>ABIMAQ</strong> possuem valor diferenciado que será verificado via CNPJ</p>
                     </div>
                 </div>
-                               <!-- Substituir a tabela por cards -->
+                <!-- Substituir a tabela por cards -->
                 <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4 justify-content-center mb-4">
-                    <?php $aos_delay_lote = 100; ?>
-                    <?php foreach ($lotes as $lote): ?>
+                    <?php
+                    $aos_delay_lote = 100;
+                    foreach ($lotes as $lote):
+                        // +++ INÍCIO DA LÓGICA PARA DETERMINAR O LOTE ATUAL +++
+                        $isLoteAtual = false;
+                        $classeDestaqueLote = '';
+
+                        // Tenta converter as datas do lote para objetos DateTime
+                        // As datas devem estar no formato 'd/m/Y' como no seu array
+                        $dataInicioLote = DateTime::createFromFormat('d/m/Y', $lote['inicio']);
+                        if ($dataInicioLote) {
+                            $dataInicioLote->setTime(0,0,0); // Normaliza para meia-noite
+                        }
+
+                        $dataFimLote = DateTime::createFromFormat('d/m/Y', $lote['fim']);
+                        if ($dataFimLote) {
+                            $dataFimLote->setTime(0,0,0); // Normaliza para meia-noite (o lote é válido ATÉ o final deste dia)
+                                                       // Na comparação, usamos <= $dataFimLote
+                        }
+
+                        // Verifica se as datas foram convertidas corretamente e se o lote é o atual
+                        if ($dataInicioLote && $dataFimLote) {
+                            if ($hoje >= $dataInicioLote && $hoje <= $dataFimLote) {
+                                $isLoteAtual = true;
+                                $classeDestaqueLote = 'lote-atual-destaque'; // Define a classe CSS
+                            }
+                        }
+                        // +++ FIM DA LÓGICA PARA DETERMINAR O LOTE ATUAL +++
+                    ?>
                         <div class="col d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="<?= $aos_delay_lote ?>">
-                            <div class="card card-lote h-100 shadow-sm">
+                            <div class="card card-lote h-100 shadow-sm <?= $classeDestaqueLote ?>">
                                 <div class="card-header text-center fw-bold"><?= htmlspecialchars($lote['nome']) ?></div>
                                 <div class="card-body d-flex flex-column text-center">
                                     <p class="card-text text-muted mb-2"><small><?= htmlspecialchars($lote['inicio']) ?> a <?= htmlspecialchars($lote['fim']) ?></small></p>
@@ -972,7 +1024,6 @@ header('Cache-Control: no-cache, no-store, private');
                 <div class="row justify-content-center mb-4" data-aos="fade-up" data-aos-delay="400">
                     <div class="col-lg-8 text-center bg-light-alt p-4 rounded shadow-sm">
                         <h4 class="fw-semibold mb-3">Descontos Progressivos para Grupos!</h4>
-                        <p class="mb-1">Traga sua equipe e economize:</p>
                         <ul class="list-unstyled">
                             <li><p class="mb-1"><strong class="text-white">5% de desconto</strong> para 2 inscrições da mesma empresa.</p></li>
                             <li><p class="mb-1"><strong class="text-white">10% de desconto</strong> para 3 inscrições da mesma empresa.</p></li>
@@ -1001,6 +1052,7 @@ header('Cache-Control: no-cache, no-store, private');
                 <div class="col-lg-6" data-aos="fade-right" data-aos-delay="200">
                     <h4 class="fw-semibold mb-3">Centro de Eventos ABIMAQ</h4>
                     <p class="text-light">Av. Jabaquara, 2925 - Mirandópolis<br>São Paulo - SP, 04045-004</p>
+                    <p class="text-light">Próximo a estação São Judas do metrô</p>
                     <hr class="my-4"> <!-- Mais destaque na linha divisória -->
                     <p><strong>Estacionamento:</strong> Convênio com estacionamento pago no local.</p>
                     <br>
@@ -1061,7 +1113,7 @@ header('Cache-Control: no-cache, no-store, private');
                             <h5 class="card-title text-center mb-3">R$ 5.000,00</h5>
                             <ul class="list-unstyled mb-4 flex-grow-1">
                                 <li><i class="bi bi-check text-success"></i> 1 Convite</li>
-                                <li><i class="bi bi-check text-success"></i> Menção da emppresa na abertura </li>
+                                <li><i class="bi bi-check text-success"></i> Menção da empresa na abertura </li>
                                 <li><i class="bi bi-check text-success"></i> Logo na página do evento</li>
                                 <li><i class="bi bi-check text-success"></i> Logo no e-mail marketing</li>
                             </ul>
@@ -1075,11 +1127,12 @@ header('Cache-Control: no-cache, no-store, private');
                         <div class="card-body d-flex flex-column">
                             <h5 class="card-title text-center mb-3">R$ 8.000,00</h5>
                             <ul class="list-unstyled mb-4 flex-grow-1">
-                                <li><i class="bi bi-check text-success"></i> 2 Convite</li>
-                                <li><i class="bi bi-check text-success"></i> Menção da emppresa na abertura </li>
+                                <li><i class="bi bi-check text-success"></i> 2 Convites</li>
+                                <li><i class="bi bi-check text-success"></i> Menção da empresa na abertura </li>
                                 <li><i class="bi bi-check text-success"></i> Logo na página do evento</li>
                                 <li><i class="bi bi-check text-success"></i> Logo no e-mail marketing</li>
-                                <li><i class="bi bi-check text-success"></i> Logo nos posta das redes sociais</li>
+                                <li><i class="bi bi-check text-success"></i> Logo nos posts das redes sociais</li>
+                                <li><i class="bi bi-check text-success"></i> Logo no banner do site ABIMAQ</li>
                             </ul>
                         </div>
                     </div>
@@ -1091,11 +1144,11 @@ header('Cache-Control: no-cache, no-store, private');
                         <div class="card-body d-flex flex-column">
                             <h5 class="card-title text-center mb-3">R$ 10.000,00</h5>
                             <ul class="list-unstyled mb-4 flex-grow-1">
-                                <li><i class="bi bi-check text-success"></i> 4 Convite</li>
-                                <li><i class="bi bi-check text-success"></i> Menção da emppresa na abertura </li>
+                                <li><i class="bi bi-check text-success"></i> 4 Convites</li>
+                                <li><i class="bi bi-check text-success"></i> Menção da empresa na abertura </li>
                                 <li><i class="bi bi-check text-success"></i> Logo na página do evento</li>
                                 <li><i class="bi bi-check text-success"></i> Logo no e-mail marketing</li>
-                                <li><i class="bi bi-check text-success"></i> Logo nos posta das redes sociais</li>
+                                <li><i class="bi bi-check text-success"></i> Logo nos posts das redes sociais</li>
                                 <li><i class="bi bi-check text-success"></i> Logo no banner do site ABIMAQ</li>
                                 <li><i class="bi bi-check text-success"></i> Anúncio na news ABIMAQ Info</li>
                                 <li><i class="bi bi-check text-success"></i> Logo na ambientação</li>
@@ -1110,11 +1163,11 @@ header('Cache-Control: no-cache, no-store, private');
                         <div class="card-body d-flex flex-column">
                             <h5 class="card-title text-center mb-3">R$ 20.000,00</h5>
                             <ul class="list-unstyled mb-4 flex-grow-1">
-                                <li><i class="bi bi-check text-success"></i> 6 Convite</li>
-                                <li><i class="bi bi-check text-success"></i> Menção da emppresa na abertura </li>
+                                <li><i class="bi bi-check text-success"></i> 6 Convites</li>
+                                <li><i class="bi bi-check text-success"></i> Menção da empresa na abertura </li>
                                 <li><i class="bi bi-check text-success"></i> Logo na página do evento</li>
                                 <li><i class="bi bi-check text-success"></i> Logo no e-mail marketing</li>
-                                <li><i class="bi bi-check text-success"></i> Logo nos posta das redes sociais</li>
+                                <li><i class="bi bi-check text-success"></i> Logo nos posts das redes sociais</li>
                                 <li><i class="bi bi-check text-success"></i> Logo no banner do site ABIMAQ</li>
                                 <li><i class="bi bi-check text-success"></i> Anúncio na news ABIMAQ Info</li>
                                 <li><i class="bi bi-check text-success"></i> Logo na ambientação</li>
@@ -1162,7 +1215,7 @@ header('Cache-Control: no-cache, no-store, private');
             <div class="row align-items-center">
                 <div class="col-md-4 mb-3 mb-md-0 text-center text-md-start"> <img src="src/images/logo.png" width="120" alt="SMDI 2025 Logo Rodapé" style="filter: brightness(0) invert(1) opacity(0.8);"> </div>
                 <div class="col-md-4 mb-3 mb-md-0 text-center">
-                    <p class="mb-1">Entre em contato:</p> <a href="mailto:eventos@abimaq.org.br" class="link-footer">eventos@abimaq.org.br</a><br> <a href="tel:+551155826311" class="link-footer">(11) 5582-6311</a>
+                    <p class="mb-1">Entre em contato:</p> <a href="mailto:eventos@abimaq.org.br" class="link-footer">eventos@abimaq.org.br</a><br> <a href="tel:+551155826315" class="link-footer">(11) 5582-6315</a>
                 </div>
                 <div class="col-md-4 text-center text-md-end">
                     <p class="mb-2">Siga a ABIMAQ:</p>

@@ -1,4 +1,5 @@
 <?php
+header('Cache-Control: no-cache, no-store, private');
 // --- INÍCIO DO SCRIPT DE PROCESSAMENTO ---
 
 // 1. INICIA A SESSÃO OBRIGATORIAMENTE NO TOPO
@@ -20,8 +21,8 @@ define('TABLE_ASSOCIADOS', 'cnpj'); // <<< MUDE AQUI
 // --- Configurações de Preço e Lotes ---
 $precoBaseAssociado = 200.00;
 $precoBaseNaoAssociado = 400.00;
-$dataLimiteLote1Str = '2025-06-06 23:59:59';
-$dataLimiteLote2Str = '2025-06-18 23:59:59';
+$dataLimiteLote1Str = '2025-06-13 23:59:59';
+$dataLimiteLote2Str = '2025-06-27 23:59:59';
 $dataLimiteLote3Str = '2025-07-11 23:59:59';
 $percentualAumentoLote2 = 10;
 $percentualAumentoLote3 = 20;
@@ -271,10 +272,24 @@ try {
         $mensagemSucesso .= " (Desconto de {$discountPercentageServer}% aplicado)";
     }
 
+    require "controller/Emails/EmailInscrito.php";
+    $resultado = enviaInscrito("$nomeBoleto", "$emailBoleto", "Confirmação de Inscrição SMDI", $numParticipantesValidos);
+
+    if ($resultado['success']) {
+        $Email = "Status da requisição: Sucesso (HTTP {$resultado['http_code']}).<br> Mensagem: {$resultado['message']}\n";
+        // Analise $resultado['response_body'] para ver a resposta real da API de envio
+        // var_dump($resultado['response_body']);
+    } else {
+        $Email = "Status da requisição: Falha (HTTP {$resultado['http_code']}).<br> Mensagem: {$resultado['message']}\n";
+        // Analise $resultado['response_body'] para detalhes do erro da API
+        // var_dump($resultado['response_body']);
+    }
+
     redirect_with_feedback('obrigado', [
         'status' => 'success',
         'message' => $mensagemSucesso,
-        'pids' => $idsParticipantesInseridos // Envia os IDs se precisar
+        'pids' => $idsParticipantesInseridos, // Envia os IDs se precisar
+        'email' => $Email
     ]);
 } catch (Exception $e) {
     // 12. TRATAMENTO DE ERROS GERAIS / DB -> ROLLBACK

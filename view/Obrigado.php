@@ -1,4 +1,5 @@
 <?php
+header('Cache-Control: no-cache, no-store, private');
 // obrigado.php
 
 // Tenta iniciar a sessão se ainda não estiver ativa
@@ -16,6 +17,7 @@ if (session_status() == PHP_SESSION_NONE) {
     <!-- Ajuste o caminho do CSS -->
     <link rel="stylesheet" href="src/css/bootstrap.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <meta name="robots" content="noindex">
     <style>
         body {
             display: flex;

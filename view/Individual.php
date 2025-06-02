@@ -17,7 +17,7 @@ if ($feedback) {
     $dadosForm = $feedback['data']['geral'] ?? [];
     $dadosParticipantesForm = $feedback['data']['participantes'] ?? [[]];
     if ($feedback['status'] === 'success') {
-        $mensagemSucesso = $feedback['message'];
+        // $mensagemSucesso = $feedback['message'];
         $dadosForm = [];
         $dadosParticipantesForm = [[]];
     } elseif ($feedback['status'] === 'db_error' || $feedback['status'] === 'general_error') {
@@ -35,8 +35,8 @@ if (empty($dadosParticipantesForm)) {
 // --- Configurações JS (iguais) ---
 $precoBaseAssociadoJS = 200.00;
 $precoBaseNaoAssociadoJS = 400.00;
-$dataLimiteLote1JS = [2025, 5, 6];
-$dataLimiteLote2JS = [2025, 5, 18];
+$dataLimiteLote1JS = [2025, 5, 13];
+$dataLimiteLote2JS = [2025, 5, 27];
 $dataLimiteLote3JS = [2025, 6, 11];
 $percentualAumentoLote2JS = 10;
 $percentualAumentoLote3JS = 20;
@@ -512,7 +512,7 @@ header('Cache-Control: no-cache, no-store, private');
     <div class="container">
         <div class="col-12 pt-4 pb-3 text-center destaque">
             <h2 class="fs-1">Informações importantes</h2>
-            <p> - Após a inscrição, a equipe da ABIMAQ entrará em contato para enviar o boleto de pagamento.<br> - O pagamento é via boleto e não fazemos emissão de NF, apenas recibo simples.</p>
+            <p>Após a inscrição, a equipe da ABIMAQ enviará o boleto de pagamento para o e-mail informado.<br>O pagamento é feito exclusivamente via boleto, com emissão apenas de recibo simples.</p>
         </div>
         <form class="row my-5" method="post" name='post' action="individual" novalidate>
             <h1 class="text-center pt-5 mb-3">Inscrição de Participantes</h1>
@@ -525,7 +525,7 @@ header('Cache-Control: no-cache, no-store, private');
             <h4 class="text-center mb-4">Dados Financeiros (Empresa)</h4>
             <div class="col-md-6 col-12 mb-3">
                 <label for="CNPJ" class="form-label">CNPJ</label>
-                <input type="text" class="form-control <?= isset($errosValidacaoGeral['CNPJ']) ? 'is-invalid' : '' ?>" id="CNPJ" name="geral[CNPJ]" value="<?= htmlspecialchars($dadosForm['CNPJ'] ?? '') ?>" required>
+                <input type="text" class="form-control <?= isset($errosValidacaoGeral['CNPJ']) ? 'is-invalid' : '' ?>" id="CNPJ" name="geral[CNPJ]" value="<?= htmlspecialchars($dadosForm['CNPJ'] ?? '') ?>" maxlength="18" required>
                 <?php if (isset($errosValidacaoGeral['CNPJ'])): ?>
                     <div class="invalid-feedback">
                         <?= $errosValidacaoGeral['CNPJ'] ?>
@@ -1068,11 +1068,77 @@ header('Cache-Control: no-cache, no-store, private');
             }
 
             // --- Inicialização ---
-            atualizarDisplayPreco();
-            atualizarIndicesEVisibilidadeRemover();
+            if (cnpjInput && cnpjInput.value.trim() !== '') {
+                // A função consultarCnpj é async, mas não precisamos esperar por ela aqui
+                // para o fluxo principal. Ela atualizará o preço no seu 'finally'.
+                consultarCnpj(cnpjInput.value.trim());
+            } else {
+                // Se o CNPJ estiver vazio, garante que o preço seja calculado com base em "não associado"
+                isAssociadoGlobal = false;
+                atualizarDisplayPreco();
+            }
 
         }); // Fim DOMContentLoaded
     </script>
+    <script>
+document.addEventListener('DOMContentLoaded', function() {
+    const cnpjInput = document.getElementById('CNPJ');
+
+    if (cnpjInput) {
+        cnpjInput.addEventListener('input', function(event) {
+            let value = event.target.value;
+
+            // 1. Remove tudo que não for dígito
+            value = value.replace(/\D/g, '');
+
+            // 2. Limita a 14 dígitos (CNPJ)
+            value = value.substring(0, 14);
+
+            // 3. Aplica a máscara
+            let formattedValue = '';
+            if (value.length > 0) {
+                formattedValue = value.substring(0, 2); // XX
+            }
+            if (value.length > 2) {
+                formattedValue += '.' + value.substring(2, 5); // XX.XXX
+            }
+            if (value.length > 5) {
+                formattedValue += '.' + value.substring(5, 8); // XX.XXX.XXX
+            }
+            if (value.length > 8) {
+                formattedValue += '/' + value.substring(8, 12); // XX.XXX.XXX/XXXX
+            }
+            if (value.length > 12) {
+                formattedValue += '-' + value.substring(12, 14); // XX.XXX.XXX/XXXX-XX
+            }
+
+            event.target.value = formattedValue;
+        });
+
+        // Opcional: Formatar ao carregar a página se já houver um valor (ex: vindo do PHP)
+        if (cnpjInput.value) {
+            let initialValue = cnpjInput.value.replace(/\D/g, '').substring(0, 14);
+            let formattedInitialValue = '';
+            if (initialValue.length > 0) {
+                formattedInitialValue = initialValue.substring(0, 2);
+            }
+            if (initialValue.length > 2) {
+                formattedInitialValue += '.' + initialValue.substring(2, 5);
+            }
+            if (initialValue.length > 5) {
+                formattedInitialValue += '.' + initialValue.substring(5, 8);
+            }
+            if (initialValue.length > 8) {
+                formattedInitialValue += '/' + initialValue.substring(8, 12);
+            }
+            if (initialValue.length > 12) {
+                formattedInitialValue += '-' + initialValue.substring(12, 14);
+            }
+            cnpjInput.value = formattedInitialValue;
+        }
+    }
+});
+</script>
 
 </body>
 
