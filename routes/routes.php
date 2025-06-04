@@ -2,11 +2,15 @@
 
 switch ($caminho){
     case 'home':
-        require "view/Home.php";
-    break;
-    
     case 'page':
         require "view/Page.php";
+    break;
+    case 'colaborador':
+        if(isset($_POST['geral'])){
+            require "controller/Colaborador.php";
+        }else{
+            require "view/Colaborador.php";
+        }
     break;
     
     case 'individual':
