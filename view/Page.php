@@ -1,9 +1,9 @@
 <?php
 // --- PHP Vars (igual ao anterior) ---
-$palestrantesConfirmados = false;
+$palestrantesConfirmados = true;
 $programacaoDefinida = true;
 $ingressosDisponiveis = true;
-$patrocinadoresConfirmados = false;
+$patrocinadoresConfirmados = true;
 $lotes = [
     // Lote 1: 02/06/2025 - 13/06/2025
     // Lote 2: 14/06/2025 - 27/06/2025
@@ -41,18 +41,27 @@ $lotes = [
 $linkInscricao = 'individual';
 $palestrantes = [
     [
-        'foto' => 'src/images/cristiano.png',
-        'nome' => 'Cristiano Santos',
-        'titulo' => 'Especialista em Marketing B2B',
-        'bio' => 'Com mais de 15 anos de experiência...',
-        'linkedin' => 'https://www.linkedin.com/in/vinicius-fernandes-andrade/'
+        'foto' => 'src/images/palestrante/beatriz.png',
+        'nome' => 'Beatriz Guarezi',
+        'titulo' => 'Especialista em branding, criadora de conteúdo, TEDx Speaker e LinkedIn Top Voice.',
+        'bio' => 'Criadora da Bits to Brands, ela lidera um movimento que revoluciona a forma como profissionais pensam e constroem marcas. Com diversos prêmios e reconhecimentos, Beatriz conversa com mais de 100 mil profissionais em sua newsletter e redes sociais.',
+        'linkedin' => 'https://www.linkedin.com/in/beatrizguarezi/'
+    ],
+];
+$embaixadores = [
+    [
+        'foto' => 'src/images/palestrante/noara.png',
+        'nome' => 'Noara Pozzer',
+        'titulo' => 'Especialista em atendimento, vendas, marketing e liderança',
+        'bio' => 'Se dedica há mais de 18 anos a melhorar os resultados em vendas e comportamento em empresas. Treinadora de equipes de alta performance, desenvolvedora dos Métodos Vendedor e Líder de resultado, professora de MBA e é consultora, palestrante e professora com foco em inovação, estratégia e cuidado com pessoas.',
+        'linkedin' => 'https://www.linkedin.com/in/noarapozzer/'
     ],
      [
-        'foto' => 'src/images/ana.png',
-        'nome' => 'A definir',
-        'titulo' => 'Expert em Vendas Consultivas',
-        'bio' => 'Ajudo empresas a transformar...',
-        'linkedin' => 'https://www.linkedin.com/in/vinicius-fernandes-andrade/'
+        'foto' => 'src/images/palestrante/jp.png',
+        'nome' => 'João Paulo (JP do Whats)',
+        'titulo' => 'Um pioneiro no marketing conversacional',
+        'bio' => 'Conhecido como JP do Whats, é uma das maiores referências no Brasil no uso estratégico do WhatsApp como ferramenta de engajamento e comunicação de alto impacto. Desde 2016, JP explora o potencial do WhatsApp como canal estratégico, compartilhando sua expertise em mais de 70 palestras presenciais e on-line, impactando milhares de pessoas.',
+        'linkedin' => 'https://www.linkedin.com/in/jpdowhats/'
     ],
 ];
 $programacao = [
@@ -71,7 +80,7 @@ $programacao = [
     [
         'horario' => '15:10 - 16:00',
         'titulo' => 'Trilha 1: Marketing',
-        'palestrante' => 'A definir',
+        'palestrante' => 'Beatriz Guarezi',
         'descricao' => null
     ],
     [
@@ -83,7 +92,7 @@ $programacao = [
     [
         'horario' => '16:10 - 17:00',
         'titulo' => 'Trilha 2: Marketing',
-        'palestrante' => 'A definir',
+        'palestrante' => 'Sara Zimmermann',
         'descricao' => null
     ],
     [
@@ -99,35 +108,47 @@ $programacao = [
         'descricao' => 'Celebre o aprendizado, fortaleça conexões e gere novas oportunidades de negócio em um ambiente descontraído.'
     ],
 ];
+$patrocinadoresRubi = [
+    
+];
+
 $patrocinadoresOuro = [
-    [
-        'logo' => 'src/images/logo.png', // Substituir por logo real
-        'link' => '#', // Substituir por link real
-        'nome' => 'Patrocinador Ouro 1'
-    ],
-    [
-        'logo' => 'src/images/logo.png', // Substituir por logo real
-        'link' => '#', // Substituir por link real
-        'nome' => 'Patrocinador Ouro 2'
-    ]
+
 ];
 
 $patrocinadoresPrata = [
     [
-        'logo' => 'src/images/logo.png', // Substituir por logo real
-        'link' => '#', // Substituir por link real
-        'nome' => 'Patrocinador Prata 1'
+        'logo' => 'src/images/patrocinador/explorador-prata/logo-tmd-strategy.png', // Substituir por logo real
+        'link' => 'https://tmdstrategy.com.br/', // Substituir por link real
+        'nome' => 'TMD Strategy'
     ],
     [
-        'logo' => 'src/images/logo.png', // Substituir por logo real
-        'link' => '#', // Substituir por link real
-        'nome' => 'Patrocinador Prata 2'
+        'logo' => 'src/images/patrocinador/explorador-prata/noara.png', // Substituir por logo real
+        'link' => 'https://noarapozzer.com.br/', // Substituir por link real
+        'nome' => 'Noara Pozzer'
     ],
     [
-        'logo' => 'src/images/logo.png', // Substituir por logo real
-        'link' => '#', // Substituir por link real
-        'nome' => 'Patrocinador Prata 3'
+        'logo' => 'src/images/patrocinador/explorador-prata/JPDOWHATS.png', // Substituir por logo real
+        'link' => 'https://www.jpdowhats.com.br/', // Substituir por link real
+        'nome' => 'JP do Whats'
     ]
+];
+$patrocinadoresBronze = [
+    [
+        'logo' => 'src/images/patrocinador/descobridor-bronze/anamid.png', // Substituir por logo real
+        'link' => 'https://www.anamid.com.br/', // Substituir por link real
+        'nome' => 'AnaMid'
+    ],
+    [
+        'logo' => 'src/images/patrocinador/descobridor-bronze/programasom.png', // Substituir por logo real
+        'link' => 'https://programasom.com.br/', // Substituir por link real
+        'nome' => 'ProgramaSom'
+    ],
+    [
+        'logo' => 'src/images/patrocinador/descobridor-bronze/vitamina.png', // Substituir por logo real
+        'link' => 'https://vitaminaweb.digital/', // Substituir por link real
+        'nome' => 'Vitamina Web'
+    ],
 ];
 
 header('Cache-Control: no-cache, no-store, private');
@@ -738,14 +759,17 @@ $hoje->setTime(0, 0, 0); // Normaliza para meia-noite para comparações de data
         }
 
         .patrocinador-logo {
-            max-height: 80px; /* Tamanho máximo para as logos */
-            filter: brightness(0) invert(1) opacity(0.7); /* Logos brancas/claras e semitransparentes */
+            /*max-height: 80px; /* Tamanho máximo para as logos */
+            /*max-width: 150px; /* Tamanho máximo para as logos */
+            /*filter: brightness(0) invert(1) opacity(0.7); /* Logos brancas/claras e semitransparentes */
             margin: 20px 30px; /* Espaço entre as logos */
             transition: all 0.3s ease; /* Animação no hover */
+            /* padding: 1rem; */
+            background-color: #fff;
         }
 
         .patrocinador-logo:hover {
-            filter: brightness(0) invert(1) opacity(1); /* Fica totalmente opaco no hover */
+            /*filter: brightness(0) invert(1) opacity(1); /* Fica totalmente opaco no hover */
             transform: scale(1.1); /* Leve zoom no hover */
         }
 
@@ -891,6 +915,40 @@ $hoje->setTime(0, 0, 0); // Normaliza para meia-noite para comparações de data
     <!-- Seção Palestrantes -->
     <section id="palestrantes" class="py-5">
         <div class="container">
+            <h2 class="text-center py-4 title" data-aos="fade-up">Conheça os Embaixadores</h2>
+            <?php if ($palestrantesConfirmados && !empty($embaixadores)): ?>
+                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 justify-content-center">
+                    <?php $aos_delay = 100; ?>
+                    <?php foreach ($embaixadores as $embaixador): ?>
+                        <div class="col" data-aos="fade-up" data-aos-delay="<?= $aos_delay ?>">
+                            <div class="card h-100 text-center shadow-sm">
+                                <div class="card-body d-flex flex-column align-items-center p-4">
+                                    <img src="<?= htmlspecialchars($embaixador['foto']) ?>" class="card-img-top embaixador-img rounded-circle mb-3 w-50" alt="Foto de <?= htmlspecialchars($embaixador['nome']) ?>">
+                                    <h5 class="card-title mb-1 fw-semibold"><?= htmlspecialchars($embaixador['nome']) ?></h5>
+                                    <p class="text-muted mb-3"><small><?= htmlspecialchars($embaixador['titulo']) ?></small></p>
+                                    <p class="card-text small mb-4"><?= htmlspecialchars($embaixador['bio']) ?></p>
+                                    <?php if (!empty($embaixador['linkedin']) && $embaixador['linkedin'] !== '#'): ?>
+                                        <a href="<?= htmlspecialchars($embaixador['linkedin']) ?>" target="_blank" class="btn btn-outline-primary btn-sm mt-auto">
+                                            <i class="bi bi-linkedin"></i> LinkedIn
+                                        </a>
+                                    <?php endif; ?>
+                                </div>
+                            </div>
+                        </div>
+                        <?php $aos_delay += 100; ?>
+                    <?php endforeach; ?>
+                </div>
+            <?php else: ?>
+                <div class="text-center py-5" data-aos="fade-up">
+                    <h3 class="laranja">Em breve, divulgaremos os palestrantes confirmados. Fique ligado!</h4>
+                    <p>Já estamos em contato com grandes nomes do mercado...</p>
+                </div>
+            <?php endif; ?>
+        </div>
+    </section>
+    <!-- Seção Palestrantes -->
+    <section id="embaixadores" class="py-5">
+        <div class="container">
             <h2 class="text-center py-4 title" data-aos="fade-up">Conheça os Especialistas</h2>
             <?php if ($palestrantesConfirmados && !empty($palestrantes)): ?>
                 <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 justify-content-center">
@@ -899,7 +957,7 @@ $hoje->setTime(0, 0, 0); // Normaliza para meia-noite para comparações de data
                         <div class="col" data-aos="fade-up" data-aos-delay="<?= $aos_delay ?>">
                             <div class="card h-100 text-center shadow-sm">
                                 <div class="card-body d-flex flex-column align-items-center p-4">
-                                    <img src="<?= htmlspecialchars($palestrante['foto']) ?>" class="card-img-top palestrante-img rounded-circle mb-3" alt="Foto de <?= htmlspecialchars($palestrante['nome']) ?>">
+                                    <img src="<?= htmlspecialchars($palestrante['foto']) ?>" class="card-img-top palestrante-img rounded-circle mb-3 w-50" alt="Foto de <?= htmlspecialchars($palestrante['nome']) ?>">
                                     <h5 class="card-title mb-1 fw-semibold"><?= htmlspecialchars($palestrante['nome']) ?></h5>
                                     <p class="text-muted mb-3"><small><?= htmlspecialchars($palestrante['titulo']) ?></small></p>
                                     <p class="card-text small mb-4"><?= htmlspecialchars($palestrante['bio']) ?></p>
@@ -1197,10 +1255,14 @@ $hoje->setTime(0, 0, 0); // Normaliza para meia-noite para comparações de data
         <div class="container">
             <h2 class="text-center py-4 title" data-aos="fade-up">Nossos Patrocinadores</h2>
             <?php if ($patrocinadoresConfirmados): ?>
+                <?php if (!empty($patrocinadoresRubi)): ?> <h4 class="text-center mb-4 sponsor-tier" data-aos="fade-up" data-aos-delay="100">Rubi</h4>
+                    <div class="d-flex flex-wrap justify-content-center align-items-center mb-5" data-aos="fade-up" data-aos-delay="200"> <?php foreach ($patrocinadoresRubi as $patro): ?> <a href="<?= htmlspecialchars($patro['link']) ?>" target="_blank"> <img src="<?= htmlspecialchars($patro['logo']) ?>" alt="<?= htmlspecialchars($patro['nome']) ?>" class="patrocinador-logo" style="max-width: 210px;"> </a> <?php endforeach; ?> </div> <?php endif; ?>
                 <?php if (!empty($patrocinadoresOuro)): ?> <h4 class="text-center mb-4 sponsor-tier" data-aos="fade-up" data-aos-delay="100">Ouro</h4>
-                    <div class="d-flex flex-wrap justify-content-center align-items-center mb-5" data-aos="fade-up" data-aos-delay="200"> <?php foreach ($patrocinadoresOuro as $patro): ?> <a href="<?= htmlspecialchars($patro['link']) ?>" target="_blank"> <img src="<?= htmlspecialchars($patro['logo']) ?>" alt="<?= htmlspecialchars($patro['nome']) ?>" class="patrocinador-logo"> </a> <?php endforeach; ?> </div> <?php endif; ?>
+                    <div class="d-flex flex-wrap justify-content-center align-items-center mb-5" data-aos="fade-up" data-aos-delay="200"> <?php foreach ($patrocinadoresOuro as $patro): ?> <a href="<?= htmlspecialchars($patro['link']) ?>" target="_blank"> <img src="<?= htmlspecialchars($patro['logo']) ?>" alt="<?= htmlspecialchars($patro['nome']) ?>" class="patrocinador-logo" style="max-width: 200px;"> </a> <?php endforeach; ?> </div> <?php endif; ?>
                 <?php if (!empty($patrocinadoresPrata)): ?> <h4 class="text-center mb-4 sponsor-tier" data-aos="fade-up" data-aos-delay="300">Prata</h4>
-                    <div class="d-flex flex-wrap justify-content-center align-items-center" data-aos="fade-up" data-aos-delay="400"> <?php foreach ($patrocinadoresPrata as $patro): ?> <a href="<?= htmlspecialchars($patro['link']) ?>" target="_blank"> <img src="<?= htmlspecialchars($patro['logo']) ?>" alt="<?= htmlspecialchars($patro['nome']) ?>" class="patrocinador-logo"> </a> <?php endforeach; ?> </div> <?php endif; ?>
+                    <div class="d-flex flex-wrap justify-content-center align-items-center" data-aos="fade-up" data-aos-delay="400"> <?php foreach ($patrocinadoresPrata as $patro): ?> <a href="<?= htmlspecialchars($patro['link']) ?>" target="_blank"> <img src="<?= htmlspecialchars($patro['logo']) ?>" alt="<?= htmlspecialchars($patro['nome']) ?>" class="patrocinador-logo" style="max-width: 180px;"> </a> <?php endforeach; ?> </div> <?php endif; ?>
+                <?php if (!empty($patrocinadoresBronze)): ?> <h4 class="text-center mb-4 sponsor-tier" data-aos="fade-up" data-aos-delay="300">Bronze</h4>
+                    <div class="d-flex flex-wrap justify-content-center align-items-center" data-aos="fade-up" data-aos-delay="400"> <?php foreach ($patrocinadoresBronze as $patro): ?> <a href="<?= htmlspecialchars($patro['link']) ?>" target="_blank"> <img src="<?= htmlspecialchars($patro['logo']) ?>" alt="<?= htmlspecialchars($patro['nome']) ?>" class="patrocinador-logo" style="max-width: 150px;"> </a> <?php endforeach; ?> </div> <?php endif; ?>
             <?php else: ?>
                 <div class="text-center py-4" data-aos="fade-up">
                     <h3 class="laranja">As marcas que apoiam o futuro do marketing industrial estarão aqui.</p>
