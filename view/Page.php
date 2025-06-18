@@ -1255,13 +1255,13 @@ $hoje->setTime(0, 0, 0); // Normaliza para meia-noite para comparações de data
         <div class="container">
             <h2 class="text-center py-4 title" data-aos="fade-up">Nossos Patrocinadores</h2>
             <?php if ($patrocinadoresConfirmados): ?>
-                <?php if (!empty($patrocinadoresRubi)): ?> <h4 class="text-center mb-4 sponsor-tier" data-aos="fade-up" data-aos-delay="100">Rubi</h4>
+                <?php if (!empty($patrocinadoresRubi)): ?> <h4 class="text-center mb-4 sponsor-tier" data-aos="fade-up" data-aos-delay="100">Novos Caminhos</h4>
                     <div class="d-flex flex-wrap justify-content-center align-items-center mb-5" data-aos="fade-up" data-aos-delay="200"> <?php foreach ($patrocinadoresRubi as $patro): ?> <a href="<?= htmlspecialchars($patro['link']) ?>" target="_blank"> <img src="<?= htmlspecialchars($patro['logo']) ?>" alt="<?= htmlspecialchars($patro['nome']) ?>" class="patrocinador-logo" style="max-width: 210px;"> </a> <?php endforeach; ?> </div> <?php endif; ?>
-                <?php if (!empty($patrocinadoresOuro)): ?> <h4 class="text-center mb-4 sponsor-tier" data-aos="fade-up" data-aos-delay="100">Ouro</h4>
+                <?php if (!empty($patrocinadoresOuro)): ?> <h4 class="text-center mb-4 sponsor-tier" data-aos="fade-up" data-aos-delay="100">Desbravador</h4>
                     <div class="d-flex flex-wrap justify-content-center align-items-center mb-5" data-aos="fade-up" data-aos-delay="200"> <?php foreach ($patrocinadoresOuro as $patro): ?> <a href="<?= htmlspecialchars($patro['link']) ?>" target="_blank"> <img src="<?= htmlspecialchars($patro['logo']) ?>" alt="<?= htmlspecialchars($patro['nome']) ?>" class="patrocinador-logo" style="max-width: 200px;"> </a> <?php endforeach; ?> </div> <?php endif; ?>
-                <?php if (!empty($patrocinadoresPrata)): ?> <h4 class="text-center mb-4 sponsor-tier" data-aos="fade-up" data-aos-delay="300">Prata</h4>
+                <?php if (!empty($patrocinadoresPrata)): ?> <h4 class="text-center mb-4 sponsor-tier" data-aos="fade-up" data-aos-delay="300">Explorador</h4>
                     <div class="d-flex flex-wrap justify-content-center align-items-center" data-aos="fade-up" data-aos-delay="400"> <?php foreach ($patrocinadoresPrata as $patro): ?> <a href="<?= htmlspecialchars($patro['link']) ?>" target="_blank"> <img src="<?= htmlspecialchars($patro['logo']) ?>" alt="<?= htmlspecialchars($patro['nome']) ?>" class="patrocinador-logo" style="max-width: 180px;"> </a> <?php endforeach; ?> </div> <?php endif; ?>
-                <?php if (!empty($patrocinadoresBronze)): ?> <h4 class="text-center mb-4 sponsor-tier" data-aos="fade-up" data-aos-delay="300">Bronze</h4>
+                <?php if (!empty($patrocinadoresBronze)): ?> <h4 class="text-center mb-4 sponsor-tier" data-aos="fade-up" data-aos-delay="300">Descobridor</h4>
                     <div class="d-flex flex-wrap justify-content-center align-items-center" data-aos="fade-up" data-aos-delay="400"> <?php foreach ($patrocinadoresBronze as $patro): ?> <a href="<?= htmlspecialchars($patro['link']) ?>" target="_blank"> <img src="<?= htmlspecialchars($patro['logo']) ?>" alt="<?= htmlspecialchars($patro['nome']) ?>" class="patrocinador-logo" style="max-width: 150px;"> </a> <?php endforeach; ?> </div> <?php endif; ?>
             <?php else: ?>
                 <div class="text-center py-4" data-aos="fade-up">
