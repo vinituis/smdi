@@ -512,7 +512,7 @@ header('Cache-Control: no-cache, no-store, private');
     <div class="container">
         <div class="col-12 pt-4 pb-3 text-center destaque">
             <h2 class="fs-1">Informações importantes</h2>
-            <p>Após a inscrição, a equipe da ABIMAQ enviará o boleto de pagamento para o e-mail informado.<br>O pagamento é feito exclusivamente via boleto, com emissão apenas de recibo simples.</p>
+            <p>Após a inscrição, a equipe da ABIMAQ enviará o boleto de pagamento para o e-mail informado.<br>O pagamento é feito exclusivamente via boleto emitido apenas em nome da empresa, com emissão apenas de recibo simples.<br>O valor de associado é calculado automaticamente quando inserir o CNPJ</p>
         </div>
         <form class="row my-5" method="post" name='post' action="individual" novalidate>
             <h1 class="text-center pt-5 mb-3">Inscrição de Participantes</h1>
