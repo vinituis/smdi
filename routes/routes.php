@@ -1,44 +1,44 @@
 <?php
 
-switch ($caminho){
+switch ($caminho) {
     case 'home':
     case 'page':
         require "view/Page.php";
-    break;
+        break;
     case 'colaborador':
-        if(isset($_POST['geral'])){
+        if (isset($_POST['geral'])) {
             require "controller/Colaborador.php";
-        }else{
+        } else {
             require "view/Colaborador.php";
         }
-    break;
-    
+        break;
+
     case 'individual':
         // var_dump($_POST);
-        if(isset($_POST['geral'])){
+        if (isset($_POST['geral'])) {
             require "controller/Post.php";
-        }else{
+        } else {
             require "view/Individual.php";
         }
-    break;
+        break;
+    case 'convite':
+        require "routes/Convite.php";
+        break;
 
     case 'obrigado':
         require "view/Obrigado.php";
-    break;
+        break;
     ////////////////////////////////////////////////////////////////////////
 
     case 'api':
         require "controller/Api.php";
-    break;
-    
+        break;
+
     case 'cep':
         require "controller/ApiCep.php";
-    break;
-    
+        break;
+
     case 'razao':
         require "controller/ApiRazao.php";
-    break;
-    
+        break;
 }
-
-?>
