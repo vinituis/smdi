@@ -47,6 +47,20 @@ $palestrantes = [
         'bio' => 'Criadora da Bits to Brands, ela lidera um movimento que revoluciona a forma como profissionais pensam e constroem marcas. Com diversos prêmios e reconhecimentos, Beatriz conversa com mais de 100 mil profissionais em sua newsletter e redes sociais.',
         'linkedin' => 'https://www.linkedin.com/in/beatrizguarezi/'
     ],
+    [
+        'foto' => 'src/images/palestrante/gui.png',
+        'nome' => 'Gui de Bortoli',
+        'titulo' => 'Pai de duas filhas e Top 100 Profissionais Digitais de 2023.',
+        'bio' => 'Com 28 anos de experiência, Gui é CEO da Orgânica Digital, agência com 17 anos de mercado e pioneira no método Content+Performance. Sob sua liderança, a empresa conquistou o selo Google Partner Premier, foi reconhecida quatro vezes como uma das melhores do ano.',
+        'linkedin' => 'https://www.linkedin.com/in/guilhermebortoli/'
+    ],
+    [
+        'foto' => 'src/images/palestrante/vinicius.png',
+        'nome' => 'Vinicius Melo',
+        'titulo' => 'CEO da D2B e Vice-presidente de Expansão da AnaMid',
+        'bio' => 'Formado em Publicidade e Propaganda (Unaerp) com especialização em Redes Sociais e Inovação Digital (ESPM). Empreendedor, professor em cursos de pós-graduação (Unifran, Senac e Iladec/Itália). Palestrante em eventos como o Digitalks, Ecommerce Brasil e Fórum de Marketing da AMCHAM.',
+        'linkedin' => 'https://www.linkedin.com/in/viniciusmelo84/'
+    ],
 ];
 $embaixadores = [
     [
@@ -86,19 +100,19 @@ $programacao = [
     [
         'horario' => '15:10 - 16:00',
         'titulo' => 'Trilha 1: Vendas',
-        'palestrante' => 'A definir',
+        'palestrante' => 'Vinicius Mello',
         'descricao' => null
     ],
     [
         'horario' => '16:10 - 17:00',
         'titulo' => 'Trilha 2: Marketing',
-        'palestrante' => 'Sara Zimmermann',
+        'palestrante' => 'Gui de Bortoli',
         'descricao' => null
     ],
     [
         'horario' => '16:10 - 17:00',
         'titulo' => 'Trilha 2: Vendas',
-        'palestrante' => 'A definir',
+        'palestrante' => 'Sara Zimmermann',
         'descricao' => null
     ],
     [
@@ -109,7 +123,11 @@ $programacao = [
     ],
 ];
 $patrocinadoresRubi = [
-    
+    [
+        'logo' => 'src/images/patrocinador/caminhos-rubi/tipo.png', // Substituir por logo real
+        'link' => 'https://www.agenciatipo.com.br/', // Substituir por link real
+        'nome' => 'Agência Tipo'
+    ],
 ];
 
 $patrocinadoresOuro = [
@@ -148,6 +166,18 @@ $patrocinadoresBronze = [
         'logo' => 'src/images/patrocinador/descobridor-bronze/vitamina.png', // Substituir por logo real
         'link' => 'https://vitaminaweb.digital/', // Substituir por link real
         'nome' => 'Vitamina Web'
+    ],
+];
+$apoiador = [
+    [
+        'logo' => 'src/images/patrocinador/apoio/aVoz.png', // Substituir por logo real
+        'link' => 'https://avozdaindustria.com.br/', // Substituir por link real
+        'nome' => 'A Voz da Indústria'
+    ],
+    [
+        'logo' => 'src/images/patrocinador/apoio/mundoPlastico.png', // Substituir por logo real
+        'link' => 'https://mundodoplastico.plasticobrasil.com.br/', // Substituir por link real
+        'nome' => 'Mundo do Plástico'
     ],
 ];
 
@@ -1125,131 +1155,6 @@ $hoje->setTime(0, 0, 0); // Normaliza para meia-noite para comparações de data
         </div>
     </section>
 
-    <!-- Seção SEJA UM PATROCINADOR -->
-    <section id="patrocinio" class="py-5">
-        <div class="container">
-            <h2 class="text-center py-4 title" data-aos="fade-up">Seja um Patrocinador do SMDI 2025</h2>
-            <p class="lead text-center mb-5" data-aos="fade-up" data-aos-delay="100">Associe sua marca ao principal evento de Marketing Digital e Vendas focado na Indústria.</p>
-            <div class="row mb-5 g-4">
-                <div class="col-lg-6" data-aos="fade-right" data-aos-delay="200">
-                    <h4 class="fw-semibold mb-3"><i class="bi bi-bullseye me-2 text-white"></i> Alcance um Público Qualificado</h4>
-                    <p>Conecte-se diretamente com empresários, fabricantes de máquinas e equipamentos e profissionais de marketing e vendas que atuam na indústria e buscam soluções inovadoras.</p>
-                    <p>O SMDI é referência em conteúdo prático e networking estratégico para a indústria</p>
-                </div>
-                <div class="col-lg-6" data-aos="fade-left" data-aos-delay="200">
-                    <h4 class="fw-semibold mb-3"><i class="bi bi-broadcast me-2 text-white"></i> Potencial de Visibilidade</h4>
-                    <ul class="list-unstyled">
-                        <li class="my-2" data-aos="fade-left" data-aos-delay="250">
-                            <i class="bi bi-check-circle-fill text-success me-2"></i>Site com +12 mil acessos (edição 2024).
-                        </li>
-                        <li class="my-2" data-aos="fade-left" data-aos-delay="300">
-                            <i class="bi bi-check-circle-fill text-success me-2"></i> ~ 90 mil contatos ativos (E-mail, Redes sociais).
-                        </li>
-                        <li class="my-2" data-aos="fade-left" data-aos-delay="350">
-                            <i class="bi bi-check-circle-fill text-success me-2"></i>Alcance de 1.700 empresas associadas.
-                        </li>
-                        <li class="my-2" data-aos="fade-left" data-aos-delay="400">
-                            <i class="bi bi-check-circle-fill text-success me-2"></i>Anúncios online com média de 13 mil acessos.
-                        </li>
-                        <li class="my-2" data-aos="fade-left" data-aos-delay="450">
-                            <i class="bi bi-check-circle-fill text-success me-2"></i>Portal ABIMAQ com média de 50 mil acessos mensais.
-                        </li>
-                        <li class="my-2" data-aos="fade-left" data-aos-delay="500">
-                            <i class="bi bi-check-circle-fill text-success me-2"></i>Impressões significativas em vídeos e alto engajamento social.
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <h3 class="text-center mb-4 fw-semibold" data-aos="fade-up">Conheça Nossas Cotas de Patrocínio</h3>
-            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4 justify-content-center mb-5">
-                <?php $aos_delay = 100; ?>
-                <!-- Cards das Cotas (Estilo de card escuro aplicado via CSS) -->
-                <div class="col" data-aos="fade-up" data-aos-delay="<?= $aos_delay ?>">
-                    <div class="card h-100 shadow-sm card-cota">
-                        <div class="card-header text-center fw-bold">Cota Descobridor (Bronze)</div>
-                        <div class="card-body d-flex flex-column">
-                            <h5 class="card-title text-center mb-3">R$ 5.000,00</h5>
-                            <ul class="list-unstyled mb-4 flex-grow-1">
-                                <li><i class="bi bi-check text-success"></i> 1 Convite</li>
-                                <li><i class="bi bi-check text-success"></i> Menção da empresa na abertura </li>
-                                <li><i class="bi bi-check text-success"></i> Logo na página do evento</li>
-                                <li><i class="bi bi-check text-success"></i> Logo no e-mail marketing</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                 <?php $aos_delay += 150; ?>
-                <div class="col" data-aos="fade-up" data-aos-delay="<?= $aos_delay ?>">
-                    <div class="card h-100 shadow-sm card-cota">
-                        <div class="card-header text-center fw-bold">Cota Explorador (Prata)</div>
-                        <div class="card-body d-flex flex-column">
-                            <h5 class="card-title text-center mb-3">R$ 8.000,00</h5>
-                            <ul class="list-unstyled mb-4 flex-grow-1">
-                                <li><i class="bi bi-check text-success"></i> 2 Convites</li>
-                                <li><i class="bi bi-check text-success"></i> Menção da empresa na abertura </li>
-                                <li><i class="bi bi-check text-success"></i> Logo na página do evento</li>
-                                <li><i class="bi bi-check text-success"></i> Logo no e-mail marketing</li>
-                                <li><i class="bi bi-check text-success"></i> Logo nos posts das redes sociais</li>
-                                <li><i class="bi bi-check text-success"></i> Logo no banner do site ABIMAQ</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                 <?php $aos_delay += 150; ?>
-                <div class="col" data-aos="fade-up" data-aos-delay="<?= $aos_delay ?>">
-                    <div class="card h-100 shadow-sm card-cota">
-                        <div class="card-header text-center fw-bold">Cota Desbravador (Ouro)</div>
-                        <div class="card-body d-flex flex-column">
-                            <h5 class="card-title text-center mb-3">R$ 10.000,00</h5>
-                            <ul class="list-unstyled mb-4 flex-grow-1">
-                                <li><i class="bi bi-check text-success"></i> 4 Convites</li>
-                                <li><i class="bi bi-check text-success"></i> Menção da empresa na abertura </li>
-                                <li><i class="bi bi-check text-success"></i> Logo na página do evento</li>
-                                <li><i class="bi bi-check text-success"></i> Logo no e-mail marketing</li>
-                                <li><i class="bi bi-check text-success"></i> Logo nos posts das redes sociais</li>
-                                <li><i class="bi bi-check text-success"></i> Logo no banner do site ABIMAQ</li>
-                                <li><i class="bi bi-check text-success"></i> Anúncio na news ABIMAQ Info</li>
-                                <li><i class="bi bi-check text-success"></i> Logo na ambientação</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                 <?php $aos_delay += 150; ?>
-                <div class="col" data-aos="fade-up" data-aos-delay="<?= $aos_delay ?>">
-                    <div class="card h-100 shadow-sm card-cota">
-                        <div class="card-header text-center fw-bold">Cota Novos Caminhos (Rubi)</div>
-                        <div class="card-body d-flex flex-column">
-                            <h5 class="card-title text-center mb-3">R$ 20.000,00</h5>
-                            <ul class="list-unstyled mb-4 flex-grow-1">
-                                <li><i class="bi bi-check text-success"></i> 6 Convites</li>
-                                <li><i class="bi bi-check text-success"></i> Menção da empresa na abertura </li>
-                                <li><i class="bi bi-check text-success"></i> Logo na página do evento</li>
-                                <li><i class="bi bi-check text-success"></i> Logo no e-mail marketing</li>
-                                <li><i class="bi bi-check text-success"></i> Logo nos posts das redes sociais</li>
-                                <li><i class="bi bi-check text-success"></i> Logo no banner do site ABIMAQ</li>
-                                <li><i class="bi bi-check text-success"></i> Anúncio na news ABIMAQ Info</li>
-                                <li><i class="bi bi-check text-success"></i> Logo na ambientação</li>
-                                <li><i class="bi bi-check text-success"></i> Anúncio de ½ página no Informaq</li>
-                                <li><i class="bi bi-check text-success"></i> Espaço para exposição</li>
-                                <li><i class="bi bi-check text-success"></i> Vídeo institucional na abertura</li>
-
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div id="contato-patrocinio" class="text-center pt-4" data-aos="fade-up" data-aos-delay="100">
-                <h3 class="fw-semibold">Dê o próximo passo rumo ao futuro!</h3>
-                <p class="lead mb-4">Entre em contato para discutir as oportunidades de patrocínio.</p>
-                <div class="d-flex flex-column flex-md-row justify-content-center align-items-center">
-                    <a href="src/docs/midia-kit.pdf" class="btn btn-primary btn-lg me-md-3 mb-3 mb-md-0" target="_blank"> <i class="bi bi-download me-2"></i> Acessar o Mídia Kit (PDF) </a>
-                    <a href="mailto:eventos@abimaq.org.br?subject=Interesse em Patrocínio SMDI 2025" class="btn btn-secondary btn-lg"> <i class="bi bi-envelope-fill me-2"></i> Falar com Nelson Padilha </a>
-                </div>
-                <p class="mt-3 mb-0">Ou ligue: <a href="tel:+551155826315" class="link-contato fw-bold">(11) 5582-6315</a></p>
-            </div>
-        </div>
-    </section>
-
     <!-- Seção Patrocinadores (Logos) -->
     <section id="patrocinadores" class="py-5">
         <div class="container">
@@ -1259,10 +1164,12 @@ $hoje->setTime(0, 0, 0); // Normaliza para meia-noite para comparações de data
                     <div class="d-flex flex-wrap justify-content-center align-items-center mb-5" data-aos="fade-up" data-aos-delay="200"> <?php foreach ($patrocinadoresRubi as $patro): ?> <a href="<?= htmlspecialchars($patro['link']) ?>" target="_blank"> <img src="<?= htmlspecialchars($patro['logo']) ?>" alt="<?= htmlspecialchars($patro['nome']) ?>" class="patrocinador-logo" style="max-width: 210px;"> </a> <?php endforeach; ?> </div> <?php endif; ?>
                 <?php if (!empty($patrocinadoresOuro)): ?> <h4 class="text-center mb-4 sponsor-tier" data-aos="fade-up" data-aos-delay="100">Desbravador</h4>
                     <div class="d-flex flex-wrap justify-content-center align-items-center mb-5" data-aos="fade-up" data-aos-delay="200"> <?php foreach ($patrocinadoresOuro as $patro): ?> <a href="<?= htmlspecialchars($patro['link']) ?>" target="_blank"> <img src="<?= htmlspecialchars($patro['logo']) ?>" alt="<?= htmlspecialchars($patro['nome']) ?>" class="patrocinador-logo" style="max-width: 200px;"> </a> <?php endforeach; ?> </div> <?php endif; ?>
-                <?php if (!empty($patrocinadoresPrata)): ?> <h4 class="text-center mb-4 sponsor-tier" data-aos="fade-up" data-aos-delay="300">Explorador</h4>
+                <?php if (!empty($patrocinadoresPrata)): ?> <h4 class="text-center m-4 sponsor-tier" data-aos="fade-up" data-aos-delay="300">Explorador</h4>
                     <div class="d-flex flex-wrap justify-content-center align-items-center" data-aos="fade-up" data-aos-delay="400"> <?php foreach ($patrocinadoresPrata as $patro): ?> <a href="<?= htmlspecialchars($patro['link']) ?>" target="_blank"> <img src="<?= htmlspecialchars($patro['logo']) ?>" alt="<?= htmlspecialchars($patro['nome']) ?>" class="patrocinador-logo" style="max-width: 180px;"> </a> <?php endforeach; ?> </div> <?php endif; ?>
-                <?php if (!empty($patrocinadoresBronze)): ?> <h4 class="text-center mb-4 sponsor-tier" data-aos="fade-up" data-aos-delay="300">Descobridor</h4>
+                <?php if (!empty($patrocinadoresBronze)): ?> <h4 class="text-center m-4 sponsor-tier" data-aos="fade-up" data-aos-delay="300">Descobridor</h4>
                     <div class="d-flex flex-wrap justify-content-center align-items-center" data-aos="fade-up" data-aos-delay="400"> <?php foreach ($patrocinadoresBronze as $patro): ?> <a href="<?= htmlspecialchars($patro['link']) ?>" target="_blank"> <img src="<?= htmlspecialchars($patro['logo']) ?>" alt="<?= htmlspecialchars($patro['nome']) ?>" class="patrocinador-logo" style="max-width: 150px;"> </a> <?php endforeach; ?> </div> <?php endif; ?>
+                <?php if (!empty($apoiador)): ?> <h4 class="text-center m-4 sponsor-tier" data-aos="fade-up" data-aos-delay="300">Apoio</h4>
+                    <div class="d-flex flex-wrap justify-content-center align-items-center" data-aos="fade-up" data-aos-delay="400"> <?php foreach ($apoiador as $patro): ?> <a href="<?= htmlspecialchars($patro['link']) ?>" target="_blank"> <img src="<?= htmlspecialchars($patro['logo']) ?>" alt="<?= htmlspecialchars($patro['nome']) ?>" class="patrocinador-logo" style="max-width: 130px;"> </a> <?php endforeach; ?> </div> <?php endif; ?>
             <?php else: ?>
                 <div class="text-center py-4" data-aos="fade-up">
                     <h3 class="laranja">As marcas que apoiam o futuro do marketing industrial estarão aqui.</p>
