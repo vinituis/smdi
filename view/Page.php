@@ -131,7 +131,11 @@ $patrocinadoresRubi = [
 ];
 
 $patrocinadoresOuro = [
-
+    [
+        'logo' => 'src/images/patrocinador/desbravador-ouro/asta.png', // Substituir por logo real
+        'link' => 'https://www.astagroup.com/pt-br/', // Substituir por link real
+        'nome' => 'Asta Group'
+    ],
 ];
 
 $patrocinadoresPrata = [
