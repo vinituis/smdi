@@ -55,12 +55,27 @@ $palestrantes = [
         'linkedin' => 'https://www.linkedin.com/in/guilhermebortoli/'
     ],
     [
+        'foto' => 'src/images/palestrante/sandra.png',
+        'nome' => 'Sandra',
+        'titulo' => 'Fundadora e CEO da Digitalents e palestrante TEDxSP',
+        'bio' => 'Considerada uma das principais referências quando o assunto é Transformação &amp; Marketing Digital, foi eleita um dos profissionais de Marketing mais atuantes nas mídias sociais, no mundo, pela revista americana SMMagazine.',
+        'linkedin' => 'https://www.linkedin.com/in/sandraturchi/'
+    ],
+    [
+        'foto' => 'src/images/palestrante/sara.png',
+        'nome' => 'Sara Zimmermann',
+        'titulo' => 'Estrategista em Marketing, Conversão e Vendas',
+        'bio' => '18+ anos de experiência em Marketing e Vendas Digitais. 100+ clientes em diversos segmentos, nacionais e internacionais.',
+        'linkedin' => 'https://www.linkedin.com/in/zimmermannsara'
+    ],
+    [
         'foto' => 'src/images/palestrante/vinicius.png',
         'nome' => 'Vinicius Melo',
         'titulo' => 'CEO da D2B e Vice-presidente de Expansão da AnaMid',
         'bio' => 'Formado em Publicidade e Propaganda (Unaerp) com especialização em Redes Sociais e Inovação Digital (ESPM). Empreendedor, professor em cursos de pós-graduação (Unifran, Senac e Iladec/Itália). Palestrante em eventos como o Digitalks, Ecommerce Brasil e Fórum de Marketing da AMCHAM.',
         'linkedin' => 'https://www.linkedin.com/in/viniciusmelo84/'
     ],
+    
 ];
 $embaixadores = [
     [
@@ -946,40 +961,7 @@ $hoje->setTime(0, 0, 0); // Normaliza para meia-noite para comparações de data
         </div>
     </section>
 
-    <!-- Seção Palestrantes -->
-    <section id="palestrantes" class="py-5">
-        <div class="container">
-            <h2 class="text-center py-4 title" data-aos="fade-up">Conheça os Embaixadores</h2>
-            <?php if ($palestrantesConfirmados && !empty($embaixadores)): ?>
-                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 justify-content-center">
-                    <?php $aos_delay = 100; ?>
-                    <?php foreach ($embaixadores as $embaixador): ?>
-                        <div class="col" data-aos="fade-up" data-aos-delay="<?= $aos_delay ?>">
-                            <div class="card h-100 text-center shadow-sm">
-                                <div class="card-body d-flex flex-column align-items-center p-4">
-                                    <img src="<?= htmlspecialchars($embaixador['foto']) ?>" class="card-img-top embaixador-img rounded-circle mb-3 w-50" alt="Foto de <?= htmlspecialchars($embaixador['nome']) ?>">
-                                    <h5 class="card-title mb-1 fw-semibold"><?= htmlspecialchars($embaixador['nome']) ?></h5>
-                                    <p class="text-muted mb-3"><small><?= htmlspecialchars($embaixador['titulo']) ?></small></p>
-                                    <p class="card-text small mb-4"><?= htmlspecialchars($embaixador['bio']) ?></p>
-                                    <?php if (!empty($embaixador['linkedin']) && $embaixador['linkedin'] !== '#'): ?>
-                                        <a href="<?= htmlspecialchars($embaixador['linkedin']) ?>" target="_blank" class="btn btn-outline-primary btn-sm mt-auto">
-                                            <i class="bi bi-linkedin"></i> LinkedIn
-                                        </a>
-                                    <?php endif; ?>
-                                </div>
-                            </div>
-                        </div>
-                        <?php $aos_delay += 100; ?>
-                    <?php endforeach; ?>
-                </div>
-            <?php else: ?>
-                <div class="text-center py-5" data-aos="fade-up">
-                    <h3 class="laranja">Em breve, divulgaremos os palestrantes confirmados. Fique ligado!</h4>
-                    <p>Já estamos em contato com grandes nomes do mercado...</p>
-                </div>
-            <?php endif; ?>
-        </div>
-    </section>
+    
     <!-- Seção Palestrantes -->
     <section id="embaixadores" class="py-5">
         <div class="container">
@@ -1042,6 +1024,41 @@ $hoje->setTime(0, 0, 0); // Normaliza para meia-noite para comparações de data
                 <div class="text-center py-5" data-aos="fade-up">
                     <h3 class="laranja">A programação completa será divulgada em breve!</h4>
                     <p>Estamos preparando uma agenda incrível...</p>
+                </div>
+            <?php endif; ?>
+        </div>
+    </section>
+
+    <!-- Seção Palestrantes -->
+    <section id="palestrantes" class="py-5">
+        <div class="container">
+            <h2 class="text-center py-4 title" data-aos="fade-up">Conheça os Embaixadores</h2>
+            <?php if ($palestrantesConfirmados && !empty($embaixadores)): ?>
+                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 justify-content-center">
+                    <?php $aos_delay = 100; ?>
+                    <?php foreach ($embaixadores as $embaixador): ?>
+                        <div class="col" data-aos="fade-up" data-aos-delay="<?= $aos_delay ?>">
+                            <div class="card h-100 text-center shadow-sm">
+                                <div class="card-body d-flex flex-column align-items-center p-4">
+                                    <img src="<?= htmlspecialchars($embaixador['foto']) ?>" class="card-img-top embaixador-img rounded-circle mb-3 w-50" alt="Foto de <?= htmlspecialchars($embaixador['nome']) ?>">
+                                    <h5 class="card-title mb-1 fw-semibold"><?= htmlspecialchars($embaixador['nome']) ?></h5>
+                                    <p class="text-muted mb-3"><small><?= htmlspecialchars($embaixador['titulo']) ?></small></p>
+                                    <p class="card-text small mb-4"><?= htmlspecialchars($embaixador['bio']) ?></p>
+                                    <?php if (!empty($embaixador['linkedin']) && $embaixador['linkedin'] !== '#'): ?>
+                                        <a href="<?= htmlspecialchars($embaixador['linkedin']) ?>" target="_blank" class="btn btn-outline-primary btn-sm mt-auto">
+                                            <i class="bi bi-linkedin"></i> LinkedIn
+                                        </a>
+                                    <?php endif; ?>
+                                </div>
+                            </div>
+                        </div>
+                        <?php $aos_delay += 100; ?>
+                    <?php endforeach; ?>
+                </div>
+            <?php else: ?>
+                <div class="text-center py-5" data-aos="fade-up">
+                    <h3 class="laranja">Em breve, divulgaremos os palestrantes confirmados. Fique ligado!</h4>
+                    <p>Já estamos em contato com grandes nomes do mercado...</p>
                 </div>
             <?php endif; ?>
         </div>
