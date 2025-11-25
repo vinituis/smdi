@@ -532,98 +532,102 @@ header('Cache-Control: no-cache, no-store, private');
                     </div>
                 <?php endif; ?>
             </div>
-            <div class="col-md-6 col-12 mb-3"> 
-                <label for="empresa" class="form-label">Empresa (Razão Social)</label> 
+            <div class="col-md-6 col-12 mb-3">
+                <label for="empresa" class="form-label">Empresa (Razão Social)</label>
                 <input type="text" class="form-control <?= isset($errosValidacaoGeral['empresa']) ? 'is-invalid' : '' ?>" id="empresa" name="geral[empresa]" value="<?= htmlspecialchars($dadosForm['empresa'] ?? '') ?>" required> <?php if (isset($errosValidacaoGeral['empresa'])): ?>
                     <div class="invalid-feedback">
                         <?= $errosValidacaoGeral['empresa'] ?>
                     </div>
-                <?php endif; ?> 
+                <?php endif; ?>
             </div>
             <div class="col-md-6 col-12 mb-3">
-                <label for="site" class="form-label">Site</label> 
-                <input type="url" class="form-control <?= isset($errosValidacaoGeral['site']) ? 'is-invalid' : '' ?>" id="site" name="geral[site]" value="<?php if(!isset($dadosForm['site'])){ echo "https://"; } else { echo htmlspecialchars($dadosForm['site']); }?>" placeholder="https://..." required> 
+                <label for="site" class="form-label">Site</label>
+                <input type="url" class="form-control <?= isset($errosValidacaoGeral['site']) ? 'is-invalid' : '' ?>" id="site" name="geral[site]" value="<?php if (!isset($dadosForm['site'])) {
+                                                                                                                                                                echo "https://";
+                                                                                                                                                            } else {
+                                                                                                                                                                echo htmlspecialchars($dadosForm['site']);
+                                                                                                                                                            } ?>" placeholder="https://..." required>
                 <?php if (isset($errosValidacaoGeral['site'])): ?>
                     <div class="invalid-feedback">
                         <?= $errosValidacaoGeral['site'] ?>
                     </div>
                 <?php endif; ?>
             </div>
-            <div class="col-md-6 col-12 mb-3"> 
+            <div class="col-md-6 col-12 mb-3">
                 <label for="cep" class="form-label">CEP</label>
                 <input type="text" class="form-control <?= isset($errosValidacaoGeral['cep']) ? 'is-invalid' : '' ?>" id="cep" name="geral[cep]" value="<?= htmlspecialchars($dadosForm['cep'] ?? '') ?>" required>
-                <div id="cep-feedback" class="form-text"></div> 
+                <div id="cep-feedback" class="form-text"></div>
                 <?php if (isset($errosValidacaoGeral['cep'])): ?>
                     <div class="invalid-feedback">
                         <?= $errosValidacaoGeral['cep'] ?>
                     </div>
                 <?php endif; ?>
             </div>
-            <div class="col-md-8 col-12 mb-3"> 
-                <label for="logradouro" class="form-label">Logradouro</label> 
-                <input type="text" class="form-control <?= isset($errosValidacaoGeral['logradouro']) ? 'is-invalid' : '' ?>" id="logradouro" name="geral[logradouro]" value="<?= htmlspecialchars($dadosForm['logradouro'] ?? '') ?>" required> 
+            <div class="col-md-8 col-12 mb-3">
+                <label for="logradouro" class="form-label">Logradouro</label>
+                <input type="text" class="form-control <?= isset($errosValidacaoGeral['logradouro']) ? 'is-invalid' : '' ?>" id="logradouro" name="geral[logradouro]" value="<?= htmlspecialchars($dadosForm['logradouro'] ?? '') ?>" required>
                 <?php if (isset($errosValidacaoGeral['logradouro'])): ?>
                     <div class="invalid-feedback">
                         <?= $errosValidacaoGeral['logradouro'] ?>
                     </div>
-                <?php endif; ?> 
+                <?php endif; ?>
             </div>
-            <div class="col-md-4 col-5 mb-3"> 
+            <div class="col-md-4 col-5 mb-3">
                 <label for="num" class="form-label">Número</label>
-                <input type="text" class="form-control <?= isset($errosValidacaoGeral['num']) ? 'is-invalid' : '' ?>" id="num" name="geral[num]" value="<?= htmlspecialchars($dadosForm['num'] ?? '') ?>"> 
+                <input type="text" class="form-control <?= isset($errosValidacaoGeral['num']) ? 'is-invalid' : '' ?>" id="num" name="geral[num]" value="<?= htmlspecialchars($dadosForm['num'] ?? '') ?>">
                 <?php if (isset($errosValidacaoGeral['num'])): ?>
                     <div class="invalid-feedback">
                         <?= $errosValidacaoGeral['num'] ?>
                     </div>
-                <?php endif; ?> 
+                <?php endif; ?>
             </div>
-            <div class="col-md-6 col-7 mb-3"> 
-                <label for="complemento" class="form-label">Complemento</label> <input type="text" class="form-control <?= isset($errosValidacaoGeral['complemento']) ? 'is-invalid' : '' ?>" id="complemento" name="geral[complemento]" value="<?= htmlspecialchars($dadosForm['complemento'] ?? '') ?>"> 
+            <div class="col-md-6 col-7 mb-3">
+                <label for="complemento" class="form-label">Complemento</label> <input type="text" class="form-control <?= isset($errosValidacaoGeral['complemento']) ? 'is-invalid' : '' ?>" id="complemento" name="geral[complemento]" value="<?= htmlspecialchars($dadosForm['complemento'] ?? '') ?>">
                 <?php if (isset($errosValidacaoGeral['complemento'])): ?>
                     <div class="invalid-feedback">
                         <?= $errosValidacaoGeral['complemento'] ?>
                     </div>
-                <?php endif; ?> 
+                <?php endif; ?>
             </div>
-            <div class="col-md-6 col-12 mb-3"> 
-                <label for="bairro" class="form-label">Bairro</label> 
-                <input type="text" class="form-control <?= isset($errosValidacaoGeral['bairro']) ? 'is-invalid' : '' ?>" id="bairro" name="geral[bairro]" value="<?= htmlspecialchars($dadosForm['bairro'] ?? '') ?>" required> 
+            <div class="col-md-6 col-12 mb-3">
+                <label for="bairro" class="form-label">Bairro</label>
+                <input type="text" class="form-control <?= isset($errosValidacaoGeral['bairro']) ? 'is-invalid' : '' ?>" id="bairro" name="geral[bairro]" value="<?= htmlspecialchars($dadosForm['bairro'] ?? '') ?>" required>
                 <?php if (isset($errosValidacaoGeral['bairro'])): ?>
                     <div class="invalid-feedback">
                         <?= $errosValidacaoGeral['bairro'] ?>
                     </div>
-                <?php endif; ?> 
+                <?php endif; ?>
             </div>
             <div class="col-md-6 col-12 mb-3">
-                <label for="cidade" class="form-label">Cidade</label> 
-                <input type="text" class="form-control <?= isset($errosValidacaoGeral['cidade']) ? 'is-invalid' : '' ?>" id="cidade" name="geral[cidade]" value="<?= htmlspecialchars($dadosForm['cidade'] ?? '') ?>" required> 
+                <label for="cidade" class="form-label">Cidade</label>
+                <input type="text" class="form-control <?= isset($errosValidacaoGeral['cidade']) ? 'is-invalid' : '' ?>" id="cidade" name="geral[cidade]" value="<?= htmlspecialchars($dadosForm['cidade'] ?? '') ?>" required>
                 <?php if (isset($errosValidacaoGeral['cidade'])): ?>
                     <div class="invalid-feedback">
                         <?= $errosValidacaoGeral['cidade'] ?>
                     </div>
                 <?php endif; ?>
             </div>
-            <div class="col-md-6 col-12 mb-3"> 
-                <label for="estado" class="form-label">Estado (UF)</label> 
-                <input type="text" class="form-control <?= isset($errosValidacaoGeral['estado']) ? 'is-invalid' : '' ?>" id="estado" name="geral[estado]" value="<?= htmlspecialchars($dadosForm['estado'] ?? '') ?>" required maxlength="2" style="text-transform: uppercase;"> 
+            <div class="col-md-6 col-12 mb-3">
+                <label for="estado" class="form-label">Estado (UF)</label>
+                <input type="text" class="form-control <?= isset($errosValidacaoGeral['estado']) ? 'is-invalid' : '' ?>" id="estado" name="geral[estado]" value="<?= htmlspecialchars($dadosForm['estado'] ?? '') ?>" required maxlength="2" style="text-transform: uppercase;">
                 <?php if (isset($errosValidacaoGeral['estado'])): ?>
                     <div class="invalid-feedback">
                         <?= $errosValidacaoGeral['estado'] ?>
                     </div>
-                <?php endif; ?> 
+                <?php endif; ?>
             </div>
-            <div class="col-md-6 col-12 mb-3"> 
-                <label for="nomeboleto" class="form-label">Nome do destinatário do boleto</label> 
-                <input type="text" class="form-control <?= isset($errosValidacaoGeral['nomeboleto']) ? 'is-invalid' : '' ?>" id="nomeboleto" name="geral[nomeboleto]" value="<?= htmlspecialchars($dadosForm['nomeboleto'] ?? '') ?>" required> 
+            <div class="col-md-6 col-12 mb-3">
+                <label for="nomeboleto" class="form-label">Nome do destinatário do boleto</label>
+                <input type="text" class="form-control <?= isset($errosValidacaoGeral['nomeboleto']) ? 'is-invalid' : '' ?>" id="nomeboleto" name="geral[nomeboleto]" value="<?= htmlspecialchars($dadosForm['nomeboleto'] ?? '') ?>" required>
                 <?php if (isset($errosValidacaoGeral['nomeboleto'])): ?>
                     <div class="invalid-feedback">
                         <?= $errosValidacaoGeral['nomeboleto'] ?>
                     </div>
-                <?php endif; ?> 
+                <?php endif; ?>
             </div>
-            <div class="col-md-6 col-12 mb-3"> 
-                <label for="emailboleto" class="form-label">E-mail para envio do boleto</label> 
-                <input type="email" class="form-control <?= isset($errosValidacaoGeral['emailboleto']) ? 'is-invalid' : '' ?>" id="emailboleto" name="geral[emailboleto]" value="<?= htmlspecialchars($dadosForm['emailboleto'] ?? '') ?>" required> 
+            <div class="col-md-6 col-12 mb-3">
+                <label for="emailboleto" class="form-label">E-mail para envio do boleto</label>
+                <input type="email" class="form-control <?= isset($errosValidacaoGeral['emailboleto']) ? 'is-invalid' : '' ?>" id="emailboleto" name="geral[emailboleto]" value="<?= htmlspecialchars($dadosForm['emailboleto'] ?? '') ?>" required>
                 <?php if (isset($errosValidacaoGeral['emailboleto'])): ?>
                     <div class="invalid-feedback">
                         <?= $errosValidacaoGeral['emailboleto'] ?>
@@ -705,7 +709,7 @@ header('Cache-Control: no-cache, no-store, private');
             <div class="col-12">
                 <input type="submit" class="btn btn-primary btn-lg" value="Realizar Inscrição">
             </div>
-            
+
         </form>
     </div>
 
@@ -726,7 +730,7 @@ header('Cache-Control: no-cache, no-store, private');
 
         // --- Espera o DOM ---
         document.addEventListener('DOMContentLoaded', () => {
-
+            console.log("[DEBUG] DOM Carregado. Iniciando todos os scripts.");
             // --- Seletores ---
             const cnpjInput = document.getElementById('CNPJ');
             const empresaInput = document.getElementById('empresa');
@@ -803,7 +807,8 @@ header('Cache-Control: no-cache, no-store, private');
             // --- Função Atualizar Display Preço (ATUALIZADA com Desconto e Texto Dinâmico) ---
             const atualizarDisplayPreco = () => {
                 if (!participantesContainer || !basePriceInfo || !loteInfo || !lotePercentInfo || !precoValidadeInfo || !precoFinalDisplay || !discountInfo || !discountValue || !discountPercent || !participantTypeLabel) { // <<< Adiciona verificação do novo seletor
-                    console.error("Elementos do display de preço não encontrados!"); return;
+                    console.error("Elementos do display de preço não encontrados!");
+                    return;
                 }
 
                 const participantCount = participantesContainer.querySelectorAll('.participante-bloco').length;
@@ -947,63 +952,90 @@ header('Cache-Control: no-cache, no-store, private');
                 }
             };
 
-            // --- Função Consultar CNPJ ---
+            // --- Função Consultar CNPJ (VERSÃO DE DEBUG AVANÇADO) ---
             const consultarCnpj = async (cnpj) => {
-                // ... (igual, mas no finally chama atualizarDisplayPreco() sem argumentos) ...
                 if (!cnpjInput || !empresaInput) return;
                 const cnpjLimpo = limparNumeros(cnpj);
+
+                // 1. Resetar
                 cnpjInput.style.borderColor = '';
                 empresaInput.style.borderColor = '';
+                isAssociadoGlobal = false;
                 if (cnpjLimpo.length !== 14) {
-                    isAssociadoGlobal = false;
-                    atualizarDisplayPreco();
                     empresaInput.value = '';
+                    empresaInput.disabled = false;
+                    atualizarDisplayPreco();
                     return;
                 }
+
+                // 2. Feedback Visual
                 cnpjInput.style.borderColor = 'orange';
                 empresaInput.disabled = true;
-                empresaInput.value = 'Buscando...';
-                let isAssociado = false;
+                empresaInput.value = 'Buscando dados...';
+
                 try {
-                    const responseRazao = await fetch(`${urlApiRazaoSocial}?cnpj=${cnpjLimpo}`);
-                    const dataRazao = await responseRazao.json();
-                    if (responseRazao.ok && dataRazao.sucesso && dataRazao.dados?.razao_social) {
-                        empresaInput.value = dataRazao.dados.razao_social;
-                        empresaInput.style.borderColor = '';
-                    } else {
-                        if (empresaInput.value === 'Buscando...') empresaInput.value = '';
-                        empresaInput.style.borderColor = 'orange';
+                    // --- A) BUSCA RAZÃO SOCIAL (ISOLADA) ---
+                    try {
+                        console.log(`[DEBUG] Buscando Razão Social para: ${cnpjLimpo} em ${urlApiRazaoSocial}`);
+                        const responseRazao = await fetch(`${urlApiRazaoSocial}?cnpj=${cnpjLimpo}`);
+                        console.log(`[DEBUG] Resposta inicial da API Razão Social (Status: ${responseRazao.status})`);
+                        const responseClone = responseRazao.clone();
+                        const dataRazao = await responseRazao.json();
+                        if (responseRazao.ok && dataRazao.sucesso && dataRazao.dados?.razao_social) {
+                            empresaInput.value = dataRazao.dados.razao_social;
+                            empresaInput.style.borderColor = '';
+                        } else {
+                            console.warn('[DEBUG] Razão Social não encontrada. Resposta JSON:', dataRazao);
+                            empresaInput.value = '';
+                            empresaInput.style.borderColor = 'orange';
+                        }
+                    } catch (jsonError) {
+                        console.error('[DEBUG] ERRO CRÍTICO ao decodificar JSON da API de Razão Social:', jsonError);
+                        const errorText = await (responseClone?.text() || Promise.resolve('Não foi possível ler a resposta.'));
+                        console.error('[DEBUG] Resposta Bruta (Texto) da API de Razão Social:', errorText);
+                        empresaInput.value = '';
+                        empresaInput.style.borderColor = 'red';
                     }
-                } catch (error) {
-                    if (empresaInput.value === 'Buscando...') empresaInput.value = '';
-                    empresaInput.style.borderColor = 'red';
-                } finally {
-                    empresaInput.disabled = false;
-                }
-                try {
-                    const responseAssociado = await fetch(`${urlApiCnpjAssociado}?cnpj=${cnpjLimpo}`);
-                    const dataAssociado = await responseAssociado.json();
-                    if (!responseAssociado.ok) {
+
+                    // --- B) BUSCA STATUS ASSOCIADO (ISOLADA) ---
+                    try {
+                        console.log(`[DEBUG] Verificando status de associado para: ${cnpjLimpo} em ${urlApiCnpjAssociado}`);
+                        const responseAssociado = await fetch(`${urlApiCnpjAssociado}?cnpj=${cnpjLimpo}`);
+                        console.log(`[DEBUG] Resposta inicial da API Associado (Status: ${responseAssociado.status})`);
+                        const responseClone = responseAssociado.clone();
+                        const dataAssociado = await responseAssociado.json();
+                        if (responseAssociado.ok && dataAssociado.existe) {
+                            console.log('[DEBUG] CNPJ é associado!');
+                            isAssociadoGlobal = true;
+                            cnpjInput.style.borderColor = 'green';
+                        } else {
+                            console.log('[DEBUG] CNPJ não é associado. Resposta JSON:', dataAssociado);
+                            isAssociadoGlobal = false;
+                            if (cnpjInput.style.borderColor === 'orange') {
+                                cnpjInput.style.borderColor = '';
+                            }
+                        }
+                    } catch (jsonError) {
+                        console.error('[DEBUG] ERRO CRÍTICO ao decodificar JSON da API de Associado:', jsonError);
+                        const errorText = await (responseClone?.text() || Promise.resolve('Não foi possível ler a resposta.'));
+                        console.error('[DEBUG] Resposta Bruta (Texto) da API de Associado:', errorText);
+                        isAssociadoGlobal = false;
                         cnpjInput.style.borderColor = 'red';
-                        isAssociado = false;
-                    } else if (dataAssociado.existe) {
-                        cnpjInput.style.borderColor = 'green';
-                        isAssociado = true;
-                    } else {
-                        isAssociado = false;
-                        cnpjInput.style.borderColor = '';
                     }
-                } catch (error) {
+                } catch (generalError) {
+                    console.error('[DEBUG] Falha geral na função consultarCnpj:', generalError);
                     cnpjInput.style.borderColor = 'red';
-                    isAssociado = false;
-                } finally {
-                    isAssociadoGlobal = isAssociado;
-                    atualizarDisplayPreco();
-                    if (cnpjInput.style.borderColor === 'orange') {
-                        cnpjInput.style.borderColor = '';
+                    if (empresaInput.value === 'Buscando dados...') {
+                        empresaInput.value = '';
                     }
+                    isAssociadoGlobal = false;
+                } finally {
+                    console.log('[DEBUG] Bloco Finally executado. Destravando campo e atualizando preço.');
+                    empresaInput.disabled = false;
+                    atualizarDisplayPreco();
                 }
             };
+
 
             // --- Lógica para Adicionar/Remover Participantes ---
             const atualizarIndicesEVisibilidadeRemover = () => {
@@ -1063,82 +1095,21 @@ header('Cache-Control: no-cache, no-store, private');
             if (cnpjInput) {
                 cnpjInput.addEventListener('blur', () => consultarCnpj(cnpjInput.value));
             }
+
             if (cepInput) {
                 cepInput.addEventListener('blur', () => consultarCep(cepInput.value));
             }
 
             // --- Inicialização ---
             if (cnpjInput && cnpjInput.value.trim() !== '') {
-                // A função consultarCnpj é async, mas não precisamos esperar por ela aqui
-                // para o fluxo principal. Ela atualizará o preço no seu 'finally'.
                 consultarCnpj(cnpjInput.value.trim());
             } else {
-                // Se o CNPJ estiver vazio, garante que o preço seja calculado com base em "não associado"
                 isAssociadoGlobal = false;
                 atualizarDisplayPreco();
             }
 
         }); // Fim DOMContentLoaded
     </script>
-    <script>
-document.addEventListener('DOMContentLoaded', function() {
-    const cnpjInput = document.getElementById('CNPJ');
-
-    if (cnpjInput) {
-        cnpjInput.addEventListener('input', function(event) {
-            let value = event.target.value;
-
-            // 1. Remove tudo que não for dígito
-            value = value.replace(/\D/g, '');
-
-            // 2. Limita a 14 dígitos (CNPJ)
-            value = value.substring(0, 14);
-
-            // 3. Aplica a máscara
-            let formattedValue = '';
-            if (value.length > 0) {
-                formattedValue = value.substring(0, 2); // XX
-            }
-            if (value.length > 2) {
-                formattedValue += '.' + value.substring(2, 5); // XX.XXX
-            }
-            if (value.length > 5) {
-                formattedValue += '.' + value.substring(5, 8); // XX.XXX.XXX
-            }
-            if (value.length > 8) {
-                formattedValue += '/' + value.substring(8, 12); // XX.XXX.XXX/XXXX
-            }
-            if (value.length > 12) {
-                formattedValue += '-' + value.substring(12, 14); // XX.XXX.XXX/XXXX-XX
-            }
-
-            event.target.value = formattedValue;
-        });
-
-        // Opcional: Formatar ao carregar a página se já houver um valor (ex: vindo do PHP)
-        if (cnpjInput.value) {
-            let initialValue = cnpjInput.value.replace(/\D/g, '').substring(0, 14);
-            let formattedInitialValue = '';
-            if (initialValue.length > 0) {
-                formattedInitialValue = initialValue.substring(0, 2);
-            }
-            if (initialValue.length > 2) {
-                formattedInitialValue += '.' + initialValue.substring(2, 5);
-            }
-            if (initialValue.length > 5) {
-                formattedInitialValue += '.' + initialValue.substring(5, 8);
-            }
-            if (initialValue.length > 8) {
-                formattedInitialValue += '/' + initialValue.substring(8, 12);
-            }
-            if (initialValue.length > 12) {
-                formattedInitialValue += '-' + initialValue.substring(12, 14);
-            }
-            cnpjInput.value = formattedInitialValue;
-        }
-    }
-});
-</script>
 
 </body>
 

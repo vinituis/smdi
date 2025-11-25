@@ -10,6 +10,7 @@ $dbTable = 'cnpj'; // Nome da tabela que criamos
 
 // --- Cabeçalho da Resposta ---
 // Informa ao cliente que a resposta será em JSON
+header('Cache-Control: no-cache, no-store, private');
 header('Content-Type: application/json; charset=utf-8');
 // ---------------------------
 

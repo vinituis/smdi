@@ -3,6 +3,7 @@
 
 // --- Cabeçalho da Resposta ---
 // Garante que sempre seja JSON, mesmo em caso de erro interno não capturado (útil para debug)
+header('Cache-Control: no-cache, no-store, private');
 header('Content-Type: application/json; charset=utf-8');
 
 // --- Ativa exibição de erros (APENAS PARA DESENVOLVIMENTO!) ---

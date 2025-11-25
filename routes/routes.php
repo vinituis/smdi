@@ -1,5 +1,7 @@
 <?php
 
+header('Cache-Control: no-cache, no-store, private');
+
 switch ($caminho) {
     case 'home':
     case 'page':
@@ -13,13 +15,38 @@ switch ($caminho) {
         }
         break;
 
-    case 'individual':
-        // var_dump($_POST);
+    case 'anamid':
+    case 'informa':
+    case 'tipo':
+    case 'asta':
+    case 'tmd':
+    case 'noara':
+    case 'programasom':
+    case 'jp':
+    case 'deea':
+    case 'estefania':
+    case 'ello':
+    case 'aps':
+    case 'magma':
+    case 'tecnoaco':
+    case 'injetaq':
+    case 'cgitaim':
+    case 'clm':
+    case 'tele':
+    case 'bidone':
+    case 'rdigital':
         if (isset($_POST['geral'])) {
-            require "controller/Post.php";
+            require "controller/Cortesia.php";
         } else {
-            require "view/Individual.php";
+            require "view/Parceiro.php";
         }
+        break;
+
+    case 'individual':
+        require "view/Encerrado.php";
+        break;
+    case 'limite':
+        require "view/Limite.php";
         break;
     case 'convite':
         require "routes/Convite.php";

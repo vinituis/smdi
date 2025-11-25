@@ -56,9 +56,9 @@ $palestrantes = [
     ],
     [
         'foto' => 'src/images/palestrante/sandra.png',
-        'nome' => 'Sandra',
+        'nome' => 'Sandra Turchi',
         'titulo' => 'Fundadora e CEO da Digitalents e palestrante TEDxSP',
-        'bio' => 'Considerada uma das principais referências quando o assunto é Transformação &amp; Marketing Digital, foi eleita um dos profissionais de Marketing mais atuantes nas mídias sociais, no mundo, pela revista americana SMMagazine.',
+        'bio' => 'Considerada uma das principais referências quando o assunto é Transformação e Marketing Digital, foi eleita um dos profissionais de Marketing mais atuantes nas mídias sociais, no mundo, pela revista americana SMMagazine.',
         'linkedin' => 'https://www.linkedin.com/in/sandraturchi/'
     ],
     [
@@ -102,31 +102,31 @@ $programacao = [
     ],
     [
         'horario' => '14:00 - 15:00',
-        'titulo' => 'Palestra Magna',
-        'palestrante' => 'A definir',
+        'titulo' => 'Palestra Magna | A Bússola da Transformação: Navegando as mudanças do mercado B2B',
+        'palestrante' => 'Sandra Turchi',
         'descricao' => null
     ],
     [
         'horario' => '15:10 - 16:00',
-        'titulo' => 'Trilha 1: Marketing',
+        'titulo' => 'Trilha 1: Marketing | O valor de uma marca',
         'palestrante' => 'Beatriz Guarezi',
         'descricao' => null
     ],
     [
         'horario' => '15:10 - 16:00',
-        'titulo' => 'Trilha 1: Vendas',
-        'palestrante' => 'Vinicius Mello',
+        'titulo' => 'Trilha 1: Vendas | Insides Sales 4.0: Como a Inteligência Artificial está transformando a arte de vender no B2B.',
+        'palestrante' => 'Vinicius Melo',
         'descricao' => null
     ],
     [
         'horario' => '16:10 - 17:00',
-        'titulo' => 'Trilha 2: Marketing',
+        'titulo' => 'Trilha 2: Marketing | Sua marca desapareceu na Prateleira da IA?',
         'palestrante' => 'Gui de Bortoli',
         'descricao' => null
     ],
     [
         'horario' => '16:10 - 17:00',
-        'titulo' => 'Trilha 2: Vendas',
+        'titulo' => 'Trilha 2: Vendas | O Funil sem vazamentos: Táticas de conversão para cada etapa da jornada B2B',
         'palestrante' => 'Sara Zimmermann',
         'descricao' => null
     ],
