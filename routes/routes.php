@@ -43,7 +43,7 @@ switch ($caminho) {
         break;
 
     case 'individual':
-        require "view/Encerrado.php";
+        require "view/Individual.php";
         break;
     case 'limite':
         require "view/Limite.php";

@@ -7,8 +7,8 @@
 <link rel="stylesheet" href="src/css/icons.css">
 
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-9DC39DW0VW"></script>
-<script>
+<script nonce="<?php echo $nonce; ?>" async src="https://www.googletagmanager.com/gtag/js?id=G-9DC39DW0VW"></script>
+<script nonce="<?php echo $nonce; ?>">
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());

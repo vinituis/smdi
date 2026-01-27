@@ -224,7 +224,7 @@ $hoje->setTime(0, 0, 0); // Normaliza para meia-noite para comparações de data
     <!-- Link para a biblioteca AOS (Animate On Scroll) -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- <meta name="robots" content="noindex"> -->
-    <style>
+    <style >
         /* Cores e Fundos para Dark Theme Aprimorado */
         :root {
             --dark-bg: #121212; /* Fundo principal bem escuro */
@@ -1221,11 +1221,9 @@ $hoje->setTime(0, 0, 0); // Normaliza para meia-noite para comparações de data
         </div>
     </footer>
 
-    <!-- Bootstrap JS Bundle -->
-    <script src="src/js/bootstrap.bundle.min.js"></script>
     <!-- Script da biblioteca AOS -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
+    <script nonce="<?php echo $nonce; ?>" src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script nonce="<?php echo $nonce; ?>">
         // Inicializa AOS
         AOS.init({
             duration: 800, // Duração da animação em ms

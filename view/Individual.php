@@ -713,8 +713,7 @@ header('Cache-Control: no-cache, no-store, private');
         </form>
     </div>
 
-    <script src="src/js/bootstrap.bundle.min.js"></script>
-    <script>
+    <script nonce="<?php echo $nonce; ?>">
         // --- Constantes Globais vindas do PHP ---
         const PRECO_BASE_ASSOCIADO = <?= json_encode($precoBaseAssociadoJS) ?>;
         const PRECO_BASE_NAO_ASSOCIADO = <?= json_encode($precoBaseNaoAssociadoJS) ?>;
