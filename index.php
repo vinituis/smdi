@@ -46,7 +46,7 @@ $csp_policy = "default-src $default_src; " .
 header("Content-Security-Policy: " . $csp_policy);
 // --- FIM CABEÇALHOS DE SEGURANÇA ---
 
-$projeto = 'smdi2025';
+$projeto = 'smdi2026';
 
 $uri = $_SERVER['REQUEST_URI'];
 $method = $_SERVER['REQUEST_METHOD'];

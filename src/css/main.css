@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Doto:wght@100..900&display=swap');
+
+body {
+    background-color: #000;
+}
+
+h1 {
+    font-family: "Doto", sans-serif;
+    color:#0dff00;
+    font-size: 4rem;
+    text-transform: uppercase;
+}
+
+h3 {
+    font-family: "Doto", sans-serif;
+    color:#f1f1f1;
+    font-size: 45px;
+}
+
+p, label, button, input, select, textarea {
+    font-family: "Doto", sans-serif;
+    color:#f1f1f1;
+    font-size: 20px;
+}
+
+p>b {
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.form-main {
+    width: 100%;
+    background-color: #000;
+    border: 2px dotted #f1f1f1;
+    color: #f1f1f1;
+}
+
+.button {
+    font-family: "Doto", sans-serif;
+    color:#f1f1f1;
+    background-color: #000;
+    font-size: 20px;
+    font-weight: bold;
+    border: 2px dotted #f1f1f1;
+    padding: 10px 20px;
+}
+
+.button:hover {
+    border: 2px solid #0dff00;
+    color: #0dff00;
+    cursor: pointer;
+}
